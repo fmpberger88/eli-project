@@ -1,0 +1,593 @@
+/* Das Sternchen (*) ist ein universeller Selektor, der auf alle Elemente in der HTML-Struktur angewendet wird. */
+* {
+    /* Die Schriftart für alle Elemente wird auf 'Helvetica' gesetzt. Falls diese nicht verfügbar ist, wird eine generische sans-serif Schriftart verwendet. */
+    font-family:'Helvetica', sans-serif;
+    /* Die Schriftstärke für alle Elemente wird auf 400 gesetzt. */
+    font-weight: 400;
+    /* Der Text wird für alle Elemente zentriert. */
+    text-align: center;
+    /* 'box-sizing: border-box' bedeutet, dass die Gesamtbreite und -höhe eines Elements seine Rand- und Padding-Werte einschließt. */
+    box-sizing: border-box;
+    /* Setzt die Innenabstände aller Elemente auf 0. */
+    padding: 0;
+    /* Setzt die Außenabstände aller Elemente auf 0. */
+    margin: 0;
+}
+
+header {
+    font-size: 22px;
+}
+
+/* Die Klasse '.navbar' wird auf die Navigationsleiste angewendet. */
+.navbar {
+    /* Setzt die Hintergrundfarbe der Navigationsleiste auf ein sehr helles Grau. */
+    background-color: #f8f9fa;
+    /* Fügt der Navigationsleiste einen Schatten hinzu. */
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+}
+
+/* '.nav-link' ist die Klasse für die Links in der Navigationsleiste. */
+.nav-link {
+    /* Setzt die Linkfarbe auf ein dunkles Grau. */
+    color: #5a5a5a;
+}
+
+/* Ändert die Farbe des Links in der Navigationsleiste, wenn der Benutzer mit der Maus darüber fährt. */
+.nav-link:hover {
+    /* Setzt die Farbe auf ein helles Blau. */
+    color: #007bff;
+}
+
+/* '.navbar-brand' ist die Klasse für das Logo oder den Namen der Website in der Navigationsleiste. */
+.navbar-brand {
+    /* Setzt die Farbe auf ein helles Blau. */
+    color: #007bff;
+    /* Setzt die Schriftgröße auf 24 Pixel. */
+    font-size: 24px;
+    /* Setzt die Schriftstärke auf fett. */
+    font-weight: bold;
+}
+
+/* '.dropdown-item' ist die Klasse für die Links im Dropdown-Menü der Navigationsleiste. */
+.dropdown-item {
+    /* Setzt die Linkfarbe auf ein dunkles Grau. */
+    color: #5a5a5a;
+}
+
+/* Ändert die Farbe des Links im Dropdown-Menü der Navigationsleiste, wenn der Benutzer mit der Maus darüber fährt. */
+.dropdown-item:hover {
+    /* Setzt die Farbe auf ein helles Blau. */
+    color: #007bff;
+    /* Setzt die Hintergrundfarbe auf ein sehr helles Grau. */
+    background-color: #f8f9fa;
+}
+
+/* '#ksa' ist der ID-Selektor für das spezifische Element mit der ID 'ksa'. */
+#ksa {
+    /* Setzt den Außenabstand auf 50 Pixel. */
+    margin: 50px;
+    /* Setzt die Schriftstärke auf fett. */
+    font-weight: 1000;
+    /* Setzt die Ausrichtung des Textes auf linksbündig. */
+    text-align: left;
+    /* Setzt die Schriftfarbe auf ein dunkles Blau. */
+    color: #00407C;
+    /* Setzt die Schriftgröße auf 50 Pixel. */
+    font-size: 50px;
+}
+
+/* '.container h1' selektiert alle h1 Elemente innerhalb eines Elements mit der Klasse 'container'. */
+.container h1 {
+    /* Setzt die Schriftfarbe auf ein dunkles Blau. */
+    color: #00407C;
+    /* Setzt die Schriftstärke auf fett. */
+    font-weight: bold;
+    /* Setzt die Textausrichtung auf zentriert. */
+    text-align: center;
+    /* Setzt den unteren Außenabstand auf 30 Pixel. */
+    margin-bottom: 30px;
+}
+
+/* '.archiv_nav' ist die Klasse für die Navigationsleiste auf der Archiv-Seite. */
+.archiv_nav {
+    /* Setzt den unteren Außenabstand auf 30 Pixel. */
+    margin-bottom: 30px;
+}
+
+/* '.archiv_nav ul li' selektiert alle 'li'-Elemente innerhalb eines 'ul'-Elements, das sich innerhalb eines Elements mit der Klasse '.archiv_nav' befindet. */
+.archiv_nav ul li {
+    /* Ändert die Darstellung des 'li'-Elements, sodass es nebeneinander angezeigt wird. */
+    display: inline-block;
+    /* Setzt den horizontalen Außenabstand auf 15 Pixel. */
+    margin: 0 15px;
+}
+
+/* '.navi' ist die Klasse für die Links in der Navigationsleiste auf der Archiv-Seite. */
+.navi {
+    /* Setzt die Linkfarbe auf ein dunkles Grau. */
+    color: #5a5a5a;
+    /* Entfernt die Unterstreichung des Links. */
+    text-decoration: none;
+    /* Setzt die Schriftstärke auf fett. */
+    font-weight: bold;
+}
+
+/* Ändert die Farbe des Links in der Navigationsleiste auf der Archiv-Seite, wenn der Benutzer mit der Maus darüber fährt. */
+.navi:hover {
+    /* Setzt die Farbe auf ein helles Blau. */
+    color: #007bff;
+}
+
+/* '.document-container h2' selektiert alle h2 Elemente innerhalb eines Elements mit der Klasse '.document-container'. */
+.document-container h2 {
+    /* Fügt eine untere Randlinie hinzu. */
+    border-bottom: 1px solid #00407C;
+    /* Setzt die Schriftfarbe auf ein dunkles Blau. */
+    color: #00407C;
+    /* Setzt den unteren Innenabstand auf 10 Pixel. */
+    padding-bottom: 10px;
+}
+
+/* '.document' ist die Klasse für jedes Dokument-Container-Element. */
+.document {
+    /* Fügt eine 1 Pixel breite, durchgehende, graue Umrandung hinzu. */
+    border: 1px solid #ccc;
+    /* Setzt den Randradius, um abgerundete Ecken zu erzeugen. */
+    border-radius: 5px;
+    /* Setzt den Innenabstand auf 10 Pixel. */
+    padding: 10px;
+    /* Setzt den unteren Außenabstand auf 10 Pixel. */
+    margin-bottom: 10px;
+    /* Fügt einen Schatten zum Element hinzu. */
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+}
+
+/* '.document h3 a' selektiert alle 'a' (Hyperlink) Elemente innerhalb von 'h3'-Elementen, die sich in einem Element mit der Klasse '.document' befinden. */
+.document h3 a {
+    /* Setzt die Linkfarbe auf ein helles Blau. */
+    color: #007bff;
+    /* Entfernt die Unterstreichung des Links. */
+    text-decoration: none;
+    /* Setzt die Schriftgröße auf 70% der Eltern-Schriftgröße. */
+    font-size: 0.7em;
+}
+
+/* '.document h3 a:hover' ändert die Farbe des Hyperlinks innerhalb der 'h3'-Elemente, die sich in einem Element mit der Klasse '.document' befinden, wenn der Benutzer mit der Maus darüber fährt. */
+.document h3 a:hover {
+    /* Setzt die Farbe auf ein dunkles Grau. */
+    color: #5a5a5a;
+}
+
+/* '.upload-form' ist die Klasse für das Formular zum Hochladen von Dateien. */
+.upload-form {
+    /* Display: flex; aktiviert ein flexibles Layout für ein Container-Element. */
+    display: flex;
+    /* Flex-Direction: column; stellt die flexiblen Elemente vertikal auf. */
+    flex-direction: column;
+    /* Align-Items: center; zentriert die flexiblen Elemente horizontal. */
+    align-items: center;
+    /* Justify-Content: center; zentriert die flexiblen Elemente vertikal. */
+    justify-content: center;
+    /* Setzt den Abstand zwischen den Elementen in einem flexiblen Container. */
+    gap: 30px;
+}
+
+/* '.upload-form .form-group' selektiert alle Elemente mit der Klasse '.form-group', die sich innerhalb eines Elements mit der Klasse '.upload-form' befinden. */
+.upload-form .form-group {
+    /* Setzt die Breite auf 100%. */
+    width: 100%;
+    /* Begrenzt die maximale Breite auf 500 Pixel. */
+    max-width: 500px;
+}
+
+/* '.upload-form .form-group label' selektiert alle 'label'-Elemente innerhalb von '.form-group'-Elementen, die sich in einem '.upload-form'-Element befinden. */
+.upload-form .form-group label {
+    /* Setzt die Schriftgröße auf 120% der Eltern-Schriftgröße. */
+    font-size: 1.2rem;
+    /* Setzt den unteren Außenabstand auf 10 Pixel. */
+    margin-bottom: 10px;
+}
+
+/* '.upload-form .form-group select, .upload-form button' selektiert alle 'select'-Elemente und 'button'-Elemente innerhalb von '.form-group'-Elementen, die sich in einem '.upload-form'-Element befinden. */
+.upload-form .form-group select, .upload-form button {
+    /* Setzt die Breite auf 100%. */
+    width: 100%;
+}
+
+/* '.upload-form .custom-file-input::before' selektiert das Pseudo-Element vor allen Elementen mit der Klasse '.custom-file-input', die sich in einem '.upload-form'-Element befinden. */
+.upload-form .custom-file-input::before {
+    /* Setzt den Inhalt auf 'Datei wählen...'. */
+    content: 'Datei wählen...';
+    /* Setzt den Innenabstand auf 10 Pixel. */
+    padding: 10px;
+    /* Setzt die Hintergrundfarbe auf ein sehr helles Grau. */
+    background-color: #f8f9fa;
+    /* Fügt eine 1 Pixel breite, durchgehende, graue Umrandung hinzu. */
+    border: 1px solid #ced4da;
+    /* Setzt den Randradius, um abgerundete Ecken zu erzeugen. */
+    border-radius: 4px;
+    /* Fügt einen Übergangseffekt zu allen Eigenschaften hinzu. Der Übergang dauert 0.3 Sekunden. */
+    transition: all 0.3s ease-in-out;
+}
+
+/* '.upload-form .custom-file-input:hover::before' ändert das Pseudo-Element vor allen Elementen mit der Klasse '.custom-file-input', die sich in einem '.upload-form'-Element befinden, wenn der Benutzer mit der Maus darüber fährt. */
+.upload-form .custom-file-input:hover::before {
+    /* Ändert die Hintergrundfarbe auf ein leicht dunkleres Grau. */
+    background-color: #e9ecef;
+}
+
+/* '.upload-form .custom-file-input:active::before' ändert das Pseudo-Element vor allen Elementen mit der Klasse '.custom-file-input', die sich in einem '.upload-form'-Element befinden, wenn der Benutzer sie anklickt. */
+.upload-form .custom-file-input:active::before {
+    /* Ändert die Hintergrundfarbe auf ein leicht dunkleres Grau. */
+    background-color: #e9ecef;
+}
+
+/* '.upload-form button' selektiert alle 'button'-Elemente, die sich in einem '.upload-form'-Element befinden. */
+.upload-form button {
+    /* Setzt den oberen Außenabstand auf 20 Pixel. */
+    margin-top: 20px;
+    /* Setzt den Innenabstand auf 5 Pixel oben/unten und 10 Pixel links/rechts. */
+    padding: 5px 10px;
+    /* Setzt die Schriftgröße auf 120% der Eltern-Schriftgröße. */
+    font-size: 1.2rem;
+    /* Begrenzt die maximale Breite auf 120 Pixel. */
+    max-width: 120px;
+    /* Display: block; sorgt dafür, dass das Element die gesamte Breite seines Elternelements einnimmt, und zwingt nachfolgende Elemente auf eine neue Zeile. */
+    display: block;
+    /* Setzt den oberen Außenabstand auf 20 Pixel, den unteren Außenabstand auf 0 und zentriert das Element horizontal. */
+    margin: 20px auto 0;
+}
+
+
+/* pvk */
+/* Filter form layout */
+.pvk_filter {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    align-items: end;
+}
+
+/* Filter form elements */
+.pvk_filter label {
+    font-weight: bold;
+}
+
+.pvk_filter select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Filter button */
+.pvk_filter button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pvk_filter button:hover {
+    background-color: #0056b3;
+}
+
+/* Charts container */
+#charts-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Individual charts */
+#kategorie-chart, #date-kategorie-chart {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navigation */
+nav a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    color: #007BFF;
+}
+
+/* Form */
+.pvk_filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 90%;
+    padding: 25px;
+    font-size: 20px;
+
+}
+
+.pc_agency, .kategorie, .code, .ahv, .datum, button[type=submit] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.pvk_filter label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.pvk_filter select {
+    width: 100%;
+    padding: 5px;
+}
+
+.pvk_filter button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 0 0 auto; /* add this property */
+    width: 100px;
+}
+
+
+.pvk_filter button:hover {
+    background-color: #0056b3;
+}
+
+
+/*
+header nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navi {
+    font-size: clamp(0.4rem, 0.8vw, 1rem);
+    padding: clamp(0.4rem, 1.5vw, 1rem);
+    color: black;
+    margin: 0;
+}
+
+a:hover {
+    color: gray;
+}
+*/
+.jumbotron {
+    background-image: url("stadt_zh_2_sw.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+section {
+    background-color: snow;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: clamp(1rem, 2vw, 2rem);
+  margin-top: 150px;
+    color: #D40053;
+}
+
+main h1 {
+    font-weight: 700;
+    font-size: clamp(1.25rem, 2.75vw, 3.5rem);
+    color: #D40053;
+}
+
+h4 {
+    font-weight: 700;
+    font-size: clamp(1rem, 2vw, 2rem);
+    margin-bottom: 150px;
+    color: #D40053;
+}
+
+
+footer {
+    padding-top: 0%;
+    padding-bottom: 1%;
+    margin: 0.03%;
+}
+
+.col {
+    padding: 50px;
+  }
+
+.malerei {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.biographie {
+    position: relative;
+    float: left;
+
+}
+
+
+.dstelle {
+    color: #D40053;
+    padding: 50px;
+}
+
+.dstelle_item {
+    font-weight: 700;
+    text-align: left;
+}
+
+.dstelle_neu {
+    font-size: 1.5em;
+    font-weight: 800;
+    color: #D40053;
+    margin: 200px;
+}
+
+.coworkercreate p {
+    text-align: left;
+    margin-left: 700px;
+}
+
+.coworkercreate label {
+    text-align: left;
+}
+
+.coworkercreate input, select {
+    margin-left: 0px;
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    font-size: large;
+}
+
+.coworkercreate button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.coworkercreate button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+.pvk_filter p {
+    text-align: left;
+    margin-left: 700px;
+}
+
+.coworkercreate select {
+    margin-left: 0px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    font-size: large;
+}
+/*
+.pvk_filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 90%;
+    padding: 25px;
+    font-size: 20px;
+
+}
+
+.pc_agency, .kategorie, .code, .ahv, .datum, button[type=submit] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.pvk_filter button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.pvk_filter button[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+#charts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#kategorie-chart, #date-kategorie-chart {
+  width: 50%;
+}
+*/
+
+.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 60px;
+  height: 28px;
+  padding: 2px;
+  font: 14px Helvetica;
+  background: lightsteelblue;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+#pvk_table {
+    width: 90%;
+    font-size: 20px;
+}
+
+#pvk_table_head {
+    font-weight: 1000;
+}
+
+.archiv_nav {
+    justify-items: center;
+    color: #00407C;
+}
+
+
+#address {
+    height: 800px;
+    padding-top: 60px;
+}
+
+#address_section {
+    padding-top: 50px;
+    height: 300px;
+    width: 300px;
+    background-color: snow;
+}
+
+@media only screen and (max-width: 480px) {
+  #body{width: 100%;}
+  #header{width: 100%;}
+  /*#main h1{width: 100%; font-size: 30%;}
+  #main h2{width: 100%; font-size: 30%;}
+  #main h4{width: 100%; font-size: 30%;}*/
+  #a {width: 100%;}
+  
+}
+
+@media (min-width: 768px) { /* Auf größeren Bildschirmen */
+  #kategorie-chart, #date-kategorie-chart {
+    width: 50%;  /* Jeder Chart nimmt die Hälfte des Platzes */
+  }
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html> <!-- Declare this document as an HTML5 document -->
+<html lang="de"> <!-- Start of HTML element, with German declared as the language -->
+
+{% load static %} <!-- Django template tag to load static files -->
+{% load widget_tweaks %}
+
+    <head> <!-- Start of head element containing meta information about the document -->
+        <meta charset="utf-8"> <!-- Set the character encoding to UTF-8 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive design tag to adjust the viewport based on the device width -->
+        <title>eli</title> <!-- Set the title of the webpage -->
+
+        <!-- Load Google fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+
+        <!-- Load Bootstrap CSS from a CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <!-- Load a custom CSS file from static files -->
+        <link rel="stylesheet" href="{% static 'zlel/style.css' %}">
+
+        <!-- Load D3.js, a JavaScript library for creating data visualizations -->
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+
+        <meta name="author" content="Fabian Berger"> <!-- Specify the author of the webpage -->
+
+        {% block head %} <!-- A block that can be filled with content in child templates -->
+        {% endblock %}
+    </head> <!-- End of head element -->
+
+    <body> <!-- Start of body element, which contains the content of the document -->
+
+        <!-- Start of the navigation bar -->
+        <header class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container-fluid">
+
+                <!-- Navbar brand that links to the home page -->
+                <a id="ksa" class="navbar-brand ml-6" href="{% url 'home' %}">eli</a>
+
+                <!-- Navbar toggler for responsive designs -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar content that collapses on small screens -->
+                <nav class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <!-- A dropdown menu named 'Durchführungsstelle' -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="durchfuehrungsstelleDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Ergänzungsleistungen
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="durchfuehrungsstelleDropdown">
+                                <li><a class="dropdown-item" href="#">Allgemeine Informationen</a></li>
+                                <li><a class="dropdown-item" href="#">Anspruchsvoraussetzungen</a></li>
+                                <li><a class="dropdown-item" href="#">Leistungsumfang</a></li>
+                                <li><a class="dropdown-item" href="#">Antragsverfahren</a></li>
+                            </ul>
+                        </li>
+                        <!-- A dropdown menu named 'Leistungstypen' -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="leistungenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Überbrückungsleistungen
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="leistungenDropdown">
+                                <li><a class="dropdown-item" href="#">Allgemeine Informationen</a></li>
+                                <li><a class="dropdown-item" href="#">Anspruchsvoraussetzungen</a></li>
+                                <li><a class="dropdown-item" href="#">Leistungsumfang</a></li>
+                                <li><a class="dropdown-item" href="#">Antragsverfahren</a></li>
+                            </ul>
+                        </li>
+                        <!-- A dropdown menu named 'Informationen' -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="informationenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Community
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="informationenDropdown">
+                              <li><a class="dropdown-item" href="#">Forum</a></li>
+                              <li><a class="dropdown-item" href="#">Erfahrungsberichte & Testimonials</a></li>
+                            </ul>
+                        </li>
+                        <!-- A link to the logout view -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Mein Konto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Log Out</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header> <!-- End of the navigation bar -->
+
+        {% block content %} <!-- A block that can be filled with content in child templates -->
+        {% endblock %}
+
+        <!-- Row with nav component -->
+        <div class="row">
+            <div class="col">
+                <nav class="nav justify-content-center">
+                    <!-- Link to an external page -->
+                    <a class="nav-link" href="https://www.zh.ch/de/soziales/ergaenzungsleistungen-ahv-iv.html" target="_blank">Über uns</a>
+                    <!-- Link to the 'kontakt' view -->
+                    <a class="nav-link" href="#">Kontakt</a>
+                </nav>
+            </div>
+        </div>
+        <!-- End of row with nav component -->
+
+        <!-- Footer with copyright notice -->
+        <footer>
+            <h6 class="sm">&copy; Copyright. All Rights Reserved.</h6>
+        </footer>
+
+        {% block messages %} <!-- A block for displaying messages -->
+            {% for message in messages %} <!-- Iterate over each message in the 'messages' variable -->
+                <!-- Each message is displayed in an alert div, with the message tags determining the alert style -->
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }} <!-- Display the message text -->
+                </div>
+            {% endfor %}
+        {% endblock %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Load Bootstrap JavaScript from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body> <!-- End of body element -->
+</html> <!-- End of HTML element -->
+

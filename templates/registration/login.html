@@ -1,0 +1,49 @@
+{% load widget_tweaks %}
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="text-center">Willkommen bei der kantonalen ZLEL/ÜL Webapplikation</h1>
+                        <h2 class="text-center">Bitte loggen Sie sich ein!</h2>
+
+                        <form method="post">
+                            {% csrf_token %}
+                            {% for field in form %}
+                                <div class="mb-3">
+                                    <label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+                                    {% render_field field class="form-control" %}
+                                    {% if field.errors %}
+                                        <div class="alert alert-danger mt-2">
+                                            {{ field.errors.0 }}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            {% endfor %}
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">Login</button>
+                            </div>
+                        </form>
+
+                        <div class="text-center mt-4">
+                            <p>Falls Sie noch keinen Account besitzen. Bitte registrieren Sie sich.<br>Sie werden vom kantonalen Sozialamt freigeschaltet, sobald ihre Identität geprüft wurde.</p>
+                            <a href="{% url 'registration' %}" class="btn btn-outline-secondary">Registrieren</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
