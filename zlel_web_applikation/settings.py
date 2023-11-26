@@ -11,10 +11,10 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os  # Import the os module
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -26,7 +26,6 @@ SECRET_KEY = 'django-insecure-@_l%qz110-=fc*-i#$y8-1l5t(-kq#h%icu-#kr&6#a=af#&ww
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -56,8 +55,7 @@ ROOT_URLCONF = 'zlel_web_applikation.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -72,7 +70,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'zlel_web_applikation.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
@@ -82,7 +79,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -102,23 +98,40 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'de-ch'  # German as used in Switzerland
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Zurich'  # Time zone for Switzerland
 
-USE_I18N = True
+USE_I18N = True  # Enable Django’s translation system
 
-USE_TZ = True
+USE_L10N = True  # Enable localized formatting of data
 
+USE_TZ = True  # Enable Django to use timezone-aware datetimes
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# Email configuration for Posteo
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'posteo.de'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'f.m.p.berger@posteo.de'  # Your Posteo email address
+EMAIL_HOST_PASSWORD = 'bw_nMa_VdsDXkgHxCRrAj7zLnJKaQYnmoMVGYr-EPE-X'  # Your Posteo password
+# EMAIL_HOST_USER = os.environ.get('POSTEO_USER')  # Your Posteo email address
+# EMAIL_HOST_PASSWORD = os.environ.get('POSTEO_PASSWORD')  # Your Posteo password
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'f.m.p.berger@posteo.de'  # Default from email
+# DEFAULT_FROM_EMAIL = os.environ.get('POSTEO_USER')  # Default from email
+
+
+# Redirect URLs after login and logout
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

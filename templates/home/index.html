@@ -1,4 +1,4 @@
-{% extends "zlel_web_applikation/../home/base.html" %}
+{% extends 'zlel_web_applikation/base.html' %}
 {% load static %}
 
 {% block head %}
@@ -13,7 +13,20 @@
                 </div>
             </section>
             <section>
-                <h2>News & Aktuelles</h2>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h3>Was ist eli?</h3>
+                            <p>eli ist eine Webapplikation, welche dir hilft, die für dich passende Ergänzungs- oder Überbrückungsleistung zu finden.</p>
+                            <p>eli ist ein Projekt der Hochschule Luzern, welches im Rahmen des Moduls Webapplikationen im Studiengang Informatik entwickelt wurde.</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <h3>Wie funktioniert eli?</h3>
+                            <p>eli stellt dir Fragen zu deiner aktuellen Situation und deinen Bedürfnissen. Anhand deiner Antworten wird dir eine Liste mit passenden Ergänzungs- und Überbrückungsleistungen angezeigt.</p>
+                            <p>eli ist kostenlos und kann ohne Registrierung verwendet werden.</p>
+                        </div>
+                    </div>
+                </div>
             </section>
            </main>
 {% endblock %}

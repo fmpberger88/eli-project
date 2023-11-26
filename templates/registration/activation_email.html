@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>Willkommen {{  user.username }},</p>
+    <p>Vielen Dank für die Registrierung. Bitte klicke auf den Link um Deine Email zu verifizieren!</p>
+
+    <a href="{% url 'activate' token %}">Meine E-Mail bestätigen</a>
+</body>
+</html>
