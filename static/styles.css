@@ -4,8 +4,6 @@
     font-family:'Roboto', 'Helvetica', 'Arial', sans-serif;
     /* Die Schriftstärke für alle Elemente wird auf 400 gesetzt. */
     font-weight: 400;
-    /* Der Text wird für alle Elemente zentriert. */
-    text-align: center;
     /* 'box-sizing: border-box' bedeutet, dass die Gesamtbreite und -höhe eines Elements seine Rand- und Padding-Werte einschließt. */
     box-sizing: border-box;
     /* Setzt die Innenabstände aller Elemente auf 0. */
@@ -42,8 +40,33 @@ h1 {
 h2 {
   font-weight: 700;
   font-size: clamp(1rem, 2vw, 2rem);
-  margin-top: 150px;
+  margin-top: 30px;
     color: #00407C;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: clamp(0.5rem, 1vw, 1rem);
+  margin-top: 30px;
+    color: #00407C;
+}
+
+.container {
+    width: 50%;
+}
+
+.info-box {
+    width: 800px;
+}
+
+.container_gesetzesartikel {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zentriert die Inhalte horizontal im Flex-Container */
+    justify-content: center; /* Zentriert die Inhalte vertikal im Flex-Container */
+    width: 80%;
+    margin: 0 auto; /* Zentriert den Container selbst im übergeordneten Element */
+    padding: 20px; /* Fügt Innenabstand hinzu, optional für besseres Layout */
 }
 
 
@@ -219,7 +242,7 @@ nav a:hover {
 }
 
 .jumbotron {
-    background-image: url("stadt_zh_2_sw.jpg");
+    background-image: url("zlel_web_applikation/stadt_zh_2_sw.jpg");
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -300,17 +323,15 @@ footer {
 }
 
 @media only screen and (max-width: 480px) {
-  #body{width: 100%;}
-  #header{width: 100%;}
-  /*#main h1{width: 100%; font-size: 30%;}
-  #main h2{width: 100%; font-size: 30%;}
-  #main h4{width: 100%; font-size: 30%;}*/
-  #a {width: 100%;}
+    #body{width: 100%;}
+    #header{width: 100%;}
+    #a {width: 100%;}
+    .container {
+        width: 100%;
+    }
+    .info-box {
+        width: 100%;
+        text-align: center;
+    }
 
-}
-
-@media (min-width: 768px) { /* Auf größeren Bildschirmen */
-  #kategorie-chart, #date-kategorie-chart {
-    width: 50%;  /* Jeder Chart nimmt die Hälfte des Platzes */
-  }
 }

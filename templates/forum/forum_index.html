@@ -41,7 +41,7 @@
             <!-- Dynamische Anzeige der neuesten Beiträge -->
             {% for post in latest_posts %}
                 <li class="list-group-item">
-                    <a href="{% url 'forum_post_detail' post.id %}">{{ post.title }}</a>
+                    <a href="{% url 'post_detail' post.id %}">{{ post.title }}</a>
                     <small class="text-muted">- gepostet von {{ post.author.username }}</small>
                 </li>
             {% endfor %}

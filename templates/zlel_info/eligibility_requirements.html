@@ -1,7 +1,7 @@
 {% extends 'zlel_web_applikation/base.html' %}
 
 {% block content %}
-<div class="container">
+<div class="container_gesetzesartikel">
     <h1>Anspruchsvoraussetzungen für Ergänzungsleistungen in der Schweiz</h1>
 
     <!-- Introduction -->
@@ -19,7 +19,7 @@
             <div class="col-md-4 mb-3">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Grundlegende Voraussetzungen (Art. 4 ELG)</h5>
+                        <h5 class="card-title">Generelle Voraussetzungen</h5>
                         <p class="card-text">Beschreibung der grundlegenden Voraussetzungen für Ergänzungsleistungen.</p>
                         <!-- Link zu einer detaillierten Ansicht oder externen Quelle -->
                         <a href="{% url 'art_4_detail' %}" class="btn btn-primary">Mehr erfahren</a>
@@ -27,6 +27,56 @@
                 </div>
             </div>
             <!-- Wiederholen Sie diesen Block für weitere Artikel -->
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Ausländer:innen</h5>
+                        <p class="card-text">Beschreibung der zusätzlichen Voraussetzungen für Bürger*innen ohne Schweizer Pass.</p>
+                        <!-- Link zu einer detaillierten Ansicht oder externen Quelle -->
+                        <a href="{% url 'art_5_detail' %}" class="btn btn-primary">Mehr erfahren</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Vermögen</h5>
+                        <p class="card-text">Beschreibung der zusätzlichen Voraussetzungen betreffend Vermögen</p>
+                        <!-- Link zu einer detaillierten Ansicht oder externen Quelle -->
+                        <a href="{% url 'art_6_detail' %}" class="btn btn-primary">Mehr erfahren</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Kantonale Einschränkungen (Art. 7 ELG)</h5>
+                        <p class="card-text">Beschreibung der kantonalen Einschränkungen für Bürger*innen</p>
+                        <!-- Link zu einer detaillierten Ansicht oder externen Quelle -->
+                        <a href="{% url 'art_7_detail' %}" class="btn btn-primary">Mehr erfahren</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Verweigerung der EL (Art. 8 ELG)</h5>
+                        <p class="card-text">Beschreibung der zusätzlichen Voraussetzungen für eine Verweigerung der Ergänzungsleistung</p>
+                        <!-- Link zu einer detaillierten Ansicht oder externen Quelle -->
+                        <a href="{% url 'art_8_detail' %}" class="btn btn-primary">Mehr erfahren</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Berechnung der jährlichen EL (Art. 9 ELG)</h5>
+                        <p class="card-text">Beschreibung der Berechnungsgrundlagen für die jährliche Ergänzungsleistung</p>
+                        <!-- Link zu einer detaillierten Ansicht oder externen Quelle -->
+                        <a href="{% url 'art_9_detail' %}" class="btn btn-primary">Mehr erfahren</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
