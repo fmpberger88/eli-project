@@ -1,0 +1,16 @@
+<!-- forum/templates/forum/forum_category.html -->
+
+{% extends 'zlel_web_applikation/base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>{{ category.name }}</h1>
+    <!-- Beiträge in dieser Kategorie anzeigen -->
+    {% for post in posts %}
+        <div>
+            <h2><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></h2>
+            <p>Veröffentlicht am {{ post.date_posted }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

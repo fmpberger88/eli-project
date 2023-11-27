@@ -1,0 +1,19 @@
+<!-- forum/templates/forum/forum_search.html -->
+
+{% extends 'zlel_web_applikation/base.html' %}
+
+{% block content %}
+    <div>
+        <h1>Suchergebnisse</h1>
+    {% for post in posts %}
+        <div>
+            <h2><a href="{% url 'forum:post_detail' post.id %}">{{ post.title }}</a></h2>
+            <p>{{ post.body|linebreaks }}</p>
+            <p>{{ post.created }}</p>
+            <p>{{ post.author }}</p>
+        </div>
+    {% empty %}
+        <p>Keine Beiträge gefunden.</p>
+    {% endfor %}
+    </div>
+{% endblock %}

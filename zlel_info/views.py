@@ -9,3 +9,6 @@ def supplementary_benefits_info(request):
 
 def eligibility_requirements(request):
     return render(request, 'zlel_info/eligibility_requirements.html')
+
+def art_4_detail(request):
+    return render(request, 'zlel_info/Art4Detail.html')

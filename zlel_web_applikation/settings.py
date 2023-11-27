@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'widget_tweaks',
     'Home',
+    'zlel_info',
+    'forum',
 ]
 
 MIDDLEWARE = [

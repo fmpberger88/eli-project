@@ -21,4 +21,5 @@ urlpatterns = [
     path('home/', include('Home.urls')),
     path('', include('Home.urls')),
     path('zlel-info/', include('zlel_info.urls')),
+    path('forum/', include('forum.urls')),
 ]

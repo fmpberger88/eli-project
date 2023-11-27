@@ -1,0 +1,42 @@
+{% extends 'zlel_web_applikation/base.html' %}
+
+{% block content %}
+<div class="container my-4">
+    <h1>{{ post.title }}</h1>
+    <p>Veröffentlicht am {{ post.date_posted }} von {{ post.author.username }}</p>
+    <div class="post-content">
+        {{ post.content }}
+    </div>
+
+    <!-- Kommentarsektion -->
+    <section class="comments my-4">
+        <h2>Kommentare</h2>
+        {% for comment in post.comments.all %}
+            <div class="comment my-2">
+                <strong>{{ comment.author.username }}</strong> am {{ comment.date_posted }}:
+                <p>{{ comment.content }}</p>
+            </div>
+        {% empty %}
+            <p>Noch keine Kommentare vorhanden.</p>
+        {% endfor %}
+    </section>
+
+    <!-- Kommentar hinzufügen -->
+    {% if user.is_authenticated %}
+        <section class="add-comment my-4">
+            <h3>Kommentar hinzufügen</h3>
+            <form method="post">
+                {% csrf_token %}
+                <!-- Sie können ein Django-Formular verwenden oder manuell Felder erstellen -->
+                <label>
+                    <textarea name="content" class="form-control my-2" rows="4" required></textarea>
+                </label>
+                <button type="submit" class="btn btn-primary">Kommentar senden</button>
+                <a href="{% url 'add_comment' post.id %}" class="btn btn-secondary">Kommentieren</a>
+            </form>
+        </section>
+    {% else %}
+        <p><a href="{% url 'login' %}">Melden Sie sich an</a>, um einen Kommentar zu hinterlassen.</p>
+    {% endif %}
+</div>
+{% endblock %}
