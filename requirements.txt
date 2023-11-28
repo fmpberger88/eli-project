@@ -76,12 +76,6 @@ jupyterlab
 jupyterlab-pygments
 jupyterlab-widgets
 jupyterlab_server
-Kivy==2.2.1
-kivy-deps.angle==0.3.3
-kivy-deps.glew==0.3.1
-kivy-deps.sdl2==0.6.0
-Kivy-Garden==0.1.5
-kiwisolver
 lxml
 markdown-it-py
 MarkupSafe
@@ -160,11 +154,6 @@ rfc3339-validator
 rfc3986-validator
 rich
 rpds-py
-scikit-learn
-scikit-optimize
-scikit-surprise==1.1.3
-scipy==1.11.3
-seaborn
 Send2Trash
 sip
 six
@@ -176,7 +165,6 @@ sqlparse
 stack-data
 statsmodels
 stopit==1.1.2
-streamlit
 tenacity
 terminado
 threadpoolctl
