@@ -19,10 +19,7 @@
         <base href="{% static '/' %}">
         <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
-        <!-- Load D3.js, a JavaScript library for creating data visualizations -->
-        <script src="https://d3js.org/d3.v7.min.js"></script>
-
-        <meta name="author" content="Fabian Berger"> <!-- Specify the author of the webpage -->
+        <meta name="author" content="Fabian Marc Pascal Berger"> <!-- Specify the author of the webpage -->
 
         {% block head %} <!-- A block that can be filled with content in child templates -->
         {% endblock %}
@@ -35,7 +32,7 @@
             <div class="container-fluid">
 
                 <!-- Navbar brand that links to the home page -->
-                <a id="ksa" class="navbar-brand ml-6" href="{% url 'home' %}">eli</a>
+                <a id="eli" class="navbar-brand ml-6" href="{% url 'home' %}">eli</a>
 
                 <!-- Navbar toggler for responsive designs -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -108,17 +105,17 @@
             <div class="col">
                 <nav class="nav justify-content-center">
                     <!-- Link to an external page -->
-                    <a class="nav-link" href="https://www.zh.ch/de/soziales/ergaenzungsleistungen-ahv-iv.html" target="_blank">Über uns</a>
+                    <a class="nav-link" href="https://www.fmpberger.com" target="_blank">Kontakt</a>
                     <!-- Link to the 'kontakt' view -->
-                    <a class="nav-link" href="#">Kontakt</a>
+                    <a class="nav-link" href="{% url 'impressum' %}">Impressum</a>
                 </nav>
             </div>
         </div>
         <!-- End of row with nav component -->
 
         <!-- Footer with copyright notice -->
-        <footer>
-            <h6 class="sm">&copy; Copyright. All Rights Reserved.</h6>
+        <footer class="footer">
+            <h6 class="sm">&copy; Copyright 2023</h6>
         </footer>
 
         {% block messages %} <!-- A block for displaying messages -->

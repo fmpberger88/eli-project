@@ -2,12 +2,12 @@
 {% load widget_tweaks %}
 
 {% block content %}
-<div class="container">
-    <h1 class="mb-4">Registrieren Sie sich für die kantonale ZLEL/ÜL Webapplikation</h1>
+<div class="mt-5">
     <div class="row">
         <div class="col-md-6 mx-auto">
             <div class="card">
                 <div class="card-body">
+                <h1>Hier kannst Du Dich für eli registrieren</h1>
                     <form method="post">
                         {% csrf_token %}
                         {% for field in form %}

@@ -11,13 +11,13 @@ def eligibility_requirements(request):
     return render(request, 'zlel_info/eligibility_requirements.html')
 
 def art_4_detail(request):
-    return render(request, 'zlel_info/Art4Detail.html')
+    return render(request, 'zlel_info/allgemein.html')
 
 def art_5_detail(request):
-    return render(request, 'zlel_info/Art5Detail.html')
+    return render(request, 'zlel_info/auslaender.html')
 
 def art_6_detail(request):
-    return render(request, 'zlel_info/Art6Detail.html')
+    return render(request, 'zlel_info/vermoegen.html')
 
 def art_7_detail(request):
     return render(request, 'zlel_info/Art7Detail.html')

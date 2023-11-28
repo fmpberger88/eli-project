@@ -12,7 +12,7 @@ from django.contrib.auth.models import User
 
 class SignUp(CreateView):
     form_class = CustomerUserCreationForm
-    success_url = reverse_lazy("login")
+    success_url = reverse_lazy("registration_confirmation")
     template_name = "registration/registration.html"
 
     def form_valid(self, form):
@@ -50,3 +50,9 @@ def activate(request, token):
 
 def home(request):
     return render(request, 'home/index.html')
+
+def impressum(request):
+    return render(request, 'home/impressum.html')
+
+def registration_confirmation(request):
+    return render(request, 'registration/registration_confirmation.html')

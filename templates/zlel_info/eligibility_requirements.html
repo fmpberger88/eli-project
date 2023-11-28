@@ -1,7 +1,7 @@
 {% extends 'zlel_web_applikation/base.html' %}
 
 {% block content %}
-<div class="container_gesetzesartikel">
+<div class="container">
     <h1>Anspruchsvoraussetzungen für Ergänzungsleistungen in der Schweiz</h1>
 
     <!-- Introduction -->
@@ -13,14 +13,13 @@
 
     <!-- Articles Display -->
     <section class="my-4">
-        <h2>Details aus dem Ergänzungsleistungsgesetz</h2>
         <div class="row">
             <!-- Beispiel eines Artikels -->
             <div class="col-md-4 mb-3">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Generelle Voraussetzungen</h5>
-                        <p class="card-text">Beschreibung der grundlegenden Voraussetzungen für Ergänzungsleistungen.</p>
+                        <p class="card-text">Grundlegenden Voraussetzungen für den Bezug von Ergänzungsleistungen.</p>
                         <!-- Link zu einer detaillierten Ansicht oder externen Quelle -->
                         <a href="{% url 'art_4_detail' %}" class="btn btn-primary">Mehr erfahren</a>
                     </div>
@@ -31,7 +30,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Ausländer:innen</h5>
-                        <p class="card-text">Beschreibung der zusätzlichen Voraussetzungen für Bürger*innen ohne Schweizer Pass.</p>
+                        <p class="card-text">Ohne Schweizer Pass musst Du weitere Bedingungen erfüllen.</p>
                         <!-- Link zu einer detaillierten Ansicht oder externen Quelle -->
                         <a href="{% url 'art_5_detail' %}" class="btn btn-primary">Mehr erfahren</a>
                     </div>
@@ -41,7 +40,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Vermögen</h5>
-                        <p class="card-text">Beschreibung der zusätzlichen Voraussetzungen betreffend Vermögen</p>
+                        <p class="card-text">Vermögen werden bei der Berechnung der jährlichen Ergänzungsleistung berücksichtigt</p>
                         <!-- Link zu einer detaillierten Ansicht oder externen Quelle -->
                         <a href="{% url 'art_6_detail' %}" class="btn btn-primary">Mehr erfahren</a>
                     </div>
@@ -50,8 +49,8 @@
             <div class="col-md-4 mb-3">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Kantonale Einschränkungen (Art. 7 ELG)</h5>
-                        <p class="card-text">Beschreibung der kantonalen Einschränkungen für Bürger*innen</p>
+                        <h5 class="card-title">Einnahmen</h5>
+                        <p class="card-text">Einnahmen werden von Deiner jährlichen Ergänzungsleistung abgezogen</p>
                         <!-- Link zu einer detaillierten Ansicht oder externen Quelle -->
                         <a href="{% url 'art_7_detail' %}" class="btn btn-primary">Mehr erfahren</a>
                     </div>
@@ -60,8 +59,8 @@
             <div class="col-md-4 mb-3">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Verweigerung der EL (Art. 8 ELG)</h5>
-                        <p class="card-text">Beschreibung der zusätzlichen Voraussetzungen für eine Verweigerung der Ergänzungsleistung</p>
+                        <h5 class="card-title">Ausgaben</h5>
+                        <p class="card-text">Bei der Berechnung der Ergänzungsleistung kannst Du gewisse Ausgaben geltend machen.</p>
                         <!-- Link zu einer detaillierten Ansicht oder externen Quelle -->
                         <a href="{% url 'art_8_detail' %}" class="btn btn-primary">Mehr erfahren</a>
                     </div>
@@ -70,8 +69,8 @@
             <div class="col-md-4 mb-3">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Berechnung der jährlichen EL (Art. 9 ELG)</h5>
-                        <p class="card-text">Beschreibung der Berechnungsgrundlagen für die jährliche Ergänzungsleistung</p>
+                        <h5 class="card-title">Krankheits- und Behinderungskosten</h5>
+                        <p class="card-text">Krankheits- und Behinderungskosten werden durch die Ergänzungsleistungen rückvergütet.</p>
                         <!-- Link zu einer detaillierten Ansicht oder externen Quelle -->
                         <a href="{% url 'art_9_detail' %}" class="btn btn-primary">Mehr erfahren</a>
                     </div>
