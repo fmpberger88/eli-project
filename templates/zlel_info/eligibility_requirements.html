@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="container">
-    <h1>Anspruchsvoraussetzungen für Ergänzungsleistungen in der Schweiz</h1>
+    <h1>Themenspezifische Informationen über die Ergänzungsleistungen</h1>
 
     <!-- Introduction -->
     <section>
@@ -21,7 +21,7 @@
                         <h5 class="card-title">Generelle Voraussetzungen</h5>
                         <p class="card-text">Grundlegenden Voraussetzungen für den Bezug von Ergänzungsleistungen.</p>
                         <!-- Link zu einer detaillierten Ansicht oder externen Quelle -->
-                        <a href="{% url 'art_4_detail' %}" class="btn btn-primary">Mehr erfahren</a>
+                        <a href="{% url 'el_allgemein' %}" class="btn btn-primary">Mehr erfahren</a>
                     </div>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                         <h5 class="card-title">Ausländer:innen</h5>
                         <p class="card-text">Ohne Schweizer Pass musst Du weitere Bedingungen erfüllen.</p>
                         <!-- Link zu einer detaillierten Ansicht oder externen Quelle -->
-                        <a href="{% url 'art_5_detail' %}" class="btn btn-primary">Mehr erfahren</a>
+                        <a href="{% url 'el_auslaender' %}" class="btn btn-primary">Mehr erfahren</a>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@
                         <h5 class="card-title">Vermögen</h5>
                         <p class="card-text">Vermögen werden bei der Berechnung der jährlichen Ergänzungsleistung berücksichtigt</p>
                         <!-- Link zu einer detaillierten Ansicht oder externen Quelle -->
-                        <a href="{% url 'art_6_detail' %}" class="btn btn-primary">Mehr erfahren</a>
+                        <a href="{% url 'el_vermoegen' %}" class="btn btn-primary">Mehr erfahren</a>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                         <h5 class="card-title">Einnahmen</h5>
                         <p class="card-text">Einnahmen werden von Deiner jährlichen Ergänzungsleistung abgezogen</p>
                         <!-- Link zu einer detaillierten Ansicht oder externen Quelle -->
-                        <a href="{% url 'art_7_detail' %}" class="btn btn-primary">Mehr erfahren</a>
+                        <a href="{% url 'el_einnahmen' %}" class="btn btn-primary">Mehr erfahren</a>
                     </div>
                 </div>
             </div>
@@ -62,7 +62,7 @@
                         <h5 class="card-title">Ausgaben</h5>
                         <p class="card-text">Bei der Berechnung der Ergänzungsleistung kannst Du gewisse Ausgaben geltend machen.</p>
                         <!-- Link zu einer detaillierten Ansicht oder externen Quelle -->
-                        <a href="{% url 'art_8_detail' %}" class="btn btn-primary">Mehr erfahren</a>
+                        <a href="{% url 'el_ausgaben' %}" class="btn btn-primary">Mehr erfahren</a>
                     </div>
                 </div>
             </div>
@@ -72,7 +72,27 @@
                         <h5 class="card-title">Krankheits- und Behinderungskosten</h5>
                         <p class="card-text">Krankheits- und Behinderungskosten werden durch die Ergänzungsleistungen rückvergütet.</p>
                         <!-- Link zu einer detaillierten Ansicht oder externen Quelle -->
-                        <a href="{% url 'art_9_detail' %}" class="btn btn-primary">Mehr erfahren</a>
+                        <a href="{% url 'el_krankheit' %}" class="btn btn-primary">Mehr erfahren</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Heime</h5>
+                        <p class="card-text">Die Ergänzungsleistungen kann bei einem Heimaufenthalt die Kosten decken</p>
+                        <!-- Link zu einer detaillierten Ansicht oder externen Quelle -->
+                        <a href="{% url 'el_heim' %}" class="btn btn-primary">Mehr erfahren</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Kinder</h5>
+                        <p class="card-text">Welche Regeln gelten für Kinder bei den Ergänzungsleistungen</p>
+                        <!-- Link zu einer detaillierten Ansicht oder externen Quelle -->
+                        <a href="{% url 'el_heim' %}" class="btn btn-primary">Mehr erfahren</a>
                     </div>
                 </div>
             </div>
