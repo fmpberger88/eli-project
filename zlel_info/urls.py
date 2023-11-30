@@ -8,7 +8,8 @@ from .views import (supplementary_benefits_info,
                     el_ausgaben,
                     el_kinder,
                     el_heim,
-                    el_krankheit)
+                    el_krankheit,
+                    el_anmeldung)
 
 urlpatterns = [
     path('supplementary_benefits_info/', supplementary_benefits_info, name='supplementary_benefits_info'),
@@ -20,5 +21,6 @@ urlpatterns = [
     path('el_ausgaben/', el_ausgaben, name='el_ausgaben'),
     path('el_kinder/', el_kinder, name='el_kinder'),
     path('el_heim', el_heim, name='el_heim'),
-    path('el_krankheit', el_krankheit, name='el_krankheit')
+    path('el_krankheit', el_krankheit, name='el_krankheit'),
+    path('el_anmeldung', el_anmeldung, name='el_anmeldung')
 ]

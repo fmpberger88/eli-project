@@ -18,7 +18,7 @@ header {
 
 /*ok/
 /* '#ksa' ist der ID-Selektor für das spezifische Element mit der ID 'ksa'. */
-#ksa {
+#eli {
     /* Setzt den Außenabstand auf 50 Pixel. */
     margin: 50px;
     /* Setzt die Schriftstärke auf fett. */
@@ -51,15 +51,18 @@ h3 {
     color: #00407C;
 }
 
-.container {
-    width: 50%;
+.img_front {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .info-box {
     width: 800px;
 }
 
-.container_gesetzesartikel {
+.container {
     display: flex;
     flex-direction: column;
     align-items: center; /* Zentriert die Inhalte horizontal im Flex-Container */
@@ -129,63 +132,6 @@ h3 {
 }
 
 
-
-/* pvk */
-/* Filter form layout */
-.pvk_filter {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-    align-items: end;
-}
-
-/* Filter form elements */
-.pvk_filter label {
-    font-weight: bold;
-}
-
-.pvk_filter select {
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
-
-/* Filter button */
-.pvk_filter button {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    background-color: #007BFF;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.pvk_filter button:hover {
-    background-color: #0056b3;
-}
-
-/* Charts container */
-#charts-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-/* Individual charts */
-#kategorie-chart, #date-kategorie-chart {
-    flex: 1;
-    min-width: 300px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-
-
-/*ok* für die Unterlinks im Dokumentenarchiv/
 /* Navigation */
 nav a {
     color: #333;
@@ -197,129 +143,37 @@ nav a:hover {
     color: #007BFF;
 }
 
-/* Form */
-.pvk_filter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    width: 90%;
-    padding: 25px;
-    font-size: 20px;
-
-}
-
-.pc_agency, .kategorie, .code, .ahv, .datum, button[type=submit] {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.pvk_filter label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-.pvk_filter select {
-    width: 100%;
-    padding: 5px;
-}
-
-.pvk_filter button {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    flex: 0 0 auto; /* add this property */
-    width: 100px;
-}
-
-
-.pvk_filter button:hover {
-    background-color: #0056b3;
-}
-
-.jumbotron {
-    background-image: url("zlel_web_applikation/stadt_zh_2_sw.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-}
-
-
 footer {
     padding-top: 0%;
     padding-bottom: 1%;
     margin: 0.03%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .col {
     padding: 50px;
   }
 
-.malerei {
-    font-weight: 700;
-    font-size: 1.5em;
+.impressum-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-.biographie {
-    position: relative;
-    float: left;
-
+.impressum-container h1, .impressum-container h2, .impressum-container h3 {
+    color: #333;
 }
 
-
-.pvk_filter p {
-    text-align: left;
-    margin-left: 700px;
+.impressum-container a {
+    color: #007bff;
+    text-decoration: none;
 }
 
-
-
-.tooltip {
-  position: absolute;
-  text-align: center;
-  width: 60px;
-  height: 28px;
-  padding: 2px;
-  font: 14px Helvetica;
-  background: lightsteelblue;
-  border: 0px;
-  border-radius: 8px;
-  pointer-events: none;
-}
-
-#pvk_table {
-    width: 90%;
-    font-size: 20px;
-}
-
-#pvk_table_head {
-    font-weight: 1000;
-}
-
-.archiv_nav {
-    justify-items: center;
-    color: #00407C;
-}
-
-#mitarbeiter_hinzufügen {
-    text-align: center;
-}
-
-/*ok*/
-#address {
-    height: 400px;
-    padding-top: 60px;
-}
-/*ok*/
-#address_section {
-    padding-top: 50px;
-    height: 300px;
-    width: 300px;
-    background-color: white;
+.impressum-container a:hover {
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 480px) {

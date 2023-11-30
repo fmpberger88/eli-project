@@ -33,3 +33,6 @@ def el_krankheit(request):
 
 def el_heim(request):
     return render(request, 'zlel_info/heim.html')
+
+def el_anmeldung(request):
+    return render(request, 'zlel_info/el_anmeldung.html')
