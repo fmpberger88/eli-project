@@ -5,16 +5,23 @@
 {% endblock %}
 
 {% block content %}
-        <main class ="jumbotron" role="main">
+        <main role="main">
             <section class="container-fluid bg-white">
-                <div class="row text-center">
-                  <h1 class="container-sm">Herzlich willkommen auf eli</h1>
-                  <h2 class="container-sm">Deine Seite rund um das Thema Ergänzungsleistungen</h2> <!-- Escaping the name -->
+                <!-- Flex Container -->
+                <!-- Bildbereich -->
+                <div class="img_container">
+                    <img class="image_front" src="../../static/images/stadt_zh_2.webp" alt="Stadt Zürich" loading="lazy"/>
+                </div>
+
+                <div class="title-image-container text-center">
+                    <!-- Titelbereich -->
+                    <div class="title-area">
+                        <h1 class="container-sm">Herzlich willkommen auf eli</h1>
+                        <h2 class="container-sm">Deine Seite rund um das Thema Ergänzungsleistungen</h2>
+                    </div>
                 </div>
             </section>
-            <img class="image_front" src="../../static/images/stadt_zh_2_sw.webp" alt="Stadt Zürich" loading="lazy" width="1009" height="356"/>
-            <section>
-                <div class="container-fluid container">
+                <div class="container">
                     <div class="row">
                         <div class="col-sm-6">
                             <h3>Was ist eli?</h3>
@@ -22,7 +29,7 @@
                         </div>
                         <div class="col-sm-6">
                             <h3>Wie funktioniert eli?</h3>
-                            <p>eli bittet Dir eine nicht abschliessenden Überblick über die Ergänzungsleistungen und insbesondere Zusatzleistungen im Kanton Zürich. Bei Bedarf kannst Du ein Konto eröffnen, und Dich im Forum der Community beteiligen.</p>
+                            <p>eli bietet Dir einen nicht abschliessenden Überblick über die Ergänzungsleistungen und insbesondere Zusatzleistungen im Kanton Zürich. Bei Bedarf kannst Du ein Konto eröffnen, und Dich im Forum der Community beteiligen.</p>
                         </div>
                     </div>
                 </div>

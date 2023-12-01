@@ -7,6 +7,8 @@ from django.views.generic import CreateView
 from .forms import CustomerUserCreationForm  # Import the custom form
 from django.http import HttpResponse
 from django.contrib.auth.models import User
+from django.contrib.sites.shortcuts import get_current_site
+from django.urls import reverse
 
 
 
@@ -18,19 +20,30 @@ class SignUp(CreateView):
     def form_valid(self, form):
         response = super().form_valid(form)
         user = form.save()
-
+        # Get the current site
+        current_site = get_current_site(self.request)
+        # Get the domain name
+        domain = current_site.domain
         # Generate a token
         token = dumps(user.pk)
+        # Generate activation link
+        activation_link = 'http://{domain}{path}'.format(
+            domain=domain,
+            path=reverse('activate', kwargs={'token': token})
+        )
+
+        context = {
+            'user': user,
+            'activation_link': activation_link
+        }
 
         # Email content
         subject = "Activate your Account"
-        message = render_to_string('registration/activation_email.html', {
-            'user': user,
-            'token': token
-        })
+        message = render_to_string('registration/activation_email.txt', context)  # Text version
+        html_message = render_to_string('registration/activation_email.html', context)  # HTML version
 
         # Send email
-        send_mail(subject, message, None, [user.email])
+        send_mail(subject, message, None, [user.email], html_message=html_message)
 
         return response
 
@@ -45,7 +58,8 @@ def activate(request, token):
     user.is_active = True
     user.save()
 
-    return HttpResponse('Dein Konto wurde aktiviert')
+    # Redirect to the account activated page
+    return render(request, 'registration/account_activated.html')
 
 
 def home(request):

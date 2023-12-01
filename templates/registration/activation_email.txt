@@ -1,0 +1,5 @@
+Willkommen {{ user.username }},
+
+Vielen Dank für die Registrierung. Bitte klicke auf den folgenden Link, um Deine E-Mail zu verifizieren:
+
+{{ activation_link }}
