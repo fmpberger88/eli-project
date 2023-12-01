@@ -161,6 +161,16 @@ nav a:hover {
     color: #007BFF;
 }
 
+.card-color {
+    background-color: #CCE6FF;
+    color: black;
+}
+
+.button-color {
+    background-color: #00407C;
+    color: white;
+}
+
 footer {
     padding-top: 0;
     padding-bottom: 1%;

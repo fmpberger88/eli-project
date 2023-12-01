@@ -1,11 +1,27 @@
 {% extends 'zlel_web_applikation/base.html' %}
+{% load widget_tweaks %}
 
 {% block content %}
-<div class="container">
-    <h1>Neuen Beitrag erstellen</h1>
-    <form method="post">
+<div class="container my-4">
+    <h1 class="mb-4">Neuen Beitrag erstellen</h1>
+    <form method="post" class="needs-validation" novalidate>
         {% csrf_token %}
-        {{ form.as_p }}
+
+        {% for field in form %}
+            <div class="mb-3">
+                <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                {% render_field field class="form-control" %}
+                {% if field.help_text %}
+                    <small class="form-text text-muted">{{ field.help_text }}</small>
+                {% endif %}
+                {% for error in field.errors %}
+                    <div class="invalid-feedback">
+                        {{ error }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+
         <button type="submit" class="btn btn-primary">Beitrag veröffentlichen</button>
     </form>
 </div>

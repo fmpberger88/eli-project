@@ -2,41 +2,40 @@
 
 {% block content %}
 <div class="container my-4">
-    <h1>{{ post.title }}</h1>
-    <p>Veröffentlicht am {{ post.date_posted }} von {{ post.author.username }}</p>
-    <div class="post-content">
-        {{ post.content }}
+    <h1 class="mb-3">{{ post.title }}</h1>
+    <p class="text-muted">Veröffentlicht am {{ post.date_posted }} von {{ post.author.username }}</p>
+
+    <div class="post-content mb-4">
+        <p>{{ post.content }}</p>
     </div>
 
-    <!-- Kommentarsektion -->
-    <section class="comments my-4">
-        <h2>Kommentare</h2>
-        {% for comment in post.comments.all %}
-            <div class="comment my-2">
-                <strong>{{ comment.author.username }}</strong> am {{ comment.date_posted }}:
-                <p>{{ comment.content }}</p>
+    <!-- Antworten auf den Beitrag -->
+    <section class="replies my-4">
+        <h2>Antworten</h2>
+        {% for reply in post.reply_set.all %}
+            <div class="card mb-2">
+                <div class="card-body">
+                    <h5 class="card-title">{{ reply.author.username }} am {{ reply.date_posted }}</h5>
+                    <p class="card-text">{{ reply.content }}</p>
+                </div>
             </div>
         {% empty %}
-            <p>Noch keine Kommentare vorhanden.</p>
+            <div class="alert alert-info">Noch keine Antworten vorhanden.</div>
         {% endfor %}
     </section>
 
-    <!-- Kommentar hinzufügen -->
+    <!-- Antwort hinzufügen -->
     {% if user.is_authenticated %}
-        <section class="add-comment my-4">
-            <h3>Kommentar hinzufügen</h3>
-            <form method="post">
+        <section class="add-reply my-4">
+            <h3>Antwort hinzufügen</h3>
+            <form method="post" action="{% url 'add_reply' post.id %}">
                 {% csrf_token %}
-                <!-- Sie können ein Django-Formular verwenden oder manuell Felder erstellen -->
-                <label>
-                    <textarea name="content" class="form-control my-2" rows="4" required></textarea>
-                </label>
-                <button type="submit" class="btn btn-primary">Kommentar senden</button>
-                <a href="{% url 'add_comment' post.id %}" class="btn btn-secondary">Kommentieren</a>
+                <textarea name="content" class="form-control mb-2" rows="4" required></textarea>
+                <button type="submit" class="btn btn-primary">Antwort senden</button>
             </form>
         </section>
     {% else %}
-        <p><a href="{% url 'login' %}">Melden Sie sich an</a>, um einen Kommentar zu hinterlassen.</p>
+        <p><a href="{% url 'login' %}" class="btn btn-secondary">Melden Sie sich an</a>, um eine Antwort zu hinterlassen.</p>
     {% endif %}
 </div>
 {% endblock %}
