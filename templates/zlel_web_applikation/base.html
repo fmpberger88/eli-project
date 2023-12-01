@@ -59,9 +59,9 @@
                               Kantonale Leistungen Zürich
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="leistungenDropdown">
-                                <li><a class="dropdown-item" href="#">Kantonale Beihilfe</a></li>
-                                <li><a class="dropdown-item" href="#">Kantonale Zuschüsse</a></li>
-                                <li><a class="dropdown-item" href="#">Betreuung im Alter</a></li>
+                                <li><a class="dropdown-item" href="{% url 'beihilfe' %}">Kantonale Beihilfe</a></li>
+                                <li><a class="dropdown-item" href="{% url 'zuschuesse' %}">Kantonale Zuschüsse</a></li>
+                                <li><a class="dropdown-item" href="{% url 'betreuung_alter' %}">Betreuung im Alter</a></li>
                             </ul>
                         </li>
                         <!-- A dropdown menu named 'Informationen' -->
@@ -76,7 +76,7 @@
                         </li>
                         <!-- A link to the logout view -->
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Mein Konto</a>
+                            <a class="nav-link" href="{% url 'konto' %}">Mein Konto</a>
                         </li>
                         {% if user.is_authenticated %}
                             <li class="nav-item">

@@ -22,4 +22,6 @@ urlpatterns = [
     path('', include('Home.urls')),
     path('zlel-info/', include('zlel_info.urls')),
     path('forum/', include('forum.urls')),
+    path('kantonale-leistungen/', include('kantonale_leistungen.urls')),
+    path('mein-konto/', include('konto.urls')),
 ]

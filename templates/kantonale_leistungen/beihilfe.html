@@ -1,10 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'zlel_web_applikation/base.html' %}
 
-</body>
-</html>
+{% block content %}
+<div class="container">
+    <h1>Kantonale Beihilfen gemäß ZLG</h1>
+
+    <!-- Anspruchsberechtigung -->
+    <section class="my-4">
+        <h2>§ 13: Anspruchsberechtigung für Beihilfen</h2>
+        <p>
+            Anspruch auf Beihilfen hast Du, wenn Du die Voraussetzungen für Ergänzungsleistungen gemäß Art. 4–6 ELG erfüllst und eine bestimmte Mindestwohndauer im Kanton aufweisen kannst: zehn Jahre für Schweizer Bürger und 15 Jahre für andere.
+        </p>
+    </section>
+
+
+    <!-- Wohnsitzdauer und Karenzfrist -->
+    <section>
+        <h2>§ 13 Absatz 3: Karenzfrist und Wohnsitzdauer</h2>
+        <p>
+            Bei der Berechnung der Karenzfrist werden die Wohnsitzdauer des verstorbenen Ehepartners oder eingetragenen Partners sowie die Wohnsitzdauer der Eltern bei Waisen berücksichtigt.
+        </p>
+    </section>
+
+    <!-- Vermögensgrenzen -->
+    <section>
+        <h2>§ 14: Vermögensgrenzen</h2>
+        <p>
+            Kein Anspruch auf Beihilfen besteht, wenn das ermittelte Reinvermögen die festgelegten Grenzen übersteigt: 37.500 Franken bei Einzelpersonen, 60.000 Franken bei Ehepaaren und 15.000 Franken bei rentenberechtigten Waisen und Kindern.
+        </p>
+    </section>
+
+    <!-- Höchstanspruch und Anpassung -->
+    <section>
+        <h2>§ 16: Höchstanspruch und Anpassung der Beihilfe</h2>
+        <p>
+            Der jährliche Höchstanspruch auf Beihilfe variiert je nach Status der Person.
+        </p>
+        <ul>
+            <li><strong>Alleinstehende: </strong>2'420 Franken pro Jahr</li>
+            <li><strong>Ehepaare: </strong>3'630 Franken pro Jahr</li>
+            <li><strong>Für die ersten zwei Kinder: </strong>je 1'210 Franken pro Jahr</li>
+            <li><strong>Für das dritte und vierte Kind: </strong>je 807 Franken</li>
+            <li><strong>Für jedes weitere Kind: </strong>je 403 Franken</li>
+        </ul>
+    </section>
+
+    <!-- Berechnung der Beihilfe -->
+    <section>
+        <h2>§ 17: Berechnung der Beihilfe</h2>
+        <p>
+            Für die Berechnung der Beihilfe wird auf die Bedarfsrechnung für die jährliche Ergänzungsleistung abgestellt, wobei bestimmte Beträge als anrechenbare Einnahmen behandelt werden.
+        </p>
+    </section>
+
+    <!-- Rückerstattung und unrechtmäßige Bezüge -->
+    <section>
+        <h2>§ 19: Rückerstattung von Beihilfen</h2>
+        <p>
+            Rechtmäßig bezogene Beihilfen können unter bestimmten Bedingungen zurückgefordert werden, insbesondere wenn der Bezieher in günstigere Verhältnisse kommt oder aus dem Nachlass.
+        </p>
+    </section>
+
+    <!-- Weitere Informationen -->
+    <section>
+        <h2>Weitere Informationen</h2>
+        <p>
+            Für detailliertere Informationen besuche bitte die offizielle Webseite der AHV/IV oder wende Dich an die kantonale Ausgleichskasse. Im Kanton Zürich sind die Gemeinden für den Vollzug der Ergänzungsleistungen zuständig.
+        </p>
+    </section>
+
+</div>
+{% endblock %}

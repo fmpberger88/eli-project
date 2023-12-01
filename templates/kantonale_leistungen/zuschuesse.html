@@ -1,10 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'zlel_web_applikation/base.html' %}
 
-</body>
-</html>
+{% block content %}
+<div class="container">
+    <h1>Zuschüsse gemäß ZLG § 19a</h1>
+
+    <!-- Überblick über Zuschüsse -->
+    <section class="my-4">
+        <h2>Überblick</h2>
+        <p>
+            Zuschüsse sind vorgesehen für Personen, die dauerhaft oder längere Zeit in einem Heim oder Spital leben und bei denen Ergänzungsleistungen sowie Beihilfen nicht ausreichen, um den Bedarf zu decken. Die Gewährung der Zuschüsse setzt voraus, dass die Vermögensfreibeträge nicht überschritten werden.
+        </p>
+    </section>
+
+    <!-- Details zur Regelung der Zuschüsse -->
+    <section>
+        <h2>Regelungen und Bedingungen</h2>
+        <p>
+            Die genauen Bestimmungen, einschließlich der Karenzfrist und der Anrechnung von Vermögen und Einkommen, werden durch eine Verordnung des Regierungsrates geregelt. Bei der Festlegung dieser Kriterien werden die Gemeinden und der Fachverband für Zusatzleistungen konsultiert.
+        </p>
+    </section>
+
+    <!-- Anwendbare Bestimmungen für Zuschüsse -->
+    <section>
+        <h2>Anwendbare Bestimmungen</h2>
+        <p>
+            Für Zuschüsse gelten die Bestimmungen des ZLG, die auch für Beihilfen relevant sind, einschließlich der Paragraphen 15, 19, 22, 33 Abs. 2 und 38.
+        </p>
+    </section>
+
+    <!-- Weitere Informationen -->
+    <section>
+        <h2>Weitere Informationen</h2>
+        <p>
+            Für detailliertere Informationen zu Zuschüssen wende Dich bitte an die zuständige kantonale Ausgleichskasse oder besuche die offizielle Webseite der AHV/IV. Auch Informationen von Gemeinden und Fachverbänden können hilfreich sein.
+        </p>
+    </section>
+
+</div>
+{% endblock %}
