@@ -1,7 +1,7 @@
 /* Das Sternchen (*) ist ein universeller Selektor, der auf alle Elemente in der HTML-Struktur angewendet wird. */
 * {
     /* Die Schriftart für alle Elemente wird auf 'Helvetica' gesetzt. Falls diese nicht verfügbar ist, wird eine generische sans-serif Schriftart verwendet. */
-    font-family:'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Helvetica', 'Arial', sans-serif;
     /* Die Schriftstärke für alle Elemente wird auf 400 gesetzt. */
     font-weight: 400;
     /* 'box-sizing: border-box' bedeutet, dass die Gesamtbreite und -höhe eines Elements seine Rand- und Padding-Werte einschließt. */
