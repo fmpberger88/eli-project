@@ -58,28 +58,31 @@ h3 {
 
 h4 {
   font-weight: 400;
-  font-size: clamp(0.9rem, 1.25vw, 1.25rem);
+  font-size: clamp(1rem, 1.25vw, 1.25rem);
   margin-top: 20px;
     color: black;
 }
 
 p {
-    font-size: clamp(0.8rem, 1vw, 1rem);
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
 }
 
 .li-text {
-    font-size: clamp(0.8rem, 1vw, 1rem);
+    font-size: clamp(1rem, 1vw, 1rem);
 }
 
 .title-image-container {
     display: flex;
+    flex-direction: row;
     justify-content: center; /* Zentriert die Elemente horizontal */
     align-items: center; /* Vertikale Ausrichtung */
-    padding-bottom: 100px;
+    padding-bottom: 150px;
 }
 
 .img_container {
-    padding-left: 20px;
+    position: absolute;
+    top: 150px;
+    left: 75px;
 }
 
 .image_front {
@@ -87,8 +90,8 @@ p {
     height: auto;
     object-fit: cover;
     border-radius: 50%;
-    position: absolute;
     align-self: flex-end;
+    margin-bottom: 30px;
 }
 
 
@@ -181,6 +184,7 @@ nav a:hover {
 .card-color {
     background-color: #CCE6FF;
     color: black;
+    height: 300px;
 }
 
 .card-color:hover {
@@ -272,10 +276,17 @@ footer {
         padding-bottom: 0;
     }
 
+    .img_container {
+        padding-right: 0;
+        position: relative;
+        top: auto;
+        left: auto;
+    }
     .image_front {
         position: relative;
         align-self: center;
         margin-bottom: 30px;
+        padding: 0;
     }
 
 }
