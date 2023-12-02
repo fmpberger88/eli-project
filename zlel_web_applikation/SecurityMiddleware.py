@@ -9,11 +9,16 @@ class SecurityMiddleware:
         response['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains'
 
         # Content-Security-Policy
-        # Customize this policy based on your needs
-        response['Content-Security-Policy'] = "default-src 'self'; script-src 'self'; object-src 'none';"
+        # Ermöglicht das Laden von Stilen von Google Fonts und Bootstrap CDN
+        csp = (
+            "default-src 'self'; "
+            "script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; "
+            "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; "
+            "object-src 'none';"
+        )
+        response['Content-Security-Policy'] = csp
 
         # Permissions-Policy
-        # You need to customize this according to the APIs you need
         response['Permissions-Policy'] = 'geolocation=(self), microphone=()'
 
         return response
