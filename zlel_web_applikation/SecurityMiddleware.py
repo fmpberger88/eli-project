@@ -9,11 +9,11 @@ class SecurityMiddleware:
         response['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains'
 
         # Content-Security-Policy
-        # Ermöglicht das Laden von Stilen von Google Fonts und Bootstrap CDN
         csp = (
             "default-src 'self'; "
             "script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; "
             "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; "
+            "img-src 'self' data:; "  # Allow images from same origin and data URLs
             "object-src 'none';"
         )
         response['Content-Security-Policy'] = csp
