@@ -11,6 +11,11 @@
     /* Setzt die Außenabstände aller Elemente auf 0. */
     margin: 0;
 }
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
 /*ok*/
 header {
     font-size: 22px;
@@ -38,21 +43,32 @@ h1 {
 }
 
 h2 {
-  font-weight: 700;
-  font-size: clamp(1rem, 2vw, 2rem);
-  margin-top: 30px;
+    font-weight: 700;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    margin-top: 30px;
     color: #00407C;
 }
 
 h3 {
-  font-weight: 400;
-  font-size: clamp(0.75rem, 1.25vw, 1.25rem);
-  margin-top: 30px;
+    font-weight: 400;
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
+    margin-top: 20px;
     color: #00407C;
 }
 
+h4 {
+  font-weight: 400;
+  font-size: clamp(0.9rem, 1.25vw, 1.25rem);
+  margin-top: 20px;
+    color: black;
+}
+
 p {
-    font-size: clamp(0.5rem, 1vw, 1rem);
+    font-size: clamp(0.8rem, 1vw, 1rem);
+}
+
+.li-text {
+    font-size: clamp(0.8rem, 1vw, 1rem);
 }
 
 .title-image-container {
@@ -89,6 +105,7 @@ p {
     margin: 0 auto; /* Zentriert den Container selbst im übergeordneten Element */
     padding: 20px; /* Fügt Innenabstand hinzu, optional für besseres Layout */
 }
+
 
 
 /*ok/
@@ -166,18 +183,52 @@ nav a:hover {
     color: black;
 }
 
+.card-color:hover {
+    background-color: #5BA1E3;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Bild leicht vergrößern */
+    transition: transform 0.3s ease;
+
+}
+
 .button-color {
-    background-color: #00407C;
+    background-color: #0F2D4A;
     color: white;
 }
 
+.button-color:hover {
+    background-color: #D29D46;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button-style {
+    border-radius: 10px;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
 footer {
-    padding-top: 0;
-    padding-bottom: 1%;
-    margin: 0.03%;
+    padding: 1rem 0;
+    margin-top: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #468ED2;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
+    text-decoration: underline;
 }
 
 .col {
@@ -204,7 +255,7 @@ footer {
     text-decoration: underline;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
     #body{width: 100%;}
     #header{width: 100%;}
     #a {width: 100%;}
@@ -214,6 +265,17 @@ footer {
     .info-box {
         width: 100%;
         text-align: center;
+    }
+
+    .title-image-container {
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+
+    .image_front {
+        position: relative;
+        align-self: center;
+        margin-bottom: 30px;
     }
 
 }
