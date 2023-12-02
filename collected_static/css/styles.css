@@ -46,17 +46,35 @@ h2 {
 
 h3 {
   font-weight: 400;
-  font-size: clamp(0.5rem, 1vw, 1rem);
+  font-size: clamp(0.75rem, 1.25vw, 1.25rem);
   margin-top: 30px;
     color: #00407C;
 }
 
-.img_front {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+p {
+    font-size: clamp(0.5rem, 1vw, 1rem);
 }
+
+.title-image-container {
+    display: flex;
+    justify-content: center; /* Zentriert die Elemente horizontal */
+    align-items: center; /* Vertikale Ausrichtung */
+    padding-bottom: 100px;
+}
+
+.img_container {
+    padding-left: 20px;
+}
+
+.image_front {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    align-self: flex-end;
+}
+
 
 .info-box {
     width: 800px;
@@ -67,7 +85,7 @@ h3 {
     flex-direction: column;
     align-items: center; /* Zentriert die Inhalte horizontal im Flex-Container */
     justify-content: center; /* Zentriert die Inhalte vertikal im Flex-Container */
-    width: 80%;
+    width: 70%;
     margin: 0 auto; /* Zentriert den Container selbst im übergeordneten Element */
     padding: 20px; /* Fügt Innenabstand hinzu, optional für besseres Layout */
 }
@@ -143,8 +161,18 @@ nav a:hover {
     color: #007BFF;
 }
 
+.card-color {
+    background-color: #CCE6FF;
+    color: black;
+}
+
+.button-color {
+    background-color: #00407C;
+    color: white;
+}
+
 footer {
-    padding-top: 0%;
+    padding-top: 0;
     padding-bottom: 1%;
     margin: 0.03%;
     display: flex;
