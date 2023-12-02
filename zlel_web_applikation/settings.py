@@ -61,6 +61,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'zlel_web_applikation.SecurityMiddleware.SecurityMiddleware',
 ]
 
 ROOT_URLCONF = 'zlel_web_applikation.urls'
