@@ -1,6 +1,5 @@
 from django.urls import path
-from .views import (supplementary_benefits_info,
-                    eligibility_requirements,
+from .views import (eligibility_requirements,
                     el_allgemein,
                     el_auslaender,
                     el_vermoegen,
@@ -12,7 +11,6 @@ from .views import (supplementary_benefits_info,
                     el_anmeldung)
 
 urlpatterns = [
-    path('supplementary_benefits_info/', supplementary_benefits_info, name='supplementary_benefits_info'),
     path('eligibility_requirements/', eligibility_requirements, name='eligibility_requirements'),
     path('el_allgemein/', el_allgemein, name='el_allgemein'),
     path('el_auslaender/', el_auslaender, name='el_auslaender'),

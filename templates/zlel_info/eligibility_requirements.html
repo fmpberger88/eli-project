@@ -1,7 +1,7 @@
 {% extends 'zlel_web_applikation/base.html' %}
 
 {% block content %}
-<div class="container">
+<main class="container">
     <h1>Themenspezifische Informationen über die Ergänzungsleistungen</h1>
 
     <!-- Introduction -->
@@ -70,7 +70,7 @@
                 <div class="card">
                     <div class="card-body card-color">
                         <h2 class="card-title">Krankheits- und Behinderungskosten</h2>
-                        <p class="card-text">Krankheits- und Behinderungskosten werden durch die Ergänzungsleistungen rückvergütet.</p>
+                        <p class="card-text">Können rückvergütet werden.</p>
                         <!-- Link zu einer detaillierten Ansicht oder externen Quelle -->
                         <a href="{% url 'el_krankheit' %}" class="btn button-color button-style">Mehr erfahren</a>
                     </div>
@@ -80,7 +80,7 @@
                 <div class="card">
                     <div class="card-body card-color">
                         <h2 class="card-title">Heime</h2>
-                        <p class="card-text">Die Ergänzungsleistungen kann bei einem Heimaufenthalt die Kosten decken</p>
+                        <p class="card-text">Die Ergänzungsleistungen kann bei einem Heimaufenthalt die Kosten decken.</p>
                         <!-- Link zu einer detaillierten Ansicht oder externen Quelle -->
                         <a href="{% url 'el_heim' %}" class="btn button-color button-style">Mehr erfahren</a>
                     </div>
@@ -90,9 +90,9 @@
                 <div class="card">
                     <div class="card-body card-color">
                         <h2 class="card-title">Kinder</h2>
-                        <p class="card-text">Welche Regeln gelten für Kinder bei den Ergänzungsleistungen</p>
+                        <p class="card-text">Welche Regeln gelten für Kinder bei den Ergänzungsleistungen?</p>
                         <!-- Link zu einer detaillierten Ansicht oder externen Quelle -->
-                        <a href="{% url 'el_heim' %}" class="btn button-color button-style">Mehr erfahren</a>
+                        <a href="{% url 'el_kinder' %}" class="btn button-color button-style">Mehr erfahren</a>
                     </div>
                 </div>
             </div>
@@ -103,9 +103,9 @@
     <section>
         <h2>Weitere Informationen und Antragstellung</h2>
         <p>
-            Für detaillierte Informationen oder um einen Antrag auf Ergänzungsleistungen zu stellen, wenden Sie sich bitte an Ihre kantonale Ausgleichskasse oder besuchen Sie die offizielle Webseite der AHV/IV.
+            Für detailliertere Informationen besuche bitte die offizielle Webseite der <a href="https://www.ahv-iv.ch/de" target="_blank" aria-label="Link zur Informationsstelle der AHV und IV">AHV/IV</a> oder wende Dich an die kantonale Ausgleichskasse. Bitte beachte, im Kanton Zürich musst Du Dich an die für Dich <a href="https://www.zh.ch/de/soziales/ergaenzungsleistungen-ahv-iv.html#main_decisiontree_copy" target="_blank" aria-label="Link zum Suchbaum für Zürcher EL-Durchführungsstellen">zuständige Durchführungsstelle</a> wenden, da im Kanton Zürich die Gemeinden für den Vollzug der Ergänzungsleistungen zuständig sind.
         </p>
     </section>
 
-</div>
+</main>
 {% endblock %}

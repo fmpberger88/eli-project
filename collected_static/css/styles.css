@@ -21,6 +21,10 @@ header {
     font-size: 22px;
 }
 
+.header-container {
+    padding-left: 150px;
+}
+
 /*ok/
 /* '#ksa' ist der ID-Selektor für das spezifische Element mit der ID 'ksa'. */
 #eli {
@@ -71,27 +75,34 @@ p {
     font-size: clamp(1rem, 1vw, 1rem);
 }
 
-.title-image-container {
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* 1/4 und 3/4 */
+    grid-template-rows: auto auto; /* 3 Zeilen */
+    row-gap: 30px; /* Abstand zwischen den Zeilen */
+    column-gap: 50px; /* Abstand zwischen den Spalten */
+    padding: 75px 150px;
+}
+
+.grid-item {
     display: flex;
-    flex-direction: row;
-    justify-content: center; /* Zentriert die Elemente horizontal */
-    align-items: center; /* Vertikale Ausrichtung */
-    padding-bottom: 150px;
+    align-items: center; /* Zentriert die Inhalte vertikal im Flex-Container */
 }
 
-.img_container {
-    position: absolute;
-    top: 150px;
-    left: 75px;
+.grid-item.image {
+    width: 250px; /* Fixe Breite des Bildcontainers */
+    height: 250px; /* Fixe Höhe des Bildcontainers */
+    border-radius: 50%; /* Rundes Bild */
+    overflow: hidden; /* Sorgt dafür, dass das Bild rund bleibt */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.image_front {
-    width: 250px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 50%;
-    align-self: flex-end;
-    margin-bottom: 30px;
+.grid-item.image img {
+    width: 100%; /* Bild füllt den Container aus */
+    height: 100%;
+    object-fit: cover; /* Sorgt dafür, dass das Bild die Größe beibehält und zugeschnitten wird */
 }
 
 
@@ -216,7 +227,7 @@ nav a:hover {
 }
 
 footer {
-    padding: 1rem 0;
+    padding: 30px 0 1rem;
     margin-top: auto;
     display: flex;
     flex-direction: column;
@@ -262,6 +273,9 @@ footer {
 @media only screen and (max-width: 768px) {
     #body{width: 100%;}
     #header{width: 100%;}
+    .header-container {
+        padding-left: 0;
+    }
     #a {width: 100%;}
     .container {
         width: 100%;
@@ -271,22 +285,25 @@ footer {
         text-align: center;
     }
 
-    .title-image-container {
-        flex-direction: column;
-        padding-bottom: 0;
+    .card-color {
+        height: 220px;
     }
 
-    .img_container {
-        padding-right: 0;
-        position: relative;
-        top: auto;
-        left: auto;
-    }
-    .image_front {
-        position: relative;
-        align-self: center;
-        margin-bottom: 30px;
-        padding: 0;
+    .grid-container {
+        grid-template-columns: 1fr 2fr;
+        padding: 50px;
+        row-gap: 50px;
     }
 
+}
+
+/* Für kleine Bildschirme (z.B. Smartphones) */
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Stapeln in einer Spalte */
+    }
+
+    .grid-item {
+        justify-content: center; /* Zentriert den Inhalt horizontal */
+    }
 }

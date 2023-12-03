@@ -5,7 +5,7 @@
     <title>Login</title>
 {% endblock %}
 {% block content %}  <!-- Define the content of this page -->
-    <div class="mt-5">
+    <div class="mt-5 mb-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card">
@@ -26,16 +26,15 @@
                                 </div>
                             {% endfor %}
                             <div class="d-grid">
-                                <button type="submit" class="btn btn-primary">Login</button>
+                                <button type="submit" class="btn button-style button-color">Login</button>
                             </div>
                         </form>
-
                         <div class="text-center mt-4">
                             <p>Falls Sie noch keinen Account besitzen. Bitte registrieren Sie sich</p>
-                            <a href="{% url 'signup' %}" class="btn btn-outline-secondary">Registrieren</a>
+                            <a href="{% url 'signup' %}" class="btn button-style button-color">Registrieren</a>
                         </div>
                         <div class="text-center mt-4">
-                            <a href="{% url 'password_reset' %}" class="btn btn-outline-secondary">Passwort vergessen?</a>
+                            <a href="{% url 'password_reset' %}" class="btn button-style button-color">Passwort vergessen?</a>
                         </div>
                     </div>
                 </div>

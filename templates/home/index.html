@@ -5,32 +5,32 @@
 {% endblock %}
 
 {% block content %}
-        <main role="main">
-            <section class="title-image-container">
-                <!-- Flex Container -->
-                <!-- Bildbereich -->
-                <div class="img_container">
-                    <img class="image_front" src="../../static/images/stadt_zh_2.webp" alt="Stadt Zürich" width="1024" height="932"/>
-                </div>
-                <div class="text-center">
-                    <!-- Titelbereich -->
-                    <div class="title-area">
-                        <h1 class="container-sm">Herzlich willkommen auf eli</h1>
-                        <h2 class="container-sm">Deine Seite rund um das Thema Ergänzungsleistungen</h2>
-                    </div>
-                </div>
-            </section>
-            <section class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <h3>Was ist eli?</h3>
-                        <p>eli ist eine auf privater Initiative entwickelte Website. Das heisst, die Angaben sind ohne Gewähr, sollen jedoch die zivilgesellschaftliche Selbstbestimmung fördern.</p>
-                    </div>
-                    <div class="col-sm-6">
-                        <h3>Wie funktioniert eli?</h3>
-                        <p>eli bietet Dir einen nicht abschliessenden Überblick über die Ergänzungsleistungen und insbesondere Zusatzleistungen im Kanton Zürich. Bei Bedarf kannst Du ein Konto eröffnen, und Dich im Forum der Community beteiligen.</p>
-                    </div>
-                </div>
-            </section>
-           </main>
+    <main role="main">
+        <h1 class="container-sm text-center">Herzlich willkommen auf eli</h1>
+        <h2 class="container-sm text-center">Deine Seite rund um das Thema Ergänzungsleistungen</h2>
+        <!-- Hier beginnt das Grid-System -->
+        <div class="grid-container">
+            <!-- Zeile 1 -->
+            <div class="grid-item image">
+                <img class="image_front" src="../../static/images/zuerich.webp" alt="Stadt Zürich" width="1024" height="932"/>
+            </div>
+            <div class="grid-item text">
+                <p>eli bietet Dir einen Überblick über die Zusatzleistungen und Ergänzungsleistungen im Kanton Zürich. Bei Bedarf kannst Du ein Konto eröffnen, und Dich im Forum zu beteiligen. Sie ist auf Basis privater Initiative entstanden und soll Betroffene informieren und ihre zivilgesellschaftliche Selbstbestimmung fördern.</p>
+            </div>
+            <!-- Zeile 2 -->
+            <div class="grid-item image">
+                <img class="image_front" src="../../static/images/bundeshaus.webp" alt="Stadt Zürich" width="1024" height="932"/>
+            </div>
+            <div class="grid-item text">
+                <p>Die Ergänzungsleistungen wurden im Jahr 1965 eingeführt als Reaktion auf die unzureichenden Renten der Alters- und Hinterlassenenversicherung (AHV) und der Invalidenversicherung (IV). Diese Renten erfüllten nicht den Verfassungsauftrag der Existenzsicherung, was zu einer signifikanten Anzahl von Rentnerinnen und Rentnern führte, die unter dem Existenzminimum lebten. Die Ergänzungsleistung schliesst diese Lücke.</p>
+            </div>
+            <!-- Zeile 3 -->
+            <div class="grid-item image">
+                <img class="image_front" src="../../static/images/people.webp" alt="Stadt Zürich" width="1024" height="932"/>
+            </div>
+            <div class="grid-item text">
+                <p>Ergänzungsleistungen sind in der Schweiz als Sozialversicherungsleistungen auf Bundesebene geregelt und nicht als Sozialhilfe zu verstehen. Sie bieten eine bedarfsgeprüfte Unterstützung, die über Steuermittel finanziert wird und dienen der Deckung des grundlegenden Lebensbedarfs von Personen, deren Renten und Einkommen für den Lebensunterhalt nicht ausreichen. Die Leistungen umfassen auch Pflege- und Heimkosten und haben sich als wichtiger Teil der sozialen Sicherheit in der Schweiz etabliert.</p>
+            </div>
+        </div>
+    </main>
 {% endblock %}

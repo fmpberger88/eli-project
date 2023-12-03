@@ -27,7 +27,7 @@
 
         <!-- Start of the navigation bar -->
         <header class="navbar navbar-expand-lg navbar-light bg-white">
-            <div class="container-fluid">
+            <div class="container-fluid header-container">
 
                 <!-- Navbar brand that links to the home page -->
                 <a id="eli" class="navbar-brand ml-6" href="{% url 'home' %}">eli</a>
@@ -40,18 +40,15 @@
                 <!-- Navbar content that collapses on small screens -->
                 <nav class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
-                        <!-- A dropdown menu named 'Durchführungsstelle' -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="durchfuehrungsstelleDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                               Ergänzungsleistungen
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="durchfuehrungsstelleDropdown">
-                                <li><a class="dropdown-item" href="{% url 'supplementary_benefits_info' %}">Allgemeine Informationen</a></li>
                                 <li><a class="dropdown-item" href="{% url 'eligibility_requirements' %}">Themenspezifische Informationen</a></li>
                                 <li><a class="dropdown-item" href="{% url 'el_anmeldung' %}">Antragsverfahren</a></li>
                             </ul>
                         </li>
-                        <!-- A dropdown menu named 'Leistungstypen' -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle nav-text" href="#" id="leistungenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                               Kantonale Leistungen Zürich
@@ -62,19 +59,8 @@
                                 <li><a class="dropdown-item" href="{% url 'betreuung_alter' %}">Betreuung im Alter</a></li>
                             </ul>
                         </li>
-                        <!-- A dropdown menu named 'Informationen' -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="informationenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Community
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="informationenDropdown">
-                              <li><a class="dropdown-item" href="{% url 'forum_index' %}">Forum</a></li>
-                              <li><a class="dropdown-item" href="#">Erfahrungsberichte & Testimonials</a></li>
-                            </ul>
-                        </li>
-                        <!-- A link to the logout view -->
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'konto' %}">Mein Konto</a>
+                            <a class="nav-link" href="{% url 'forum_index' %}">Forum</a>
                         </li>
                         {% if user.is_authenticated %}
                             <li class="nav-item">
