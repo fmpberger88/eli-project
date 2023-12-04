@@ -151,13 +151,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'posteo.de'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'f.m.p.berger@posteo.de'  # Your Posteo email address
-EMAIL_HOST_PASSWORD = 'bw_nMa_VdsDXkgHxCRrAj7zLnJKaQYnmoMVGYr-EPE-X'  # Your Posteo password
-# EMAIL_HOST_USER = os.environ.get('POSTEO_USER')  # Your Posteo email address
-# EMAIL_HOST_PASSWORD = os.environ.get('POSTEO_PASSWORD')  # Your Posteo password
+EMAIL_HOST_USER = os.environ.get('POSTEO_USER')  # Your Posteo email address
+EMAIL_HOST_PASSWORD = os.environ.get('POSTEO_PASSWORD')  # Your Posteo password
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'f.m.p.berger@posteo.de'  # Default from email
-# DEFAULT_FROM_EMAIL = os.environ.get('POSTEO_USER')  # Default from email
+DEFAULT_FROM_EMAIL = os.environ.get('POSTEO_USER')  # Default from email
 
 
 # Redirect URLs after login and logout
