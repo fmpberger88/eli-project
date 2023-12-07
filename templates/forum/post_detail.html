@@ -8,8 +8,8 @@
     <div class="post-content mb-4">
         <p>{{ post.content }}</p>
         {% if request.user == post.author %}
-            <a href{% url 'update_post' post_id=post.pk %}>Bearbeiten</a>
-            <a href="{% url 'delete_post' pk=post.pk %}">Löschen</a>
+            <a class="btn button-style button-color" href={% url 'update_post' post_id=post.pk %}>Bearbeiten</a>
+            <a class="btn button-style button-color" href="{% url 'delete_post' pk=post.pk %}">Löschen</a>
         {% endif %}
     </div>
 
@@ -23,8 +23,8 @@
                     <p class="card-text">{{ reply.content }}</p>
                 </div>
             {% if request.user == reply.author %}
-                <a href="{% url 'update_reply' pk=reply.pk %}">Bearbeiten</a>
-                <a href="{% url 'delete_reply' pk=reply.pk %}">Löschen</a>
+                <a class="btn button-style button-color" href="{% url 'update_reply' pk=reply.pk %}">Bearbeiten</a>
+                <a class="btn button-style button-color" href="{% url 'delete_reply' pk=reply.pk %}">Löschen</a>
             {% endif %}
             </div>
         {% empty %}
