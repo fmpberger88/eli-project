@@ -38,6 +38,28 @@ def add_post(request):
     return render(request, 'forum/add_post.html', {'form': form})
 
 
+@login_required()
+def update_post(request, post_id):
+    post = get_object_or_404(Post, pk=post_id)
+    if request.method == 'POST':
+        form = PostForm(request.POST, instance=post)
+        if form.is_valid():
+            form.save()
+            return redirect('post_detail', post_id=post_id)
+    else:
+        form = PostForm(instance=post)
+    return render(request, 'forum/edit_post.html', {'form': form})
+
+
+@login_required()
+def delete_post(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    if request.method == 'POST':
+        post.delete()
+        return redirect('forum_index')
+    return render(request, 'forum/delete_post.html', {'post': post})
+
+
 @login_required
 def add_reply(request, post_id):
     post = get_object_or_404(Post, pk=post_id)
@@ -52,3 +74,25 @@ def add_reply(request, post_id):
     else:
         form = ReplyForm()
     return render(request, 'forum/add_reply.html', {'form': form, 'post': post})
+
+
+@login_required()
+def update_reply(request, pk):
+    reply = get_object_or_404(Reply, pk=pk)
+    if request.method == 'POST':
+        form = ReplyForm(request.POST, instance=reply)
+        if form.is_valid():
+            reply = form.save()
+            return redirect('post_detail', post_id=reply.post.id)
+    else:
+        form = ReplyForm(instance=reply)
+    return render(request, 'forum/edit_reply.html', {'form': form, 'post': reply.post})
+
+
+@login_required()
+def delete_reply(request, pk):
+    reply = get_object_or_404(Reply, pk=pk)
+    if request.method == 'POST':
+        reply.delete()
+        return redirect('forum_index')
+    return render(request, 'forum/delete_reply.html', {"post": reply})

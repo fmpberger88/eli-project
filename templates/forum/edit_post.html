@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'zlel_web_applikation/base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+    <h1>Beitrag bearbeiten</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn button-style button-color">Update</button>
+    </form>
+{% endblock %}

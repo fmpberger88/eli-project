@@ -1,10 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'zlel_web_applikation/base.html' %}
+
+{% block content %}
+    <div class="container_post">
+
+        <!-- User Posts Section -->
+        <h1 class="my-4">Deine Beiträge</h1>
+        {% for post in user_post %}
+            <div class="card mb-4 card-content card-color">
+                <div class="card-body">
+                    <h2 class="card-title">{{ post.title }}</h2>
+                    <p class="card-text">{{ post.content }}</p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <small class="text-muted">Veröffentlicht am {{ post.date_posted }}</small>
+                        <div>
+                            <a href="{% url 'update_post' post_id=post.pk %}" class="btn button-style button-color">Bearbeiten</a>
+                            <a href="{% url 'delete_post' pk=post.pk %}" class="btn button-style button-color">Löschen</a>
+                        </div>
+                </div>
+            </div>
+        {% empty %}
+            <p>Du hast noch keine Beiträge erfasst</p>
+        {% endfor %}
+
+        <!-- User Replies Section -->
+        <h1 class="my-4">Deine Antworten</h1>
+        {% for reply in user_replies %}
+            <div class="card mb-4 card-content card-color">
+                <div class="card-body">
+                    <p class="card-text">{{ reply.content }}</p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <small class="text-muted">Antwort veröffentlicht am {{ reply.date_posted }}</small>
+                    <div>
+                        <a href="{% url 'post_detail' post_id=reply.post.pk %}" class="btn button-color button-style">Zeige Beitrag</a>
+                        <a href="{% url 'update_reply' pk=reply.pk %}" class="btn button-color button-style">Bearbeiten</a>
+                        <a href="{% url 'delete_reply' pk=reply.pk %}" class="btn button-color button-style">Löschen</a>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <p>Du hast noch keine Antworten erfasst.</p>
+        {% endfor %}
+
+    </div>  <!-- End of container -->
+{% endblock %}

@@ -1,12 +1,16 @@
 {% extends 'zlel_web_applikation/base.html' %}
 
 {% block content %}
-<div class="container my-4">
+<div class="container_post my-4">
     <h1 class="mb-3">{{ post.title }}</h1>
     <p class="text-muted">Veröffentlicht am {{ post.date_posted }} von {{ post.author.username }}</p>
 
     <div class="post-content mb-4">
         <p>{{ post.content }}</p>
+        {% if request.user == post.author %}
+            <a href{% url 'update_post' post_id=post.pk %}>Bearbeiten</a>
+            <a href="{% url 'delete_post' pk=post.pk %}">Löschen</a>
+        {% endif %}
     </div>
 
     <!-- Antworten auf den Beitrag -->
@@ -18,6 +22,10 @@
                     <h5 class="card-title">{{ reply.author.username }} am {{ reply.date_posted }}</h5>
                     <p class="card-text">{{ reply.content }}</p>
                 </div>
+            {% if request.user == reply.author %}
+                <a href="{% url 'update_reply' pk=reply.pk %}">Bearbeiten</a>
+                <a href="{% url 'delete_reply' pk=reply.pk %}">Löschen</a>
+            {% endif %}
             </div>
         {% empty %}
             <div class="alert alert-info">Noch keine Antworten vorhanden.</div>
@@ -31,11 +39,11 @@
             <form method="post" action="{% url 'add_reply' post.id %}">
                 {% csrf_token %}
                 <textarea name="content" class="form-control mb-2" rows="4" required></textarea>
-                <button type="submit" class="btn btn-primary">Antwort senden</button>
+                <button type="submit" class="btn button-color button-style">Antwort senden</button>
             </form>
         </section>
     {% else %}
-        <p><a href="{% url 'login' %}" class="btn btn-secondary">Melden Sie sich an</a>, um eine Antwort zu hinterlassen.</p>
+        <p><a href="{% url 'login' %}" class="btn button-style button-color">Melden Sie sich an</a>, um eine Antwort zu hinterlassen.</p>
     {% endif %}
 </div>
 {% endblock %}
