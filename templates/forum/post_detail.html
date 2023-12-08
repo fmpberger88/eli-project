@@ -23,8 +23,8 @@
                     <p class="card-text">{{ reply.content }}</p>
                 </div>
             {% if request.user == reply.author %}
-                <a class="btn button-style button-color" href="{% url 'update_reply' pk=reply.pk %}">Bearbeiten</a>
-                <a class="btn button-style button-color" href="{% url 'delete_reply' pk=reply.pk %}">Löschen</a>
+                <a class="btn button-style button-color a_button" href="{% url 'update_reply' pk=reply.pk %}">Bearbeiten</a>
+                <a class="btn button-style button-color a_button" href="{% url 'delete_reply' pk=reply.pk %}">Löschen</a>
             {% endif %}
             </div>
         {% empty %}

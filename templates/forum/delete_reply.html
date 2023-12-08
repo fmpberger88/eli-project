@@ -1,11 +1,13 @@
 {% extends 'zlel_web_applikation/base.html' %}
 
 {% block content %}
-    <h1>Delete Reply</h1>
-    <p>Are you sure you want to delete this reply?</p>
-    <form method="POST">
-        {% csrf_token %}
-        <button type="submit">Yes, delete</button>
-    </form>
-    <a href="{% url 'home' %}">No, take me back</a>
+    <div class="container_post">
+        <h1 class="mt-4">Antwort löschen</h1>
+        <p class="delete_text">Bist Du sicher, dass Du Deine Antwort löschen willst?</p>
+        <form method="POST">
+            {% csrf_token %}
+            <button class="btn button-color button-style a_button" type="submit">Ja, bitte löschen!</button>
+        </form>
+        <a class="mb-5 btn button-style button-color a_button" href="{% url 'forum_index' %}">Nein, bring mich zurück!</a>    
+    </div>
 {% endblock %}

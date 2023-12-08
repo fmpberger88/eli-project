@@ -71,9 +71,21 @@ p {
     font-size: clamp(1rem, 1.25vw, 1.25rem);
 }
 
+.delete_text {
+    margin-bottom: 50px;
+    margin-top: 70px;
+    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+    border-color: red;
+    border-style: solid;
+    background-color: rgba(255, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 15px;
+}
+
 .li-text {
     font-size: clamp(1rem, 1vw, 1rem);
 }
+
 
 .grid-container {
     display: grid;
@@ -127,6 +139,10 @@ p {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
+}
+
+.custom_lg {
+    width: 800px !important;
 }
 
 
@@ -241,6 +257,11 @@ nav a:hover {
     cursor: pointer;
 }
 
+.a_button {
+    width: 200px;
+    margin-top: 30px;
+}
+
 footer {
     padding: 30px 0 1rem;
     margin-top: auto;
@@ -310,6 +331,10 @@ footer {
         row-gap: 50px;
     }
 
+    .custom_lg {
+        width: 400px !important;
+    }
+
 }
 
 /* Für kleine Bildschirme (z.B. Smartphones) */
@@ -320,5 +345,9 @@ footer {
 
     .grid-item {
         justify-content: center; /* Zentriert den Inhalt horizontal */
+    }
+
+    .custom_lg {
+        width: 200px !important;
     }
 }

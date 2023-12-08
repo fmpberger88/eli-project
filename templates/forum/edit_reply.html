@@ -1,10 +1,23 @@
 {% extends 'zlel_web_applikation/base.html' %}
+{% load widget_tweaks %}
 
 {% block content %}
-    <h1>Edit reply</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn_default">Update</button>
-    </form>
+    <div class="my-4 container_post">
+        <h1 class="mb-4">Antwort bearbeiten</h1>
+        <form class="mb-4" method="post">
+            {% csrf_token %}
+
+            <!-- Platzhalter zum Anzeigen aller Formularfelder -->
+            <div>
+                {% for field in form %}
+                    <div class="mb-4">
+                        {% render_field field class="custom_lg" %}
+                    </div>
+                {% endfor %}
+            </div>
+
+            <button type="submit" class="save btn button-style button-color">Update</button>
+        </form>
+    </div>
+
 {% endblock %}

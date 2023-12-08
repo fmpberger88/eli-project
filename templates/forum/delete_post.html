@@ -1,11 +1,13 @@
 {% extends 'zlel_web_applikation/base.html' %}  <!-- Use your base template here -->
 
 {% block content %}
-    <h1>Delete Post</h1>
-    <p>Are you sure you want to delete the post "{{ post.title }}"?</p>
-    <form method="POST">
+    <div class="container_post">
+        <h1 class="mt-4">Beitrag löschen</h1>
+        <p class="delete_text">Bist Du sicher, dass Du Deinen Beitrag "{{ post.title }}" löschen möchtest?</p>
+        <form method="POST">
         {% csrf_token %}
-        <button type="submit">Yes, delete</button>
-    </form>
-    <a href="{% url 'home' %}">No, take me back</a> <!-- adjust according to your needs -->
+        <button class="btn button-color button-style a_button" type="submit">Ja, bitte löschen</button>
+        </form>
+        <a class="mb-5 btn button-style button-color a_button" href="{% url 'forum_index' %}">Nein, bring mich zurück</a> <!-- adjust according to your needs -->
+    </div>
 {% endblock %}

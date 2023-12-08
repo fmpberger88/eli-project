@@ -2,13 +2,19 @@
 {% load widget_tweaks %}
 
 {% block content %}
-    <div class="my-4 container">
+    <div class="my-4 container_post">
         <h1 class="mb-4">Beitrag bearbeiten</h1>
-        <form method="POST">
+        <form class="mb-4" method="POST">
             {% csrf_token %}
-            <div class="mb-3">
-                {{ form.as_p }}
+            <!-- Platzhalter zum Anzeigen aller Formularfelder -->
+            <div>
+                {% for field in form %}
+                    <div class="mb-4">
+                        {% render_field field class="custom_lg" %}
+                    </div>
+                {% endfor %}
             </div>
+
             <button type="submit" class="save btn button-style button-color">Update</button>
         </form>
     </div>
