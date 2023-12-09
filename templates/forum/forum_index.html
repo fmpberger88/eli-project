@@ -18,11 +18,11 @@
         <div class="row">
             {% for category in categories %}
                 <div class="col-md-4 mb-3">
-                    <div class="card h-100">
-                        <div class="card-body card-color card-content">
+                    <div class="card card-color">
+                        <div class="card-body card-content">
                             <h2 class="card-title">{{ category.name }}</h2>
                             <p class="card-text">{{ category.description }}</p>
-                            <a href="{% url 'forum_category' category.name %}" class="btn btn-outline-primary button-color button-style">Mehr erfahren</a>
+                            <a href="{% url 'forum_category' category.name %}" class="btn button-color button-style">Mehr erfahren</a>
                         </div>
                     </div>
                 </div>
