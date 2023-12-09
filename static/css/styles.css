@@ -350,4 +350,15 @@ footer {
     .custom_lg {
         width: 200px !important;
     }
+
+    .button-style {
+        font-weight: 200;
+        font-size: 12px;
+        margin: 5px;
+        width: 100px;
+    }
+
+    .small_displays {
+        display: none;
+    }
 }

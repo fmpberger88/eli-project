@@ -12,7 +12,7 @@
                     <p class="card-text">{{ post.content }}</p>
                 </div>
                 <div class="card-footer d-flex justify-content-between">
-                    <small class="text-muted">Veröffentlicht am {{ post.date_posted }}</small>
+                    <small class="text-muted small_displays">Veröffentlicht am {{ post.date_posted }}</small>
                         <div>
                             <a href="{% url 'update_post' post_id=post.pk %}" class="btn button-style button-color">Bearbeiten</a>
                             <a href="{% url 'delete_post' pk=post.pk %}" class="btn button-style button-color">Löschen</a>
@@ -31,7 +31,7 @@
                     <p class="card-text">{{ reply.content }}</p>
                 </div>
                 <div class="card-footer d-flex justify-content-between">
-                    <small class="text-muted">Antwort veröffentlicht am {{ reply.date_posted }}</small>
+                    <small class="text-muted small_displays">Antwort veröffentlicht am {{ reply.date_posted }}</small>
                     <div>
                         <a href="{% url 'post_detail' post_id=reply.post.pk %}" class="btn button-color button-style">Zeige Beitrag</a>
                         <a href="{% url 'update_reply' pk=reply.pk %}" class="btn button-color button-style">Bearbeiten</a>
