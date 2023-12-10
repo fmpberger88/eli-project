@@ -1,0 +1,20 @@
+{% extends 'zlel_web_applikation/base.html' %}
+
+{% block content %}
+    <div class="container_search">
+      <h1 class="mb-4">Such-Ergebnisse</h1>
+      {% if results %}
+        <ul>
+        {% for post in results %}
+            <li class="mb-4 card li_search card-color card-content">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.content|truncatewords:5 }}</p>
+                <a class="btn button-color button-style" href="{% url 'post_detail' post.id %}">Zum Beitrag</a>
+            </li>
+        {% endfor %}
+        </ul>
+      {% else %}
+        <p>Keine Treffer gefunden.</p>
+      {% endif %}
+    </div>
+{% endblock %}

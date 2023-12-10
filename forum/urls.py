@@ -7,7 +7,8 @@ from .views import (forum_index,
                     update_post,
                     delete_post,
                     delete_reply,
-                    update_reply
+                    update_reply,
+                    search
                     )
 
 urlpatterns = [
@@ -20,4 +21,5 @@ urlpatterns = [
     path('post/<int:pk>/delete/', delete_post, name='delete_post'),
     path('reply/<int:pk>/edit/', update_reply, name='update_reply'),
     path('reply/<int:pk>/delete/', delete_reply, name='delete_reply'),
+    path('search/', search, name='search')
 ]

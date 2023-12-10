@@ -1,3 +1,4 @@
+from django.db.models import Q
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Post, Category, Reply
 from .forms import PostForm, ReplyForm
@@ -96,3 +97,12 @@ def delete_reply(request, pk):
         reply.delete()
         return redirect('forum_index')
     return render(request, 'forum/delete_reply.html', {"post": reply})
+
+
+def search(request):
+    query = request.GET.get('q')
+    if query:
+        results = Post.objects.filter(Q(title__icontains=query) | Q(content__icontains=query)).order_by('-date_posted')
+    else:
+        results = None
+    return render(request, 'forum/search.html', {'results': results, 'query': query})

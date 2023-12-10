@@ -2,25 +2,26 @@
 
 {% block content %}
 <div class="container_post my-4">
-    <h1 class="mb-3">{{ post.title }}</h1>
-    <p class="text-muted">Veröffentlicht am {{ post.date_posted }} von {{ post.author.username }}</p>
+    <div>
+        <h1 class="mb-2">{{ post.title }}</h1>
+        <p>Veröffentlicht am {{ post.date_posted }} von {{ post.author.username }}</p>
 
-    <div class="post-content mb-4">
-        <p>{{ post.content }}</p>
-        {% if request.user == post.author %}
-            <a class="btn button-style button-color" href={% url 'update_post' post_id=post.pk %}>Bearbeiten</a>
-            <a class="btn button-style button-color" href="{% url 'delete_post' pk=post.pk %}">Löschen</a>
-        {% endif %}
+        <div class="post-content mb-4">
+            <p>{{ post.content }}</p>
+            {% if request.user == post.author %}
+                <a class="btn button-style button-color" href={% url 'update_post' post_id=post.pk %}>Bearbeiten</a>
+                <a class="btn button-style button-color" href="{% url 'delete_post' pk=post.pk %}">Löschen</a>
+            {% endif %}
+        </div>
     </div>
-
     <!-- Antworten auf den Beitrag -->
     <section class="replies my-4">
         <h2>Antworten</h2>
         {% for reply in post.reply_set.all %}
-            <div class="card mb-2">
-                <div class="card-body">
-                    <h5 class="card-title">{{ reply.author.username }} am {{ reply.date_posted }}</h5>
-                    <p class="card-text">{{ reply.content }}</p>
+            <div>
+                <div>
+                    <p class="mt-4 answer_title">{{ reply.author.username }} am {{ reply.date_posted }}</p>
+                    <p class="mt-2 mb-4 card-text">{{ reply.content }}</p>
                 </div>
             {% if request.user == reply.author %}
                 <a class="btn button-style button-color a_button" href="{% url 'update_reply' pk=reply.pk %}">Bearbeiten</a>
