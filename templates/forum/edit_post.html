@@ -2,7 +2,7 @@
 {% load widget_tweaks %}
 
 {% block content %}
-    <div class="my-4 container_post">
+    <main class="my-4 container_post">
         <h1 class="mb-4">Beitrag bearbeiten</h1>
         <form class="mb-4" method="POST">
             {% csrf_token %}
@@ -17,6 +17,6 @@
 
             <button type="submit" class="save btn button-style button-color">Update</button>
         </form>
-    </div>
+    </main>
 
 {% endblock %}

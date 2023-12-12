@@ -1,12 +1,12 @@
 {% extends 'zlel_web_applikation/base.html' %}
 
 {% block content %}
-<div class="container_post">
+<main class="container_post">
     <h1>Antwort hinzufügen</h1>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="btn btn-primary">Antwort senden</button>
     </form>
-</div>
+</main>
 {% endblock %}

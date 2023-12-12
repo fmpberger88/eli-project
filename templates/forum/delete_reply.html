@@ -1,7 +1,7 @@
 {% extends 'zlel_web_applikation/base.html' %}
 
 {% block content %}
-    <div class="container_post">
+    <main class="container_post">
         <h1 class="mt-4">Antwort löschen</h1>
         <p class="delete_text">Bist Du sicher, dass Du Deine Antwort löschen willst?</p>
         <form method="POST">
@@ -9,5 +9,5 @@
             <button class="btn button-color button-style a_button" type="submit">Ja, bitte löschen!</button>
         </form>
         <a class="mb-5 btn button-style button-color a_button" href="{% url 'forum_index' %}">Nein, bring mich zurück!</a>    
-    </div>
+    </main>
 {% endblock %}

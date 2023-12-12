@@ -1,3 +1,4 @@
+
 /* Das Sternchen (*) ist ein universeller Selektor, der auf alle Elemente in der HTML-Struktur angewendet wird. */
 * {
     /* Die Schriftart für alle Elemente wird auf 'Helvetica' gesetzt. Falls diese nicht verfügbar ist, wird eine generische sans-serif Schriftart verwendet. */
@@ -6,17 +7,14 @@
     font-weight: 400;
     /* 'box-sizing: border-box' bedeutet, dass die Gesamtbreite und -höhe eines Elements seine Rand- und Padding-Werte einschließt. */
     box-sizing: border-box;
-    /* Setzt die Innenabstände aller Elemente auf 0. */
-    padding: 0;
-    /* Setzt die Außenabstände aller Elemente auf 0. */
-    margin: 0;
+
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
+body {
+    position: relative;
+    min-height: 100vh;
 }
-/*ok*/
+/* Header */
 header {
     font-size: 22px;
 }
@@ -25,8 +23,6 @@ header {
     padding-left: 150px;
 }
 
-/*ok/
-/* '#ksa' ist der ID-Selektor für das spezifische Element mit der ID 'ksa'. */
 #eli {
     /* Setzt den Außenabstand auf 50 Pixel. */
     margin: 50px;
@@ -40,6 +36,7 @@ header {
     font-size: 50px;
 }
 
+/* Überschrift-Elemente */
 h1 {
     font-weight: 700;
     font-size: clamp(1.25rem, 2.5vw, 3rem);
@@ -71,6 +68,16 @@ p {
     font-size: clamp(1rem, 1.25vw, 1.25rem);
 }
 
+a {
+    color: #00407C;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
 .delete_text {
     margin-bottom: 50px;
     margin-top: 70px;
@@ -93,7 +100,7 @@ p {
     grid-template-rows: auto auto; /* 3 Zeilen */
     row-gap: 30px; /* Abstand zwischen den Zeilen */
     column-gap: 50px; /* Abstand zwischen den Spalten */
-    padding: 75px 150px;
+    padding: 75px 150px 140px;
 }
 
 .grid-item {
@@ -129,7 +136,8 @@ p {
     justify-content: center; /* Zentriert die Inhalte vertikal im Flex-Container */
     width: 70%;
     margin: 0 auto; /* Zentriert den Container selbst im übergeordneten Element */
-    padding: 20px; /* Fügt Innenabstand hinzu, optional für besseres Layout */
+    /* Fügt Innenabstand hinzu, optional für besseres Layout */
+    padding: 20px 20px 120px;
 }
 
 .container_post {
@@ -138,7 +146,7 @@ p {
     justify-content: center;
     width: 80%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 20px 120px;
 }
 
 .container_search {
@@ -157,6 +165,14 @@ p {
 
 .custom_lg {
     width: 800px !important;
+}
+
+
+
+.input_search {
+    border-radius: 15px;
+    width: 250px;
+    height: 40px;
 }
 
 
@@ -276,6 +292,7 @@ nav a:hover {
 .button-color {
     background-color: #0F2D4A;
     color: white;
+    transition: background-color 0.2s ease-in, color 0.2s ease-in, box-shadow 0.2s ease-in;
 }
 
 .button-color:hover {
@@ -298,15 +315,19 @@ nav a:hover {
 }
 
 footer {
-    padding: 30px 0 1rem;
-    margin-top: auto;
+    height: 100px;
+    padding: 50px 0 0.9rem;
     display: flex;
+    margin: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #468ED2;
     color: black;
     font-weight: 600;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-top: double;
 }
 
 .footer-nav {
@@ -314,8 +335,13 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
     font-size: clamp(1rem, 1.25vw, 1.25rem);
+}
+
+
+
+.footer-nav a:hover {
     text-decoration: underline;
 }
 
@@ -334,14 +360,6 @@ footer {
     color: #333;
 }
 
-.impressum-container a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.impressum-container a:hover {
-    text-decoration: underline;
-}
 
 @media only screen and (max-width: 768px) {
     #body{width: 100%;}
@@ -364,8 +382,8 @@ footer {
 
     .grid-container {
         grid-template-columns: 1fr 2fr;
-        padding: 50px;
         row-gap: 50px;
+        padding: 50px 50px 100px;
     }
 
     .custom_lg {

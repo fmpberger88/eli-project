@@ -1,7 +1,7 @@
 {% extends 'zlel_web_applikation/base.html' %}
 
 {% block content %}
-<div class="container_post my-4">
+<main class="container_post my-4">
     <div>
         <h1 class="mb-2">{{ post.title }}</h1>
         <p>Veröffentlicht am {{ post.date_posted }} von {{ post.author.username }}</p>
@@ -46,5 +46,5 @@
     {% else %}
         <p><a href="{% url 'login' %}" class="btn button-style button-color">Melden Sie sich an</a>, um eine Antwort zu hinterlassen.</p>
     {% endif %}
-</div>
+</main>
 {% endblock %}

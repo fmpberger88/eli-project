@@ -1,8 +1,8 @@
 {% extends 'zlel_web_applikation/base.html' %}
 
 {% block content %}
-    <div class="container_search">
-      <h1 class="mb-4">Such-Ergebnisse</h1>
+    <main class="container_search">
+      <h1 class="mb-4 text-center">Such-Ergebnisse</h1>
       {% if results %}
         <ul>
         {% for post in results %}
@@ -16,5 +16,5 @@
       {% else %}
         <p>Keine Treffer gefunden.</p>
       {% endif %}
-    </div>
+    </main>
 {% endblock %}

@@ -2,7 +2,7 @@
 {% load widget_tweaks %}
 
 {% block content %}
-<div class="my-4 container_post">
+<main class="my-4 container_post">
     <h1 class="mb-4">Neuen Beitrag erstellen</h1>
     <form method="post" class="needs-validation" novalidate>
         {% csrf_token %}
@@ -23,5 +23,5 @@
 
         <button type="submit" class="btn button-color button-style">Beitrag veröffentlichen</button>
     </form>
-</div>
+</main>
 {% endblock %}
