@@ -1,10 +1,104 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'zlel_web_applikation/base.html' %}
 
-</body>
-</html>
+{% block content %}
+<main class="container">
+    <h1>Krankheitskosten gemäss ELG und ELV</h1>
+
+    <!-- Anspruchsberechtigung -->
+    <section class="mt-4">
+        <h3>Anspruch auf Krankheits- und Behinderungskosten</h3>
+        <p>
+            Die Vergütung von Krankheits- und Behinderungskosten sollen zweckmässig und wirtschaftlich sein (ZLG §9) Gemäss §3 Absatz 1 der Zusatzleistungsverordnung des Kantons Zürichs können die Kosten nur durch die Ergänzungsleistung übernommen werden, wenn keine anderen Versicherungen die Kosten decken. Dabei werden aber die Einnahmen der Hilflosenentschädigung zur AHV/IV, der Unfall- oder Militärversicherung sowie der Assistenzbeitrag der IV nicht berücksichtigt (§ 3 Abs. 1 lit. a). 
+        </p>
+    </section>
+
+
+    <!-- Wohnsitzdauer und Karenzfrist -->
+    <section class="mt-4">
+        <h2>Welche Kosten werden übernommen?</h2>
+        <p>
+            Bei der Berechnung der Karenzfrist werden die Wohnsitzdauer des verstorbenen Ehepartners oder eingetragenen Partners sowie die Wohnsitzdauer der Eltern bei Waisen berücksichtigt. Das Ergänzungsleistungsgesetz (ELG) bestimmt im Artikel 14 die Vergütung der Krankheits- und Behinderungskosten durch die Ergänzungsleistung. Der Artikel 14 setzt die Rahmenbedingungen, jedoch tragen die Kantone die Kosten, sodass diese zwar die im ELG definierten Leistungen nicht unterschreiten dürfen, aber in der Ausführung einen gewissen Spielraum haben. Im Kanton Zürich regeln insbesondere das Zusatzleistungsgesetz (ZLG) sowie Zusatzleistungsverordnung (ZLV) die Details.
+        </p>
+        <ul>
+            <li class="li-text mt-5"><strong>Zahnarzt (Art. 14 ELG Abs. 1 lit. a): </strong>Die Ergänzungsleistungen übernehmen Kosten von einfachen, wirtschaftlichen und zweckmässigen Zahnbehandlungen. Sollten die Kosten höher als Fr. 3'000.- sein, so muss vorher bei der EL-Stelle ein Kostenvoranschlag eingereicht werden. Solltest Du dies nicht tun, so werden höchstens Fr. 3'000.-- übernommen. (§ 8 ZLV)</li>
+            <li class="li-text mt-3"><strong>Hilfe und Betreuung (Art. 14 ELG Abs. 1 lit. b): </strong>Brauchst Du Hilfe zu Hause, werden die Kosten für Hilfe, Pflege und Betreuung vergütet. Auch, wenn diese Leistungen in einem Tagesheim, Tagesspital oder Ambulatorium erbracht wurden. Werden die Leistungen durch einen privaten Träger erbracht, richtet sich die Vergütung nach den Tarifen von öffentlichen und gemeinnützigen Trägern. Leistungen können auch durch Personen erbracht werden, die nicht im selben Haushalt wohnen und nicht von einer anerkannten Spitex eingesetzt wurden. Der Stundensatz beträgt dann höchstens Fr 25.- und es können maximal Fr 4'800 pro Kalenderjahr vergütet werden ($11 Abs. 1 ZLV).</li>
+            <li class="li-text mt-3"><strong>ärztlich angeordnete Bade- und Erholungskuren (Art. 14 ELG Abs. 1 lit. c): </strong></li>
+            <li class="li-text mt-3"><strong>Diät (Art. 14 ELG Abs. 1 lit. d): </strong>Mehrkosten für ärztlich verordnete lebensnotwendige Diäten von Personen, die weder in einem Heim noch in einem Spital leben, jährlich pauschal mit Fr 2'100.- vergütet (§ 9 ZLV).</li>
+            <li class="li-text mt-3"><strong>Transport zur Behandlungsstelle (Art. 14 ELG Abs. 1 lit. e): </strong>Vergütet werden die Kosten für Notfalltransporte und notwendige Verlegungen in der Schweiz sowie zum nächstgelegenen Behandlungsort oder Tagesstrukturen. Du kannst dabei die Kosten des öffentlichen Transports geltend machen. Bist Du aufgrund einer Behinderung auf die Benützung eines anderen Transportmittels angewiesen, so kannst Du diese Kosten geltend machen (§ 15 ZLV).</li>
+            <li class="li-text mt-3"><strong> Hilfsmittel (Art. 14 ELG Abs. 1 lit. f): </strong>Die Anschaffungskosten oder die Kosten für die leihweise Abgabe können als Krankheitskosten vergütet werden ($ 16 ZLV und § 17 ZLV). Am besten lässt Du Dir die Notwendigkeit und Zweckmässigkeit ärztlich bescheinigen. Gerade bei Hörapparaten ist eine Bescheinigung von einer durch die IV anerkannten Fachperson notwendig. Die Kosten für die Abklärung sowie Bescheinigung werden dabei vergütet. Welche Hilfsmittel vergütet werden findest Du u.a. auch in den <a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.zh.ch/content/dam/zhweb/bilder-dokumente/organisation/sicherheitsdirektion/sozialamt/abteilung-sozialversicherungen/zusatzleistungen/weisungen-und-informationsschreiben/weisungen_kantonalen_sozialamtes_zum_vollzug_der_zusatzleistungen_zur_ahv_iv_stand_1._januar_2024.pdf" target="_blank">Weisungen des Kantonalen Sozialamts Zürichs</a>.</li>
+            <li class="li-text mt-3"><strong>Kostenbeteiligung Krankenkasse (Art. 14 ELG Abs. 1 lit. g): </strong>Die Ergänzungsleistungen übernehmen die Kostenbeteiligungen der obligatorischen Grundversicherung. Diese besteht aus der Franchise in Höhe von Fr. 300.- sowie des jährlichen Selbstbehalts von Fr. 700.-. Kostenbeteiligungen aus Zusatzversicherungen werden nicht übernommen (§ 7 ZLV).</li>
+            <!-- Weitere Punkte gemäß dem Gesetzestext -->
+        </ul>
+    </section>
+    
+    <section class="mt-4">
+        <h2>Fristen</h2>
+        <p>
+            Du kannst die Krankheits- und Behinderungskosten innert 15 Monaten nach Rechnungsstellung bei der EL-Stelle geltend machen (Art. 15 ELG). Dabei müssen die EL-Stellen die entstandenen Kosten spätestens nach 30 Tagen nach Deiner Einreichung vergüten. Spätestens aber nach 90 Tagen in Ausnahmefällen. 
+        </p>
+    </section>
+
+    <!-- Höchstanspruch und Anpassung -->
+    <section class="mt-4">
+        <h2>Höchstanspruch bei Krankheits- und Behinderungskosten</h2>
+        <div class="table-responsive mt-4">
+            <table class="table table-light table-sm">
+                <thead class="table-dark">
+                    <tr>
+                        <th class="font-weight-bold">Personen</th>
+                        <th class="font-weight-bold">Privathaushalt</th>
+                        <th class="font-weight-bold">Heim</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Alleinstehende</td>
+                        <td>25'000</td>
+                        <td>6'000</td>
+                    </tr>
+                    <tr>
+                        <td>Ehepaar, beide im</td>
+                        <td>50'000</td>
+                        <td>je 6'000</td>
+                    </tr>
+                    <tr>
+                        <td>Ehepaar, je 1 Partner im</td>
+                        <td>25'000</td>
+                        <td>6'000</td>
+                    </tr>
+                    <tr>
+                        <td>Vollwaisen</td>
+                        <td>10'000</td>
+                        <td>6'000</td>
+                    </tr>
+                    <tr>
+                        <td>Getrennt lebendes (fremd platziertes) Kind</td>
+                        <td>10'000</td>
+                        <td>6'000</td>
+                    </tr>
+                    <tr>
+                        <td>Übrige Kinder</td>
+                        <td>Im Betrag der Eltern enthalten</td>
+                        <td>6'000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Rückerstattung und unrechtmäßige Bezüge -->
+    <section class="mt-4">
+        <h2>Vergütung von Krankheits- und Behinderungskosten ist auch ohne monatliche Ergänzungsleistung möglich</h2>
+        <p>
+            Auch ohne Anspruch auf eine monatliche Ergänzungsleistung kannst Du unter Umständen Deine Krankheits- und Behinderungskosten von der EL-Stelle zurückfordern. Gerade bei teuren Hilfsmitteln, Zahnarztkosten oder Hilfe und Betreuung kann sich das für Dich lohnen (Art. 14 Abs. 6)!
+        </p>
+    </section>
+    <a href="{% url 'eligibility_requirements' %}" class="btn button-color button-style">Zurück</a>
+    <section>
+        <h2>Weitere Informationen und Antragstellung</h2>
+        <p>
+            Für detailliertere Informationen besuche bitte die offizielle Webseite der <a href="https://www.ahv-iv.ch/de" target="_blank" aria-label="Link zur Informationsstelle der AHV und IV">AHV/IV</a> oder wende Dich an die kantonale Ausgleichskasse. Bitte beachte, im Kanton Zürich musst Du Dich an die für Dich <a href="https://www.zh.ch/de/soziales/ergaenzungsleistungen-ahv-iv.html#main_decisiontree_copy" target="_blank" aria-label="Link zum Suchbaum für Zürcher EL-Durchführungsstellen">zuständige Durchführungsstelle</a> wenden, da im Kanton Zürich die Gemeinden für den Vollzug der Ergänzungsleistungen zuständig sind.
+        </p>
+    </section>
+</main>
+{% endblock %}
