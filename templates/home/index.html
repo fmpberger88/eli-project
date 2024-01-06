@@ -5,17 +5,22 @@
 {% endblock %}
 
 {% block content %}
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Diese Website verwendet Cookies, um sicherzustellen, dass Sie die beste Erfahrung auf unserer Website erhalten. <a href="{% url 'datenschutz' %}">Datenschutzerklärung</a></p>
+        <button id="cookie-accept">Cookies akzeptieren</button>
+    </div>
     <main role="main">
         <h1 class="container-sm text-center">Herzlich willkommen auf eli</h1>
-        <h2 class="container-sm text-center">Deine Seite rund um das Thema Ergänzungsleistungen</h2>
+        <h2 class="container-sm text-center">Deine Seite rund um das Thema Ergänzungsleistungen im Kanton Zürich</h2>
+        
         <!-- Hier beginnt das Grid-System -->
-        <div class="grid-container">
+        <article class="grid-container">
             <!-- Zeile 1 -->
             <div class="grid-item image">
                 <img class="image_front" src="../../static/images/zuerich.webp" alt="Stadt Zürich" width="1024" height="683"/>
             </div>
             <div class="grid-item text">
-                <p>eli bietet Dir einen Überblick über die Zusatzleistungen und Ergänzungsleistungen im Kanton Zürich. Bei Bedarf kannst Du ein Konto eröffnen, um Dich im Forum zu beteiligen. Sie ist auf Basis privater Initiative entstanden und soll Betroffene informieren und ihre zivilgesellschaftliche Selbstbestimmung fördern.</p>
+                <p>eli bietet Dir einen Überblick über die Zusatzleistungen und Ergänzungsleistungen im Kanton Zürich. Bei Bedarf kannst Du ein Konto eröffnen, um Dich im Forum zu beteiligen. Sie ist auf Basis privater Initiative entstanden und soll Betroffene informieren und ihre zivilgesellschaftliche Selbstbestimmung fördern. Für den Inhalt der Website kann deswegen keine Verantwortung übernommen werden. Hast Du spezifische Fragen, wende Dich bitte an Deine für Dich zuständige EL-Stelle.</p>
             </div>
             <!-- Zeile 2 -->
             <div class="grid-item image">
@@ -31,6 +36,23 @@
             <div class="grid-item text">
                 <p>Ergänzungsleistungen sind in der Schweiz als Sozialversicherungsleistungen auf Bundesebene geregelt und nicht als Sozialhilfe zu verstehen. Sie bieten eine bedarfsgeprüfte Unterstützung, die über Steuermittel finanziert wird und dienen der Deckung des grundlegenden Lebensbedarfs von Personen, deren Renten und Einkommen für den Lebensunterhalt nicht ausreichen. Die Leistungen umfassen auch Pflege- und Heimkosten und haben sich als wichtiger Teil der sozialen Sicherheit in der Schweiz etabliert.</p>
             </div>
-        </div>
+            <!-- Zeile 4 -->
+            <div class="grid-item image">
+                <img class="image_front" src="../../static/images/people_1.webp" alt="Stadt Zürich" width="1024" height="683"/>
+            </div>
+            <div class="grid-item text">
+                <p>Die Ergänzungsleistungen sind gesetzlich auf Bundesebene geregelt. Dazu kommen jeweils noch die kantonalen Gesetze dazu, die jeweils die bundesrechtlichen Bestimmungen ergänzen. Im Kanton Zürich spricht man von Zusatzleistungen. Diese bestehen aus den Ergänzungsleistungen, Beihilfen und Zuschüssen. Abgeleitet aus der <a href="https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20140518/de/pdf-a/fedlex-data-admin-ch-eli-cc-1999-404-20140518-de-pdf-a.pdf">Bundesverfassung</a> (Art. 112 BV) wurden konkrete Gesetzte zu den Ergänzungsleistungen erlassen. Diese werden in den Verordnungen nochmals spezifiziert und in den Weisungen der jeweiligen Behörden konkretisiert. Das gleiche passiert auf der kantonalen Ebene. Wenn Du dich informieren willst, lohnt es sich immer zuerst in den jeweiligen Gesetzen und Verordnungen nachzuschauen. Detaillierte Angaben und Beispiele findest Du in den Weisungen.</p>
+            </div>
+        </article>
+        <aside>
+            <ul>
+                <li><a href="https://www.fedlex.admin.ch/eli/cc/2007/804/de" target="_blank">Bundesgesetz über die Ergänzungsleistungen zur AHV/IV (ELG)</a></li>
+                <li><a href="https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de" target="_blank">Verordnung über die Ergänzungsleistungen zur AHV/IV (ELV)</a></li>
+                <li><a href="https://sozialversicherungen.admin.ch/de/d/6930" target="_blank">Wegleitung über die Ergänzungsleistungen zur AHV/IV (WEL)</a></li>
+                <li><a href="https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-831_3-1971_02_07-1971_01_01-123.html" target="_blank">Gesetz über die Zusatzleistungen zur AHV/IV (ZLG)</a></li>
+                <li><a href="https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-831_31-2008_03_05-2008_01_01-123.html" target="_blank">Verordnung über die Zusatzleistungen zur AHV/IV</a></li>
+                <li><a href="https://www.zh.ch/de/soziales/ergaenzungsleistungen-ahv-iv.html#-1837901559" target="_blank">Weisungen des Kantonale Sozialamtes zum Vollzug der Zusatzleistungen zur AHV/IV</a></li>
+            </ul>
+        </aside>
     </main>
 {% endblock %}

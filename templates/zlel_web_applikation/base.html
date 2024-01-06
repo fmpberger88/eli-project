@@ -15,7 +15,8 @@
         <!-- Load a custom CSS file from static files -->
         <base href="{% static '/' %}">
         <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-
+    
+        <script src="{% static 'js/cookie-banner.js' %}"></script>
         <meta name="author" content="Fabian Marc Pascal Berger"> <!-- Specify the author of the webpage -->
 
         {% block head %} <!-- A block that can be filled with content in child templates -->
@@ -96,6 +97,7 @@
                         <a href="https://www.fmpberger.com" target="_blank">Kontakt</a>
                         <!-- Link to the 'kontakt' view -->
                         <a href="{% url 'impressum' %}">Impressum</a>
+                        <a href="{% url 'datenschutz' %}">Datenschutz</a>
                     </nav>
                 </div>
             </div>
