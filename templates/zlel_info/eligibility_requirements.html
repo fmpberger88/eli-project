@@ -99,13 +99,14 @@
         </div>
     </section>
 
-    <!-- Weitere Informationen -->
-    <section>
-        <h2>Weitere Informationen und Antragstellung</h2>
-        <p>
-            Für detailliertere Informationen besuche bitte die offizielle Webseite der <a href="https://www.ahv-iv.ch/de" target="_blank" aria-label="Link zur Informationsstelle der AHV und IV">AHV/IV</a> oder wende Dich an die kantonale Ausgleichskasse. Bitte beachte, im Kanton Zürich musst Du Dich an die für Dich <a href="https://www.zh.ch/de/soziales/ergaenzungsleistungen-ahv-iv.html#main_decisiontree_copy" target="_blank" aria-label="Link zum Suchbaum für Zürcher EL-Durchführungsstellen">zuständige Durchführungsstelle</a> wenden, da im Kanton Zürich die Gemeinden für den Vollzug der Ergänzungsleistungen zuständig sind.
-        </p>
-    </section>
+    <a href="{% url 'eligibility_requirements' %}" class="btn button-color button-style">Zurück</a>
+    <aside>
+        <h2>Weitere Informationen</h2>
+        <ul>
+            <li><a href="https://www.ahv-iv.ch/de" target="_blank" aria-label="Link zur Informationsstelle der AHV und IV">Gehe auf die Informationsstelle AHV/IV</a></li>
+            <li><a href="https://www.zh.ch/de/soziales/ergaenzungsleistungen-ahv-iv.html#main_decisiontree_copy" target="_blank" aria-label="Link zum Suchbaum für Zürcher EL-Durchführungsstellen">Finde Deine EL-Stelle im Kanton Zürich</a></li>
+        </ul>
+    </aside>
 
 </main>
 {% endblock %}

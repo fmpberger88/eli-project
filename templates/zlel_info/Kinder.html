@@ -2,11 +2,8 @@
 
 {% block content %}
 <main class="container">
-    <h1>Zusätzliche Bestimmungen für Kinder</h1>
-
-    <!-- Inhalt des Artikels 5 -->
-    <section class="my-4">
-        <h2>Übersicht</h2>
+    <article class="my-4">
+        <h1>Zusätzliche Bestimmungen für Kinder</h1>
 
         <!-- Detaillierte Punkte -->
         <h3>Welche EL-Stelle ist zuständig?</h3>
@@ -29,14 +26,16 @@
             Du kannst allenfalls die Netto-Betreuungskosten für Kinder als Ausgaben anrechnen lassen, die das 11. Altersjahr noch nicht vollendet haben. Jedoch nicht, wenn die Betreuung durch Privatpersonen geleistet wird. Zudem musst Du die Notwendigkeit der Betreuung nachweisen. Also beispielsweise, dass eine Betreuung aufgrund einer Erwerbstätigkeit oder aus gesundheitlichen Gründen notwendig ist.
         </p>
 
-    </section>
+    </article>
 
-    <section>
+    <a href="{% url 'eligibility_requirements' %}" class="btn button-color button-style">Zurück</a>
+    <aside>
         <h2>Weitere Informationen</h2>
-        <p>
-            Für detailliertere Informationen besuche bitte die offizielle Webseite der <a href="https://www.ahv-iv.ch/de" target="_blank" aria-label="Link zur Informationsstelle der AHV und IV">AHV/IV</a> oder wende Dich an die kantonale Ausgleichskasse. Bitte beachte, im Kanton Zürich musst Du Dich an die für Dich <a href="https://www.zh.ch/de/soziales/ergaenzungsleistungen-ahv-iv.html#main_decisiontree_copy" target="_blank" aria-label="Link zum Suchbaum für Zürcher EL-Durchführungsstellen">zuständige Durchführungsstelle</a> wenden, da im Kanton Zürich die Gemeinden für den Vollzug der Ergänzungsleistungen zuständig sind.
-        </p>
-    </section>
+        <ul>
+            <li><a href="https://www.ahv-iv.ch/de" target="_blank" aria-label="Link zur Informationsstelle der AHV und IV">Gehe auf die Informationsstelle AHV/IV</a></li>
+            <li><a href="https://www.zh.ch/de/soziales/ergaenzungsleistungen-ahv-iv.html#main_decisiontree_copy" target="_blank" aria-label="Link zum Suchbaum für Zürcher EL-Durchführungsstellen">Finde Deine EL-Stelle im Kanton Zürich</a></li>
+        </ul>
+    </aside>
 
 </main>
 {% endblock %}

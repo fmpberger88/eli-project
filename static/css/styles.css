@@ -39,8 +39,9 @@ header {
 /* Überschrift-Elemente */
 h1 {
     font-weight: 700;
-    font-size: clamp(1.25rem, 2.5vw, 3rem);
+    font-size: clamp(1.25rem, 2vw, 2.25rem);
     color: #00407C;
+    margin-bottom: 30px;
 }
 
 h2 {
@@ -86,7 +87,7 @@ aside {
     align-items: center;
     justify-content: center;
     width: 90%;
-    margin: 0 auto 40px;
+    margin: 40px auto 20px;
 }
 
 aside li {

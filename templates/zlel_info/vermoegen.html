@@ -2,11 +2,8 @@
 
 {% block content %}
 <main class="container">
-    <h1>Voraussetzungen hinsichtlich des Vermögens (Artikel 9a ELG)</h1>
-
-    <!-- Inhalt des Artikels 5 -->
-    <section class="my-4">
-        <h2>Übersicht</h2>
+    <article class="my-4">
+        <h1>Voraussetzungen hinsichtlich des Vermögens (Artikel 9a ELG)</h1>
         <p>
             Artikel 9a des Ergänzungsleistungsgesetzes beschreibt spezifische Bedingungen für Vermögenswerte, die Du erfüllen musst, um Anspruch auf Ergänzungsleistungen zu haben. Die Bedingungen sind abhängig von Deinem Zivilstand und Deinem Alter. Massgebend ist Dein steuerbares Vermögen - ohne die Berücksichtigung der steuerrechtlichen Abzügen.
         </p>
@@ -44,14 +41,15 @@
 
 
 
-    </section>
+    </article>
     <a href="{% url 'eligibility_requirements' %}" class="btn button-color button-style">Zurück</a>
-    <section>
+    <aside>
         <h2>Weitere Informationen</h2>
-        <p>
-            Für detailliertere Informationen besuche bitte die offizielle Webseite der <a href="https://www.ahv-iv.ch/de" target="_blank" aria-label="Link zur Informationsstelle der AHV und IV">AHV/IV</a> oder wende Dich an die kantonale Ausgleichskasse. Bitte beachte, im Kanton Zürich musst Du Dich an die für Dich <a href="https://www.zh.ch/de/soziales/ergaenzungsleistungen-ahv-iv.html#main_decisiontree_copy" target="_blank" aria-label="Link zum Suchbaum für Zürcher EL-Durchführungsstellen">zuständige Durchführungsstelle</a> wenden, da im Kanton Zürich die Gemeinden für den Vollzug der Ergänzungsleistungen zuständig sind.
-        </p>
-    </section>
+        <ul>
+            <li><a href="https://www.ahv-iv.ch/de" target="_blank" aria-label="Link zur Informationsstelle der AHV und IV">Gehe auf die Informationsstelle AHV/IV</a></li>
+            <li><a href="https://www.zh.ch/de/soziales/ergaenzungsleistungen-ahv-iv.html#main_decisiontree_copy" target="_blank" aria-label="Link zum Suchbaum für Zürcher EL-Durchführungsstellen">Finde Deine EL-Stelle im Kanton Zürich</a></li>
+        </ul>
+    </aside>
 
 </main>
 {% endblock %}

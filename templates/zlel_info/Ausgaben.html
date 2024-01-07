@@ -1,10 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'zlel_web_applikation/base.html' %}
 
-</body>
-</html>
+{% block content %}
+<main class="container">
+    <article class="my-4">
+        <h1>Ausgaben</h1>
+        <p>
+            Diese Seite befindet sich im Aufbau...
+        </p>
+    </article>
+    <a href="{% url 'eligibility_requirements' %}" class="btn button-color button-style">Zurück</a>
+    <aside>
+        <h2>Weitere Informationen</h2>
+        <ul>
+            <li><a href="https://www.ahv-iv.ch/de" target="_blank" aria-label="Link zur Informationsstelle der AHV und IV">Gehe auf die Informationsstelle AHV/IV</a></li>
+            <li><a href="https://www.zh.ch/de/soziales/ergaenzungsleistungen-ahv-iv.html#main_decisiontree_copy" target="_blank" aria-label="Link zum Suchbaum für Zürcher EL-Durchführungsstellen">Finde Deine EL-Stelle im Kanton Zürich</a></li>
+        </ul>
+    </aside>
+</main>
+{% endblock %}
