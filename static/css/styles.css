@@ -111,7 +111,7 @@ aside a {
 
 aside li:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: scale(1.2); /* Bild leicht vergrößern */
+    transform: scale(1.1); /* Bild leicht vergrößern */
     transition: transform 0.3s ease;
     border-radius: 20px;
 }
@@ -175,10 +175,8 @@ aside a:hover {
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Zentriert die Inhalte horizontal im Flex-Container */
     justify-content: center; /* Zentriert die Inhalte vertikal im Flex-Container */
     width: 70%;
-    margin: 0 auto; /* Zentriert den Container selbst im übergeordneten Element */
     /* Fügt Innenabstand hinzu, optional für besseres Layout */
     padding: 20px 20px 120px;
 }
@@ -336,6 +334,7 @@ nav a:hover {
     background-color: #0F2D4A;
     color: white;
     transition: background-color 0.2s ease-in, color 0.2s ease-in, box-shadow 0.2s ease-in;
+    width: auto;
 }
 
 .button-color:hover {
@@ -424,7 +423,7 @@ footer {
     .grid-container {
         grid-template-columns: 1fr 2fr;
         row-gap: 50px;
-        padding: 50px 50px 100px;
+        padding: 50px 50px 20px;
     }
 
     .custom_lg {
