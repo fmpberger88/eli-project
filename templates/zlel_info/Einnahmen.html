@@ -3,10 +3,177 @@
 {% block content %}
 <main class="container">
     <article class="my-4">
-        <h1>Ausgaben</h1>
-        <p>
-            Diese Seite befindet sich im Aufbau...
-        </p>
+        <h1>Anrechnung von Einnahmen bei Ergänzungsleistungen</h1>
+        <section>
+            <h2>Welche Einnahmen werden Dir angerechnet(WEL Ziffer 3.4.1.1)?</h2>
+            <p>
+                Als Einnahmen werden Dir angerechnet:
+            </p>
+            <ul>
+                <li>Einkünfte aus Erwerbseinkommen</li>
+                <li>Einkünfte aus beweglichem und unbeweglichem Vermögen (z.B Sparzins, Dividenden, etc.)</li>
+                <li>Renten, Pensionen und andere wiederkehrende Einkünfte (z.B. AHV/IV-Rente oder IV-Taggelder)</li>
+                <li>Leistungen aus Verpfründungsvertrag und andere ähnliche Vereinbarungen (<a href="https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#a524" target="_blank">siehe Art. 524 Abs. 1 und 2 OR)</a></li>
+                <li>Familienzulagen</li>
+                <li>Auf Einkünfte und Vermögenswerte, auf die verzichtet worden sind</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Welche Einnahmen werden Dir NICHT angerechnet(WEL Ziffer 3.4.1.2)?</h2>
+            <p>
+                Nicht angerechnet werden Dir:
+            </p>
+            <ul>
+                <li>Verwandtenunterstützung nach Artikel 328 und 329 ZGB</li>
+                <li>Unterstützungen der öffentlichen Sozialhilfe</li>
+                <li>Öffentlichen oder private Leistungen mit ausgesprochenem Fürsorgecharakter (z.B. Stiftung Pro Senectute)</li>
+                <li>Stipendien</li>
+                <li>Hilflosenentschädigungen</li>
+                <li>Assistenzbeiträge der AHV oder der IV</li>
+                <li>Rentenzuschlag gemäss Artikel 34<sup>bis</sup> AHVG</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Wie wird Dein Erwerbseinkommen angerechnet (WEL Ziffer 3.4.2.1)?</h2>
+            <p>
+                Dir wird das Nettoerwerbseinkommen angerechnet. Das heisst die obligatorischen Beiträge (AHV, IV, EO, ALV, FZL, UV und BV) werden von Deinem Bruttoeinkommen abgezogen. Zusätzlich kannst Du sogenannte Gewinnungskosten abziehen, also Kosten, die Du für die Ausübung Deines Berufs auch in Deiner Steuererkläung abziehen könntest (WEL Randziffer 3533.23). Ausnahmen sind berufsorientierte Aus- und Weiterbildungen. Hier sind die tatsächlichen, nachzuweisenden Kosten anrechenbar (WEL Randziffer 3533.24).<br><br>Hast Du den Betrag ermittelt, so wird zwischen priviligierten und nicht priviligierten Erwerbseinkommen unterschieden. Bei der priviligierten Anrechnung sind vom Nettoerwerbseinkommen Fr. 1 000 bei Alleinstehenden und Fr 1 500 bei Ehepaaren und Personen mit rentenberechtigen oder an der Rente beteiligten Kindern abziehbar WEL Randziffer 3421.09). Vom Rest wird dann nochmals ein Drittel abgezogen, also zwei Drittel angerechnet. Bei einem Ehegatten oder eingetragenen Partner, der keinen EL-Anspruch hat, sind ohne Abzug eines Freibetrags 80 Prozent des Nettoerwerbseinkommens anzurechnen (WEL Randziffer 3421.10).
+            </p>
+        </section>
+        <section>
+            <h2>Faktoren für die Anrechnung von Erwerbseinkommen</h2>
+            <p>In der Tabelle findest Du je nach Konstellation die Freibeträge und Faktoren für die Anrechnung der Erwerbseinkommen.</p>
+            <div class="table-responsive">
+                <table class="table table-hover table-sm">
+                    <thead class="table-dark">
+                        <tr>
+                            <th class="font-weight-bold">Konstellation</th>
+                            <th class="font-weight-bold" colspan="2">Grundleistung</th>
+                            <th class="font-weight-bold" colspan="3">Freibetrag</th>
+                            <th class="font-weight-bold" colspan="3">Anrechnung</th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Ehegatte A</td>
+                            <td>Ehegatte B</td>
+                            <td>Ehegatte A</td>
+                            <td>Ehegatte B</td>
+                            <td>Kinder<sup>3</sup></td>
+                            <td>Ehegatte A</td>
+                            <td>Ehegatte B</td>
+                            <td>Kinder</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ehepaar</td>
+                            <td>Rente / HE</td>
+                            <td>Rente / HE</td>
+                            <td>1 500</td>
+                            <td>1 500</td>
+                            <td>1 500</td>
+                            <td>2/3</td>
+                            <td>2/3</td>
+                            <td>2/3</td>
+                        </tr>
+                        <tr>
+                            <td>Ehepaar</td>
+                            <td>Rente / HE</td>
+                            <td>nicht invalid</td>
+                            <td>1 500</td>
+                            <td>0</td>
+                            <td>1 500</td>
+                            <td>2/3</td>
+                            <td>80%</td>
+                            <td>2/3</td>
+                        </tr>
+                        <tr>
+                            <td>Ehepaar</td>
+                            <td>Rente / HE</td>
+                            <td>IV-Taggeld</td>
+                            <td>1 500</td>
+                            <td>0</td>
+                            <td>1 500</td>
+                            <td>2/3</td>
+                            <td>100%</td>
+                            <td>2/3</td>
+                        </tr>
+                        <tr>
+                            <td>Ehepaar</td>
+                            <td>IV-Taggeld</td>
+                            <td>nicht invalid</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>100%</td>
+                            <td>100%</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Ehepaar</td>
+                            <td>IV-Taggeld</td>
+                            <td>IV-Taggeld</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>100%</td>
+                            <td>100%</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Alleinstehend mit Kind</td>
+                            <td>Rente / HE</td>
+                            <td>-</td>
+                            <td>1 500</td>
+                            <td>-</td>
+                            <td>1 500</td>
+                            <td>2/3</td>
+                            <td>-</td>
+                            <td>2/3</td>
+                        </tr>
+                        <tr>
+                            <td>Alleinstehend ohne Kind</td>
+                            <td>Rente/ HE</td>
+                            <td>-</td>
+                            <td>1 000</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>2/3</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Alleinstehend ohne Kind</td>
+                            <td>IV-Taggeld</td>
+                            <td>-</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>100%</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Minderjährig mit IV-Taggeld</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>100%</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- ... Content below the table ... -->
+        </section>
+                <section>
+            <h2>Was ist Vermögensverzehr (WEL Ziffer 3.4.4)?</h2>
+            <p>
+                Das Vermögen, welches Deinen Freibetrag überschreitet (siehe dazu <a href="{% url 'el_vermoegen' %}">Vermögen</a>), wird Dir ein fiktives Einkommen angerechnet. Die EL-Stelle geht also davon aus, dass Du den Betrag, den Du durch den Vermögensverzehr weniger hast, quasi aus Deinem Vermögen deckst. Dieser beträgt in der Regel 1/15, bei Personen mit einer AHV-Rente jedoch 1/10 (WEL Randziffer 3441.02). Im Kanton Zürich gilt für Personen mit AHV Rente eine noch strengere Richtlinie, wenn diese in einem Heim leben. Dann beträgt der Vermögensverzehr 1/5 (§11 Abs. 3 ZLG). Lebt bei Ehepaaren oder Personen in eingetragener Partnerschaft jemand zu Hause und die andere im Heim, so wird das Vermögen gesondert berechnet.<br><br><strong>Dass heisst aber auch, dass Du auf Beginn eines neuen Kalenderjahres von Deiner EL-Stelle eine neue Verfügung verlangen kannst aufgrund veränderter Vermögenssituation!</strong> Dadurch wird Dein Vermögen bis auf den Freibetrag zwar aufgebraucht, aber Du bekommst jedes Jahr ein bisschen mehr Ergänzungsleistungen. 
+            </p>
+        </section>
     </article>
     <a href="{% url 'eligibility_requirements' %}" class="btn button-color button-style">Zurück</a>
     <aside>
