@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const cookieAcceptButton = document.getElementById("cookie-accept");
 
     // Überprüfe, ob der User das Banner bereits geschlossen hat
-    if(!localStorage.getItem("cookeAccepted")) {
+    if(!localStorage.getItem("cookieAccepted")) {
         cookieBanner.style.display = "block";
     }
 
