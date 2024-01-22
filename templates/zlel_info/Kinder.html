@@ -1,5 +1,11 @@
 {% extends 'zlel_web_applikation/base.html' %}
 
+{% block head %}
+    {{ block.super }}  <!-- Behält vorhandene Elemente des head-Blocks bei -->
+    <meta name="description" content="Kinder: Allgemeine Informationen zum Thema Kinder bei Ergänzungsleistungen">
+    <title>Kinder</title> <!-- Set the title of the webpage -->
+{% endblock %}
+
 {% block content %}
 <main class="container">
     <article class="my-4">

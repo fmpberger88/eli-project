@@ -1,9 +1,15 @@
 {% extends 'zlel_web_applikation/base.html' %}
 
+{% block head %}
+    {{ block.super }}  <!-- Behält vorhandene Elemente des head-Blocks bei -->
+    <meta name="description" content="Ausländer:innen: Allgemeine Informationen zum Thema Ausländer:innen bei Ergänzungsleistungen">
+    <title>Ausländer:innen</title> <!-- Set the title of the webpage -->
+{% endblock %}
+
 {% block content %}
 <main class="container">
     <article class="my-4">
-        <h1>Zusätzliche Voraussetzungen für Menschen ohne Schweizer Pass (Artikel 5 ELG)</h1>
+        <h1>Zusätzliche Voraussetzungen für Ausländer:innen (Artikel 5 ELG)</h1>
         <section>
             <p>
             Artikel 5 des Ergänzungsleistungsgesetzes beschreibt spezifische Bedingungen für Ausländer*innen, die Anspruch auf Ergänzungsleistungen in der Schweiz haben.

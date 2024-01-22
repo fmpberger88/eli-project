@@ -1,5 +1,11 @@
 {% extends 'zlel_web_applikation/base.html' %}
 
+{% block head %}
+    {{ block.super }}  <!-- Behält vorhandene Elemente des head-Blocks bei -->
+    <meta name="description" content="Datenschutz: Umfassende Informationen zum Umgang mit Deinen Daten.">
+    <title>Datenschutz</title> <!-- Set the title of the webpage -->
+{% endblock %}
+
 {% block content %}
     <main class="container mt-4">
         <div class="impressum-container">

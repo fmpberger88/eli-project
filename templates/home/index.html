@@ -2,6 +2,9 @@
 {% load static %}
 
 {% block head %}
+    {{ block.super }}  <!-- Behält vorhandene Elemente des head-Blocks bei -->
+    <meta name="description" content="Ergänzungsleistungen: eli ist eine Plattform, die es ermöglicht, sich über die Ergänzungsleistungen und Zusatzleistungen zu informieren mit Fokus auf den Kanton Zürich.">
+    <title>eli - Ergänzungsleistungen</title> <!-- Set the title of the webpage -->
 {% endblock %}
 
 {% block content %}
@@ -11,34 +14,34 @@
     </div>
     <main role="main">
         <h1 class="container-sm text-center">Herzlich willkommen auf eli</h1>
-        <h2 class="container-sm text-center">Deine Seite rund um das Thema Ergänzungsleistungen im Kanton Zürich</h2>
+        <h2 class="container-sm text-center">Deine Seite rund um das Thema Ergänzungsleistungen und Zusatzleistungen im Kanton Zürich</h2>
         
         <!-- Hier beginnt das Grid-System -->
         <article class="grid-container">
             <!-- Zeile 1 -->
             <div class="grid-item image">
-                <img class="image_front" src="../../static/images/zuerich.webp" alt="Stadt Zürich" width="1024" height="683"/>
+                <img class="image_front" src="../../static/images/zuerich.webp" loading="lazy" alt="Stadt Zürich" width="1024" height="683"/>
             </div>
             <div class="grid-item text">
                 <p>eli bietet Dir einen Überblick über die Zusatzleistungen und Ergänzungsleistungen im Kanton Zürich. Bei Bedarf kannst Du ein Konto eröffnen, um Dich im Forum zu beteiligen. Sie ist auf Basis privater Initiative entstanden und soll Betroffene informieren und ihre zivilgesellschaftliche Selbstbestimmung fördern. Für die Richtigkeit oder Vollständigkeit des Inhalts der Website kann deswegen keine Verantwortung übernommen werden. Hast Du spezifische Fragen, wende Dich bitte an Deine für Dich zuständige EL-Stelle.</p>
             </div>
             <!-- Zeile 2 -->
             <div class="grid-item image">
-                <img class="image_front" src="../../static/images/stadt_zh_2.webp" alt="Stadt Zürich" width="1024" height="683"/>
+                <img class="image_front" src="../../static/images/stadt_zh_2.webp" loading="lazy" alt="Stadt Zürich" width="1024" height="683"/>
             </div>
             <div class="grid-item text">
                 <p>Die Ergänzungsleistungen wurden im Jahr 1965 eingeführt als Reaktion auf die unzureichenden Renten der Alters- und Hinterlassenenversicherung (AHV) und der Invalidenversicherung (IV). Diese Renten erfüllten nicht den Verfassungsauftrag der Existenzsicherung, was zu einer signifikanten Anzahl von Rentnerinnen und Rentnern führte, die unter dem Existenzminimum lebten. Die Ergänzungsleistung schliesst diese Lücke.</p>
             </div>
             <!-- Zeile 3 -->
             <div class="grid-item image">
-                <img class="image_front" src="../../static/images/people_1.webp" alt="Stadt Zürich" width="1024" height="683"/>
+                <img class="image_front" src="../../static/images/people_1.webp" loading="lazy" alt="Menschenmasse am Bahnhof" width="1024" height="683"/>
             </div>
             <div class="grid-item text">
                 <p>Ergänzungsleistungen sind in der Schweiz als Sozialversicherungsleistungen auf Bundesebene geregelt und nicht als Sozialhilfe zu verstehen. Sie bieten eine bedarfsgeprüfte Unterstützung, die über Steuermittel finanziert wird und dienen der Deckung des grundlegenden Lebensbedarfs von Personen, deren Renten und Einkommen für den Lebensunterhalt nicht ausreichen. Die Leistungen umfassen auch Pflege- und Heimkosten und haben sich als wichtiger Teil der sozialen Sicherheit in der Schweiz etabliert.</p>
             </div>
             <!-- Zeile 4 -->
             <div class="grid-item image">
-                <img class="image_front" src="../../static/images/bundeshaus_1.webp" alt="Stadt Zürich" width="1024" height="683"/>
+                <img class="image_front" src="../../static/images/bundeshaus_1.webp" loading="lazy" alt="Bundeshaus" width="1024" height="683"/>
             </div>
             <div class="grid-item text">
                 <p>Die Ergänzungsleistungen sind gesetzlich auf Bundesebene geregelt. Dazu kommen jeweils noch die kantonalen Gesetze dazu, die jeweils die bundesrechtlichen Bestimmungen ergänzen. Im Kanton Zürich spricht man von Zusatzleistungen. Diese bestehen aus den Ergänzungsleistungen, Beihilfen und Zuschüssen. Abgeleitet aus der <a href="https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20140518/de/pdf-a/fedlex-data-admin-ch-eli-cc-1999-404-20140518-de-pdf-a.pdf">Bundesverfassung</a> (Art. 112 BV) wurden konkrete Gesetzte zu den Ergänzungsleistungen erlassen. Diese werden in den Verordnungen nochmals spezifiziert und in den Weisungen der jeweiligen Behörden konkretisiert. Das gleiche passiert auf der kantonalen Ebene. Wenn Du dich informieren willst, lohnt es sich immer zuerst in den jeweiligen Gesetzen und Verordnungen nachzuschauen. Detaillierte Angaben und Beispiele findest Du in den Weisungen.</p>

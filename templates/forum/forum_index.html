@@ -1,8 +1,10 @@
 {% extends 'zlel_web_applikation/base.html' %}
 {% load static %}
 
-{% block title %}
-    Forum
+{% block head %}
+    {{ block.super }}  <!-- Behält vorhandene Elemente des head-Blocks bei -->
+    <meta name="description" content="Forum: Tausche Dich mit anderen über Ergänzungsleistungen aus.">
+    <title>Forum</title> <!-- Set the title of the webpage -->
 {% endblock %}
 
 {% block content %}
