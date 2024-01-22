@@ -3,10 +3,204 @@
 {% block content %}
 <main class="container">
     <article class="my-4">
-        <h1>Ausgaben</h1>
-        <p>
-            Diese Seite befindet sich im Aufbau...
-        </p>
+        <h1>Anrechnung von Ausgaben bei Ergänzungsleistungen</h1>
+        <section>
+            <h2>Welche Ausgaben kannst Du geltend machen (WEL Ziffer 3.4.1.1)?</h2>
+            <p>
+                Als Ausgaben werden Dir angerechnet, wenn Du <strong>zu Hause</strong> wohnst:
+            </p>
+            <ul>
+                <li>Betrag für den allgemeinen Lebensbedarf (WEL Ziffer 3.2.2)</li>
+                <li>Mietzins bei Miete, aber auch bei Wohneigentum / Nutzniessung (WEL Ziffer 3.2.3)</li>
+                <li>Mietnebenkosten (WEL Ziffer 3.2.3.5)</li>
+                <li>Betrag für die obligatorische Krankenpflegeversicherung (WEL Ziffer 3.2.4)</li>
+                <li>Gebäudeunterhaltskosten und Hypothekarzinsen (WEL Ziffer 3.2.6)</li>
+                <li>Behördlich oder gerichtlich genehmigte oder festgelegte Unterhaltsleistungen (WEL Ziffer 3.2.7.1)</li>
+                <li>Nicht behördlich oder gerichtlich genehmigte oder festgelegte Unterhaltsleistungen (WEL Ziffer 3.2.7.2)</li>
+                <li>Beiträge an die Sozialversicherungen des Bundes (WEL Ziffer 3.2.8)</li>
+                <li>Kosten für die familienergänzende Kinderbetreuung (WEL Ziffer 3.2.9)</li>
+            </ul>
+        </section>
+        <section>
+            <p>
+                Als Ausgaben werden Dir angerechnet, wenn Du <strong>im Heim</strong> wohnst:
+            </p>
+            <ul>
+                <li>Tagestaxe des Heims (WEL Ziffer 3.3.2)</li>
+                <li>Betrag für persönliche Ausgaben (WEL Ziffer 3.3.3)</li>
+                <li>Mietzins bei Miete, aber auch bei Wohneigentum / Nutzniessung (WEL Ziffer 3.2.3)</li>
+                <li>Mietnebenkosten (WEL Ziffer 3.2.3.5)</li>
+                <li>Betrag für die obligatorische Krankenpflegeversicherung (WEL Ziffer 3.2.4)</li>
+                <li>Gebäudeunterhaltskosten und Hypothekarzinsen (WEL Ziffer 3.2.6)</li>
+                <li>Behördlich oder gerichtlich genehmigte oder festgelegte Unterhaltsleistungen (WEL Ziffer 3.2.7.1)</li>
+                <li>Nicht behördlich oder gerichtlich genehmigte oder festgelegte Unterhaltsleistungen (WEL Ziffer 3.2.7.2)</li>
+                <li>Beiträge an die Sozialversicherungen des Bundes (WEL Ziffer 3.2.8)</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Wie wird Dein Erwerbseinkommen angerechnet (WEL Ziffer 3.4.2.1)?</h2>
+            <p>
+                Dir wird das Nettoerwerbseinkommen angerechnet. Das heisst die obligatorischen Beiträge (AHV, IV, EO, ALV, FZL, UV und BV) werden von Deinem Bruttoeinkommen abgezogen. Zusätzlich kannst Du sogenannte Gewinnungskosten abziehen, also Kosten, die Du für die Ausübung Deines Berufs auch in Deiner Steuererkläung abziehen könntest (WEL Randziffer 3533.23). Ausnahmen sind berufsorientierte Aus- und Weiterbildungen. Hier sind die tatsächlichen, nachzuweisenden Kosten anrechenbar (WEL Randziffer 3533.24).<br><br>Hast Du den Betrag ermittelt, so wird zwischen priviligierten und nicht priviligierten Erwerbseinkommen unterschieden. Bei der priviligierten Anrechnung sind vom Nettoerwerbseinkommen Fr. 1 000 bei Alleinstehenden und Fr 1 500 bei Ehepaaren und Personen mit rentenberechtigen oder an der Rente beteiligten Kindern abziehbar WEL Randziffer 3421.09). Vom Rest wird dann nochmals ein Drittel abgezogen, also zwei Drittel angerechnet. Bei einem Ehegatten oder eingetragenen Partner, der keinen EL-Anspruch hat, sind ohne Abzug eines Freibetrags 80 Prozent des Nettoerwerbseinkommens anzurechnen (WEL Randziffer 3421.10).
+            </p>
+        </section>
+        <section>
+            <h2>Betrag für den allgemeinen Lebensbedarf</h2>
+            <p>In der Tabelle findest Du je nach Deiner Lebenssituation die anrechenbare Ausgabe für Deinen Lebensbedarf.</p>
+            <div class="table-responsive">
+                <table class="table table-hover table-sm">
+                    <thead class="table-dark">
+                        <tr>
+                            <th class="font-weight-bold"></th>
+                            <th class="font-weight-bold">Art. 10 Abs. 1 Bst. a ELG</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Alleinstehende</td>
+                            <td>Fr. 20'100</td>
+                        </tr>
+                        <tr>
+                            <td>Ehepaare</td>
+                            <td>Fr. 30'150</td>
+
+                        </tr>
+                        <tr>
+                            <td>Ehegatte, wenn anderer Ehegatte im Heim lebt</td>
+                            <td>Fr. 20'100</td>
+                        </tr>
+                        <tr>
+                            <td>1. und 2. Kind ab 11 Jahren je</td>
+                            <td>Fr. 10'515</td>
+                        </tr>
+                        <tr>
+                            <td>3. und 4 Kind ab 11 Jahren je</td>
+                            <td>Fr. 7'010</td>
+                        </tr>
+                        <tr>
+                            <td>5. und weitere Kinder je</td>
+                            <td>Fr. 3'505</td>
+                        </tr>
+                        <tr>
+                            <td>1. Kind bis 11 Jahre</td>
+                            <td>Fr. 7'380</td>
+                        </tr>
+                        <tr>
+                            <td>2. Kind bis 11 Jahre</td>
+                            <td>Fr. 6'150</td>
+                        </tr>
+                        <tr>
+                            <td>3. Kind bis 11 Jahre</td>
+                            <td>Fr. 5'125</td>
+                        </tr>
+                        <tr>
+                            <td>4. Kind bis 11 Jahre</td>
+                            <td>Fr. 4'270</td>
+                        </tr>
+                        <tr>
+                            <td>5. und mehr Kinder bis 11 Jahre je</td>
+                            <td>Fr. 3'560</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- ... Content below the table ... -->
+        </section>
+        <section>
+            <h2>Betrag für Mietzinsausgaben</h2>
+            <p>In der Tabelle findest Du je nach Deiner Lebenssituation die anrechenbare Ausgabe für Deinen Mietzins inklusive Nebenkosten (Art. 10 Abs. 1 Bst. b ELG)</p>
+            <div class="table-responsive">
+                <table class="table table-hover table-sm">
+                    <thead class="table-dark">
+                      <tr>
+                        <th rowspan="2">Haushaltsgrösse</th>
+                        <th colspan="3">Mietzinsregion*</th>
+                      </tr>
+                      <tr>
+                        <th>Region 1 (Grosszentrum)</th>
+                        <th>Region 2 (Stadt)</th>
+                        <th>Region 3 (Land)</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Alleinlebend</td>
+                        <td>Fr. 17'580</td>
+                        <td>Fr. 17'040</td>
+                        <td>Fr. 15'540</td>
+                      </tr>
+                      <tr>
+                        <td>2 Personen</td>
+                        <td>Fr. 20'820</td>
+                        <td>Fr. 20'220</td>
+                        <td>Fr. 18'780</td>
+                      </tr>
+                      <tr>
+                        <td>3 Personen</td>
+                        <td>Fr. 23'100</td>
+                        <td>Fr. 22'140</td>
+                        <td>Fr. 20'700</td>
+                      </tr>
+                      <tr>
+                        <td>4 und mehr Personen</td>
+                        <td>Fr. 25'200</td>
+                        <td>Fr. 24'120</td>
+                        <td>Fr. 22'380</td>
+                      </tr>
+                      <tr>
+                        <td>Einzelperson in einer Wohngemeinschaft</td>
+                        <td>Fr. 10'410</td>
+                        <td>Fr. 10'110</td>
+                        <td>Fr. 9'390</td>
+                      </tr>
+                      <tr>
+                        <td>Rollstuhlzuschlag</td>
+                        <td>Fr. 6'420</td>
+                        <td>Fr. 6'420</td>
+                        <td>Fr. 6'420</td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>In welcher Mietzinsregion Du lebst, kannst Du auf der Website des <a href="https://www.bsv.admin.ch/bsv/de/home/sozialversicherungen/ergaenzungsleistungen/grundlagen-und-gesetze/grundlagen/mietkosten-ergaenzungsleistungen.html" target="_blank">Bundesamts für Sozialversicherungen</a> herausfinden.</p>        
+        </section>
+        <section>
+            <h2>Ausgaben für obligatorische Krankenversicherung</h2>
+            <p>Im Kanton Zürich sind folgende Pauschalbeträge für die obligatorische Krankenversicherung 2024 festgelegt worden:</p>
+            <div class="table-responsive">
+                <table class="table table-hover table-sm">
+                    <thead class="table-dark">
+                      <tr>
+                          <th></th>
+                        <th>Erwachsene ab 25 Jahre</th>
+                        <th>junge Erwachsene bis 25 Jahre</th>
+                        <th>Kinder bis 18 Jahre</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Prämienregion 1</td>
+                        <td>Fr. 7'092</td>
+                        <td>Fr. 5'172</td>
+                        <td>Fr. 1'716</td>
+                      </tr>
+                      <tr>
+                        <td>Prämienregion 2</td>
+                        <td>Fr. 6'444</td>
+                        <td>Fr. 4'740</td>
+                        <td>Fr. 1'548</td>
+                      </tr>
+                      <tr>
+                        <td>Prämienregion 3</td>
+                        <td>Fr. 6'000</td>
+                        <td>Fr. 4'392</td>
+                        <td>Fr. 1'428</td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section>
+            <h2>Wie sieht Die Situation aus, wenn Du oder Deine Lebenspartner:in im Heim wohnst?</h2>
+            <p>Für Alters- und Pflegeheime gelten im Kanton Zürich maximal Fr. 268 pro Tag. Das ist inklusive Hotellierie, Betreuung und den gesetzlichen Selbstbehalt für die Pflege. Für IV-Heime git maximal eine Heimtaxe von Fr. 184. Wenn es sich um IV-Heime mit Pflegeheimbewilligung handelt gilt jedoch maximal Fr. 268 pro Tag.<br><br>Zudem hast Du oder Deine Lebenspartner:in einen Anspruch auf <strong>Persönliche Auslagen</strong>. Diese variieren zwischen Fr. 2'233 und Fr. 6'700. Gemäss den <a href="https://www.zh.ch/de/soziales/ergaenzungsleistungen-ahv-iv.html#-1837901559" target="_blank">Kantonalen Weisungen zum Vollzug der Zusatzleistungen</a> im Kanton Zürich ist bei Erwachsenen immer der Maximalbetrag von Fr. 6'700 anzurechnen. Für Kinder und Jugendliche sowie junge Erwachsene in Erstausbildung (z.B. wenn Du nach der Matura studierst und jünger als 25 Jahre alt bist) gelten die <a href="https://www.zh-sozialkonferenz.ch/wp-content/uploads/2022/07/20220518_Empfehlungen-Nebenkosten_Verpflegungsbeitrag-KJG-SoKo-KSA-AJB.pdf" target="_blank">Empfehlungen zu den individuellen Auslagen von Minderjährigen und jungen Erwachsenen bei Platzierung in Familien- und Heimpflegeangeboten nach KJG</a>. Der Mindestbetrag von Fr. 2'233 gemäss §2 ZLV ist jedoch zwingend einzuhalten. Für fremdplatzierte Kinder in Schulheimen, Kinder- und Jugendheimen sowie in Pflegefamilien gelten besondere Bestimmungen. Wende Dich dafür an Deine EL-Stelle, wenn Du mehr Informationen haben möchtest. </p>
+        </section>
     </article>
     <a href="{% url 'eligibility_requirements' %}" class="btn button-color button-style">Zurück</a>
     <aside>
