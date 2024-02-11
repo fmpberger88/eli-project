@@ -3,6 +3,7 @@
 
 {% load static %} <!-- Django template tag to load static files -->
 {% load widget_tweaks %}
+{% load django_bootstrap5 %}
 
     <head> <!-- Start of head element containing meta information about the document -->
         <meta charset="utf-8"> <!-- Set the character encoding to UTF-8 -->
@@ -10,7 +11,7 @@
         <meta name="google-site-verification" content="Yybjl2IfEQv2E2BseLWrgApbo-vzvMWlhFw9Obu9ElQ" />
 
         <!-- Load Bootstrap CSS from a CDN -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        {% bootstrap_css %}
         <!-- Load a custom CSS file from static files -->
         <base href="{% static '/' %}">
         <link rel="stylesheet" href="{% static 'css/styles.css' %}">
@@ -83,11 +84,9 @@
 
         {% block content %} <!-- A block that can be filled with content in child templates -->
         {% endblock %}
-
-
-
+    
         <!-- Footer with copyright notice -->
-        <footer>
+        <footer data-turbo-permanent>
             <!-- Row with nav component -->
             <div>
                 <div>
@@ -106,7 +105,8 @@
         </footer>
         <!-- End of footer -->
         <!-- Load Bootstrap JavaScript from a CDN -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    {% bootstrap_javascript %}
+        <!-- Initialize Bootstrap components after HTMX loads content -->
     </body> <!-- End of body element -->
 </html> <!-- End of HTML element -->
 
