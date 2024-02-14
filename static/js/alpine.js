@@ -1,9 +1,9 @@
-// static/js/personas_store.js
 document.addEventListener('alpine:init', () => {
     Alpine.data('dropdown', () => ({
         gemeinden: [],
         leistungsanbietende: [],
         selectedGemeinde: null,
+        searchQuery: '', // Datenfeld für die Suchanfrage
 
         async init() {
             // Lädt die Gemeindedaten beim Initialisieren
@@ -31,8 +31,14 @@ document.addEventListener('alpine:init', () => {
             // Setzt die ausgewählte Gemeinde und lädt deren Leistungsanbietende
             this.selectedGemeinde = gemeindeId;
             this.fetchLeistungsanbietende();
+        },
+
+        get filteredGemeinden() {
+            // Filtert Gemeinden basierend auf der Suchanfrage
+            return this.gemeinden.filter(gemeinde => gemeinde.name.toLowerCase().includes(this.searchQuery.toLowerCase()));
         }
-    }))
+    }));
+
     Alpine.store('personas', {
         selected: "Persona 1",
         favicons: [

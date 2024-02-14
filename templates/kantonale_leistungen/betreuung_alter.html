@@ -37,9 +37,11 @@
         <section>
             <h1>Welche Leistungen werden in Deiner Gemeinde angeboten?</h1>
             <div x-data="dropdown()">
+                <input x-model="searchQuery" type="text" placeholder="Gemeinde suchen..." class="form-control mb-3">
+            
                 <select class="form-select" x-model="selectedGemeinde" @change="selectGemeinde($event.target.value)" aria-label="Auswahl Gemeinde für Leistungsanbietende">
                     <option value="">Wähle eine Gemeinde...</option>
-                    <template x-for="gemeinde in gemeinden" :key="gemeinde.id">
+                    <template x-for="gemeinde in filteredGemeinden" :key="gemeinde.id">
                         <option :value="gemeinde.id" x-text="gemeinde.name"></option>
                     </template>
                 </select>

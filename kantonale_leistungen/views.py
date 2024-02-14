@@ -15,10 +15,14 @@ def zuschuesse(request):
 def betreuung_alter(request):
     return render(request, 'kantonale_leistungen/betreuung_alter.html')
 
+
 def gemeinde_data(request):
     data = list(Gemeinde.objects.values('id', 'name'))
     return JsonResponse(data, safe=False)
 
+
 def leistungsanbietende_data(request, gemeinde_id):
-    data = list(Leistungsanbietende.objects.filter(gemeinde__id=gemeinde_id).values("id", "name", "taetigkeit", "beschreibung", "leistung", "internetlink"))
+    data = list(
+        Leistungsanbietende.objects.filter(gemeinde__id=gemeinde_id).values("id", "name", "taetigkeit", "beschreibung",
+                                                                            "leistung", "internetlink"))
     return JsonResponse(data, safe=False)
