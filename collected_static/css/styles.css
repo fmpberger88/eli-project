@@ -168,6 +168,7 @@ aside a:hover {
 }
 
 
+
 .info-box {
     width: 800px;
 }
@@ -317,6 +318,22 @@ nav a:hover {
 
 }
 
+.age-title {
+    background-color: #CCE6FF;
+    color: black;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.age-title:hover {
+    background-color: #5BA1E3;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Bild leicht vergrößern */
+    transition: transform 0.3s ease;
+
+}
+
 .card-content {
     display: flex;
     flex-direction: column;
@@ -355,6 +372,43 @@ nav a:hover {
     width: 200px;
     margin-top: 10px;
 }
+
+.personas-container {
+    text-align: center;
+}
+
+.personas-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Erstellt 5 Spalten */
+    gap: 10px; /* Abstand zwischen den Grid-Elementen */
+    list-style: none;
+    padding: 0;
+    margin: 0 auto; /* Zentriert das Grid */
+    max-width: 1000px; /* Maximale Breite des Grids */
+}
+
+.personas-grid li {
+    cursor: pointer;
+}
+
+.personas-grid img {
+    width: 100%; /* Passt die Breite des Bildes an den Container an */
+    height: auto; /* Behält das Seitenverhältnis des Bildes bei */
+    border-radius: 50%; /* Macht das Bild rund */
+}
+
+.persona-description {
+    grid-column: 1 / -1; /* Lässt die Beschreibung über alle Spalten fließen */
+
+}
+
+.persona-description.show-description {
+    display: block; /* Zeigt die Beschreibung an, wenn eine Persona ausgewählt ist */
+    text-align: left !important;
+}
+
+
+
 
 footer {
     height: 100px;
@@ -419,6 +473,7 @@ footer {
     .card-color {
         height: 250px;
     }
+
 
     .grid-container {
         grid-template-columns: 1fr 2fr;
@@ -489,5 +544,6 @@ footer {
     padding: 5px 15px;
     cursor: pointer;
 }
+
 
 
