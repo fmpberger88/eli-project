@@ -168,6 +168,7 @@ aside a:hover {
 }
 
 
+
 .info-box {
     width: 800px;
 }
@@ -355,6 +356,43 @@ nav a:hover {
     width: 200px;
     margin-top: 10px;
 }
+
+.personas-container {
+    text-align: center;
+}
+
+.personas-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Erstellt 5 Spalten */
+    gap: 10px; /* Abstand zwischen den Grid-Elementen */
+    list-style: none;
+    padding: 0;
+    margin: 0 auto; /* Zentriert das Grid */
+    max-width: 1000px; /* Maximale Breite des Grids */
+}
+
+.personas-grid li {
+    cursor: pointer;
+}
+
+.personas-grid img {
+    width: 100%; /* Passt die Breite des Bildes an den Container an */
+    height: auto; /* Behält das Seitenverhältnis des Bildes bei */
+    border-radius: 50%; /* Macht das Bild rund */
+}
+
+.persona-description {
+    grid-column: 1 / -1; /* Lässt die Beschreibung über alle Spalten fließen */
+
+}
+
+.persona-description.show-description {
+    display: block; /* Zeigt die Beschreibung an, wenn eine Persona ausgewählt ist */
+    text-align: left !important;
+}
+
+
+
 
 footer {
     height: 100px;

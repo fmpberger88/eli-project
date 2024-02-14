@@ -11,7 +11,7 @@ class SecurityMiddleware:
         # Content-Security-Policy
         csp = (
             "default-src 'self'; "
-            "script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; "
+            "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js; "
             "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; "
             "img-src 'self' data:; "  # Allow images from same origin and data URLs
             "object-src 'none';"

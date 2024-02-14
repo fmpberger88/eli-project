@@ -1,9 +1,13 @@
 {% extends 'zlel_web_applikation/base.html' %}
 
+{% load static %} 
+
 {% block head %}
     {{ block.super }}  <!-- Behält vorhandene Elemente des head-Blocks bei -->
     <meta name="description" content="Betreuung im Alter: Die Ergänzungsleistungen helfen Dir möglichst lange zu Hause zu bleiben.">
     <title>Betreuung im Alter</title> <!-- Set the title of the webpage -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="{% static 'js/alpine.js' %}"></script>
 {% endblock %}
 
 {% block content %}
@@ -13,6 +17,53 @@
         <section>
             <h1>Ambulante Leistungen für Menschen mit einer Ergänzungsleistung zur AHV</h1>
             <p>Der Kanton Zürich wird auf Basis eines Postulats "Betreutes Wohnen statt verfrühter Heimeintritt" (KR-Nr. 404/2016) den Leistungskatalog für Menschen mit einer Ergänzungsleistung zur AHV erweitern. Die neuen Bestimmungen sollen per 1. Januar 2025 in Kraft treten.</p>
+        </section>
+        <section>
+            <h1>Wer kann von den Leistungen profitieren?</h1>
+            <div x-data="$store" class="personas-container">
+                <ul class="personas-grid">
+                    <template x-for="persona in $store.personas.favicons" :key="persona.name">
+                        <li @click="$store.personas.selectPersona(persona.name)"
+                            :class="{ 'active': $store.personas.selected === persona.name }">
+                            <img :src="persona.url" :alt="'Bild für ' + persona.name">
+                        </li>
+                    </template>
+                    <li class="persona-description" x-show="$store.personas.selected">
+                        <p x-text="$store.personas.getSelectedDescription()"></p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h1>Welche Leistungen werden in Deiner Gemeinde angeboten?</h1>
+            <div x-data="dropdown()">
+                <select class="form-select" x-model="selectedGemeinde" @change="selectGemeinde($event.target.value)" aria-label="Auswahl Gemeinde für Leistungsanbietende">
+                    <option value="">Wähle eine Gemeinde...</option>
+                    <template x-for="gemeinde in gemeinden" :key="gemeinde.id">
+                        <option :value="gemeinde.id" x-text="gemeinde.name"></option>
+                    </template>
+                </select>
+                <div x-show="selectedGemeinde">
+                    <template x-if="leistungsanbietende.length > 0">
+                        <div class="col-md-4 mb-3 w-100">
+                            <div class="card">
+                                <template x-for="anbieter in leistungsanbietende" :key="anbieter.id">
+                                    <div class="card-color card-content m-4">
+                                        <h3 x-text="anbieter.name" class="m-2"></h3>
+                                        <p class="m-2"><strong>Tätigkeiten:</strong> <span x-text="anbieter.taetigkeit"></span></p>
+                                        <p class="m-2"><strong>Beschreibung:</strong> <span x-text="anbieter.beschreibung"></span></p>
+                                        <p class="m-2"><strong>Kontakt: </strong> <span x-text="anbieter.internetlink"></span></p>
+                                        <p class="m-2"><strong>Leistungsvereinbarung:</strong> <span x-text="anbieter.leistungsvereinbarung ? 'Ja' : 'Nein'"></span></p>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                    </template>
+                    <template x-if="leistungsanbietende.length === 0">
+                        <p>Keine Leistungsanbietenden gefunden.</p>
+                    </template>
+                </div>
+            </div>
         </section>
     </article>
     <aside>
