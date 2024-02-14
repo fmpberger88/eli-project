@@ -318,6 +318,22 @@ nav a:hover {
 
 }
 
+.age-title {
+    background-color: #CCE6FF;
+    color: black;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.age-title:hover {
+    background-color: #5BA1E3;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Bild leicht vergrößern */
+    transition: transform 0.3s ease;
+
+}
+
 .card-content {
     display: flex;
     flex-direction: column;
@@ -457,6 +473,7 @@ footer {
     .card-color {
         height: 250px;
     }
+
 
     .grid-container {
         grid-template-columns: 1fr 2fr;

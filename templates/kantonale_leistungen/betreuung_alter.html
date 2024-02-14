@@ -19,7 +19,8 @@
             <p>Der Kanton Zürich wird auf Basis eines Postulats "Betreutes Wohnen statt verfrühter Heimeintritt" (KR-Nr. 404/2016) den Leistungskatalog für Menschen mit einer Ergänzungsleistung zur AHV erweitern. Die neuen Bestimmungen sollen per 1. Januar 2025 in Kraft treten.</p>
         </section>
         <section>
-            <h1>Wer kann von den Leistungen profitieren?</h1>
+            <h2>Wer kann von den Leistungen profitieren?</h2>
+            <p>Im Kanton Zürich kannst Du von den Leistungen profitieren, wenn du eine Altersrente der AHV beziehst und Anspruch auf Ergänzungsleistungen hast. Bitte achte dabei - auch wenn Du keinen Anspruch hast auf eine monatliche Ergänzungsleistung, kannst Du unter Umständen Kosten für Betreuung geltend machen. Kläre dies mit Deiner EL-Stelle ab.</p>
             <div x-data="$store" class="personas-container">
                 <ul class="personas-grid">
                     <template x-for="persona in $store.personas.favicons" :key="persona.name">
@@ -35,7 +36,8 @@
             </div>
         </section>
         <section>
-            <h1>Welche Leistungen werden in Deiner Gemeinde angeboten?</h1>
+            <h2>Welche Leistungen werden in Deiner Gemeinde angeboten?</h2>
+            <p>Jede Gemeinde bietet Dir Zugang zu einer Abklärungsstelle. Zudem bennen die Gemeinden Leistungsanbietende. Hier kannst Du nach den Leistungsanbietenden in Deinen Gemeinden suchen. Mithilfe der Suche kannst Du die Gemeinde einschränken und dann auswählen.</p>
             <div x-data="dropdown()">
                 <input x-model="searchQuery" type="text" placeholder="Gemeinde suchen..." class="form-control mb-3">
             
@@ -50,8 +52,9 @@
                         <div class="col-md-4 mb-3 w-100">
                             <div class="card">
                                 <template x-for="anbieter in leistungsanbietende" :key="anbieter.id">
-                                    <div class="card-color card-content m-4">
-                                        <h3 x-text="anbieter.name" class="m-2"></h3>
+                                    <div class="card-content m-4">
+                                        <h2 x-text="anbieter.name" class="age-title m-1"></h2>
+                                        <hr>
                                         <p class="m-2"><strong>Tätigkeiten:</strong> <span x-text="anbieter.taetigkeit"></span></p>
                                         <p class="m-2"><strong>Beschreibung:</strong> <span x-text="anbieter.beschreibung"></span></p>
                                         <p class="m-2"><strong>Kontakt: </strong> <span x-text="anbieter.internetlink"></span></p>
