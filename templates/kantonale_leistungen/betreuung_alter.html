@@ -19,6 +19,31 @@
             <p>Der Kanton Zürich wird auf Basis eines Postulats "Betreutes Wohnen statt verfrühter Heimeintritt" (KR-Nr. 404/2016) den Leistungskatalog für Menschen mit einer Ergänzungsleistung zur AHV erweitern. Die neuen Bestimmungen sollen per 1. Januar 2025 in Kraft treten.</p>
         </section>
         <section>
+            <h2>Welche Leistungen stehen Dir zur Verfügung?</h2>
+            <div x-data="{ activeModal: null }" x-init="console.log('Alpine component initiated')">
+                
+                <div @click="activeModal = 'psychosocial'; console.log('Div clicked, activeModal is now: ' + activeModal);" style="cursor: pointer;">Icon 1</div>
+                <div @click="activeModal = 'transport'; console.log('Div clicked, activeModal is now: ' + activeModal);" style="cursor: pointer;">Icon 2</div>
+                <img src="../../static/icons/wheelchair.svg" @click="activeModal = 'hilfsmittel'" alt="Rollstuhl" width="100" height="100" style="cursor: pointer">
+                
+                <div x-show="activeModal === 'psychosocial'">
+                    <p>Beschreibung der Leistungsart</p>
+                    <button @click="activeModal = null; console.log('Button clicked, activeModal is now: ' + activeModal);">Schließen</button>
+                </div>
+                        
+                <div x-show="activeModal === 'transport'">
+                    <p>Beschreibung der Leistungsart</p>
+                    <button @click="activeModal = null; console.log('Button clicked, activeModal is now: ' + activeModal);">Schließen</button>
+                </div>
+                
+                <div x-show="activeModal === 'hilfsmittel'">
+                    <h3>Transportmittel</h3>
+                    <p>Beschreibung der Leistung</p>
+                    <button @click="activeModal = null">Schliessen</button>
+                </div>
+            </div>
+        </section>
+        <section>
             <h2>Wer kann von den Leistungen profitieren?</h2>
             <p>Im Kanton Zürich kannst Du von den Leistungen profitieren, wenn du eine Altersrente der AHV beziehst und Anspruch auf Ergänzungsleistungen hast. Bitte achte dabei - auch wenn Du keinen Anspruch hast auf eine monatliche Ergänzungsleistung, kannst Du unter Umständen Kosten für Betreuung geltend machen. Kläre dies mit Deiner EL-Stelle ab.</p>
             <div x-data="$store" class="personas-container">
@@ -67,6 +92,30 @@
                     <template x-if="leistungsanbietende.length === 0">
                         <p>Keine Leistungsanbietenden gefunden.</p>
                     </template>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Schau Dir Best-Practice-Beispiele an!</h2>
+            <div x-data="{ activeTab: 'Tab1' }">
+                <div>
+                    <button @click="activeTab = 'Tab1'">Tab 1</button>
+                    <button @click="activeTab = 'Tab2'">Tab 2</button>
+                    <button @click="activeTab = 'Tab3'">Tab 3</button>
+                </div>
+                <div x-show="activeTab === 'Tab1'">
+                    <h3>Tab 1</h3>
+                    <p>Inhalt von Tab 1.</p>
+                </div>
+            
+                <div x-show="activeTab === 'Tab2'">
+                    <h3>Tab 2</h3>
+                    <p>Inhalt von Tab 2.</p>
+                </div>
+            
+                <div x-show="activeTab === 'Tab3'">
+                    <h3>Tab 3</h3>
+                    <p>Inhalt von Tab 3.</p>
                 </div>
             </div>
         </section>
