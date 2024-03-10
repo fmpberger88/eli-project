@@ -128,3 +128,7 @@ cython_debug/
 
 # VSCode
 .vscode/
+
+collected_static/videos/begruessung.mov
+collected_static/videos/begruessung.mp4
+
