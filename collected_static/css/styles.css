@@ -347,6 +347,10 @@ nav a:hover {
     font-weight: 500;
 }
 
+.ambulante-leistungen {
+    background-color: red;
+}
+
 .button-color {
     background-color: #0F2D4A;
     color: white;

@@ -347,6 +347,18 @@ nav a:hover {
     font-weight: 500;
 }
 
+.ambulante-leistungen {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.ambulante-leistungen img:hover {
+    background-color: #4ac1f7;
+    border: 1px #4ac1f7 solid;
+    border-radius: 50%;
+}
+
 .button-color {
     background-color: #0F2D4A;
     color: white;

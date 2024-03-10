@@ -20,24 +20,42 @@
         </section>
         <section>
             <h2>Welche Leistungen stehen Dir zur Verfügung?</h2>
-            <div x-data="{ activeModal: null }" x-init="console.log('Alpine component initiated')">
+            <div x-data="{ activeModal: null }">
+                <div class="ambulante-leistungen">
+                <img src="../../static/icons/book-club.svg" @click="activeModal = 'abklärung'" alt="Abklärung & Koordination" width="50" height="50" style="cursor: pointer">
+                <img src="../../static/icons/daycare.svg" @click="activeModal = 'betreuung'" alt="Betreuung im Alter" width="50" height="50" style="cursor: pointer">
+                <img src="../../static/icons/meal.svg" @click="activeModal = 'mahlzeit'" alt="Mittagstisch & Mahlzeitendienst" width="50" height="50" style="cursor: pointer">
+                <img src="../../static/icons/hospital.svg" @click="activeModal = 'ambulant'" alt="Ambulante Tagestrutkuren" width="50" height="50" style="cursor: pointer">
+                <img src="../../static/icons/transportation.svg" @click="activeModal = 'transport'" alt="Transportdienste" width="50" height="50" style="cursor: pointer"> 
+                <img src="../../static/icons/wheelchair.svg" @click="activeModal = 'hilfsmittel'" alt="Rollstuhl" width="50" height="50" style="cursor: pointer">
+                </div>
+                <div x-show="activeModal === 'abklärung'">
+                    <h3>Abklärung & Koordination</h3>
+                    <button @click="activeModal = null">Schliessen</button>
+                </div>
                 
-                <div @click="activeModal = 'psychosocial'; console.log('Div clicked, activeModal is now: ' + activeModal);" style="cursor: pointer;">Icon 1</div>
-                <div @click="activeModal = 'transport'; console.log('Div clicked, activeModal is now: ' + activeModal);" style="cursor: pointer;">Icon 2</div>
-                <img src="../../static/icons/wheelchair.svg" @click="activeModal = 'hilfsmittel'" alt="Rollstuhl" width="100" height="100" style="cursor: pointer">
+                <div x-show="activeModal === 'betreuung'">
+                    <h3>Betreuung</h3>
+                    <button @click="activeModal = null">Schliessen</button>
+                </div>
                 
-                <div x-show="activeModal === 'psychosocial'">
-                    <p>Beschreibung der Leistungsart</p>
-                    <button @click="activeModal = null; console.log('Button clicked, activeModal is now: ' + activeModal);">Schließen</button>
+                <div x-show="activeModal === 'mahlzeit'">
+                    <h3>Mahlzeitendienst & Mittagstisch</h3>
+                    <button @click="activeModal = null">Schliessen</button>
+                </div>
+                
+                <div x-show="activeModal === 'ambulant'">
+                    <h3>Ambulante Stationen</h3>
+                    <button @click="activeModal = null">Schliessen</button>
                 </div>
                         
                 <div x-show="activeModal === 'transport'">
-                    <p>Beschreibung der Leistungsart</p>
-                    <button @click="activeModal = null; console.log('Button clicked, activeModal is now: ' + activeModal);">Schließen</button>
+                    <h3>Transportleistungen</h3>
+                    <button @click="activeModal = null">Schliessen</button>
                 </div>
                 
                 <div x-show="activeModal === 'hilfsmittel'">
-                    <h3>Transportmittel</h3>
+                    <h3>Hilfsmittel</h3>
                     <p>Beschreibung der Leistung</p>
                     <button @click="activeModal = null">Schliessen</button>
                 </div>
