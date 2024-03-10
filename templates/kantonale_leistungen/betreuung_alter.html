@@ -19,16 +19,17 @@
             <p>Der Kanton Zürich wird auf Basis eines Postulats "Betreutes Wohnen statt verfrühter Heimeintritt" (KR-Nr. 404/2016) den Leistungskatalog für Menschen mit einer Ergänzungsleistung zur AHV erweitern. Die neuen Bestimmungen sollen per 1. Januar 2025 in Kraft treten.</p>
         </section>
         <section>
-            <h2>Welche Leistungen stehen Dir zur Verfügung?</h2>
+            <h2 class="mb-5">Welche Leistungen stehen Dir zur Verfügung?</h2>
             <div x-data="{ activeModal: null }">
                 <div class="ambulante-leistungen">
-                <img src="../../static/icons/book-club.svg" @click="activeModal = 'abklärung'" alt="Abklärung & Koordination" width="50" height="50" style="cursor: pointer">
-                <img src="../../static/icons/daycare.svg" @click="activeModal = 'betreuung'" alt="Betreuung im Alter" width="50" height="50" style="cursor: pointer">
-                <img src="../../static/icons/meal.svg" @click="activeModal = 'mahlzeit'" alt="Mittagstisch & Mahlzeitendienst" width="50" height="50" style="cursor: pointer">
-                <img src="../../static/icons/hospital.svg" @click="activeModal = 'ambulant'" alt="Ambulante Tagestrutkuren" width="50" height="50" style="cursor: pointer">
-                <img src="../../static/icons/transportation.svg" @click="activeModal = 'transport'" alt="Transportdienste" width="50" height="50" style="cursor: pointer"> 
-                <img src="../../static/icons/wheelchair.svg" @click="activeModal = 'hilfsmittel'" alt="Rollstuhl" width="50" height="50" style="cursor: pointer">
+                    <img src="../../static/icons/book-club.svg" :class="{ 'hervorgehoben': activeModal === 'abklärung' }" @click="activeModal = 'abklärung'" alt="Abklärung & Koordination" width="50" height="50" style="cursor: pointer" tabindex="0" ref="abklärung">
+                    <img src="../../static/icons/daycare.svg" :class="{ 'hervorgehoben': activeModal === 'betreuung' }" @click="activeModal = 'betreuung'" alt="Betreuung im Alter" width="50" height="50" style="cursor: pointer" tabindex="0" ref="betreuung">
+                    <img src="../../static/icons/meal.svg" :class="{ 'hervorgehoben': activeModal === 'mahlzeit' }" @click="activeModal = 'mahlzeit'" alt="Mittagstisch & Mahlzeitendienst" width="50" height="50" style="cursor: pointer" tabindex="0" ref="mahlzeit">
+                    <img src="../../static/icons/hospital.svg" :class="{ 'hervorgehoben': activeModal === 'ambulant' }" @click="activeModal = 'ambulant'" alt="Ambulante Tagestrutkuren" width="50" height="50" style="cursor: pointer" tabindex="0" ref="ambulant">
+                    <img src="../../static/icons/transportation.svg" :class="{ 'hervorgehoben': activeModal === 'transport' }" @click="activeModal = 'transport'" alt="Transportdienste" width="50" height="50" style="cursor: pointer" tabindex="0" ref="transport">
+                    <img src="../../static/icons/wheelchair.svg" :class="{ 'hervorgehoben': activeModal === 'hilfsmittel' }" @click="activeModal = 'hilfsmittel'" alt="Rollstuhl" width="50" height="50" style="cursor: pointer" tabindex="0" ref="hilfsmittel">
                 </div>
+
                 <div x-show="activeModal === 'abklärung'">
                     <h3>Abklärung & Koordination</h3>
                     <button @click="activeModal = null">Schliessen</button>
