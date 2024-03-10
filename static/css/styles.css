@@ -1,3 +1,12 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 
 /* Das Sternchen (*) ist ein universeller Selektor, der auf alle Elemente in der HTML-Struktur angewendet wird. */
 * {
@@ -217,6 +226,38 @@ aside a:hover {
     height: 40px;
 }
 
+.video-begrueßung {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: auto; /* Passen Sie die Höhe nach Bedarf an */
+}
+
+video#begrueßungsVideo {
+    width: 70%;
+    height: auto; /* Oder '100%' für volle Deckung, abhängig vom gewünschten Effekt */
+}
+
+.willkommensnachricht {
+    position: absolute;
+    padding: 20px;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 70%;
+    opacity: 0;
+    animation: fadeIn 5s ease-out 7s forwards;
+}
+
+.willkommensnachricht h1 {
+    background-color: white;
+    color: #00407C;
+    font-weight: bold;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
 
 
 /*ok/
@@ -538,6 +579,19 @@ footer {
     aside ul {
         margin: 0;
         padding: 0;
+    }
+
+    video#begrueßungsVideo {
+        width: 100%;
+    }
+
+    .video-begrueßung {
+        width: 100%;
+    }
+
+    .willkommensnachricht {
+        top: 90%;
+        width: 80%;
     }
 }
 

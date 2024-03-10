@@ -13,8 +13,16 @@
         <button id="cookie-accept">Cookies akzeptieren</button>
     </div>
     <main role="main">
-        <h1 class="container-sm text-center">Herzlich willkommen auf el-info.ch</h1>
-        <h2 class="container-sm text-center">Deine Seite rund um das Thema Ergänzungsleistungen und Zusatzleistungen im Kanton Zürich</h2>
+        <section class="video-begrueßung">
+            <video autoplay muted id="begrueßungsVideo">
+                <source src="{% static 'videos/hello.mp4' %}" type="video/mp4" width="300">
+                Ihr Browser unterstützt das Video-Tag nicht.
+            </video>
+            <div class="willkommensnachricht">
+                <h1>Deine Seite zum Thema Ergänzungsleistungen</h1>
+            </div>
+        </section>
+
         
         <!-- Hier beginnt das Grid-System -->
         <article class="grid-container">
@@ -44,7 +52,7 @@
                 <img class="image_front" src="../../static/images/bundeshaus_1.webp" loading="lazy" alt="Bundeshaus" width="1024" height="683"/>
             </div>
             <div class="grid-item text">
-                <p>Die Ergänzungsleistungen sind gesetzlich auf Bundesebene geregelt. Dazu kommen jeweils noch die kantonalen Gesetze dazu, die jeweils die bundesrechtlichen Bestimmungen ergänzen. Im Kanton Zürich spricht man von Zusatzleistungen. Diese bestehen aus den Ergänzungsleistungen, Beihilfen und Zuschüssen. Abgeleitet aus der <a href="https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20140518/de/pdf-a/fedlex-data-admin-ch-eli-cc-1999-404-20140518-de-pdf-a.pdf">Bundesverfassung</a> (Art. 112 BV) wurden konkrete Gesetze zu den Ergänzungsleistungen erlassen. Diese werden in den Verordnungen nochmals spezifiziert und in den Weisungen der jeweiligen Behörden konkretisiert. Das gleiche passiert auf der kantonalen Ebene. Wenn Du dich informieren willst, lohnt es sich immer zuerst in den jeweiligen Gesetzen und Verordnungen nachzuschauen. Detaillierte Angaben und Beispiele findest Du in den Weisungen.</p>
+                <p>Die Ergänzungsleistungen sind gesetzlich auf Bundesebene geregelt. Dazu kommen jeweils noch die kantonalen Gesetze dazu, die jeweils die bundesrechtlichen Bestimmungen ergänzen. Im Kanton Zürich spricht man von Zusatzleistungen. Diese bestehen aus den Ergänzungsleistungen, Beihilfen und Zuschüssen. Abgeleitet aus der <a href="https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20140518/de/pdf-a/fedlex-data-admin-ch-eli-cc-1999-404-20140518-de-pdf-a.pdf">Bundesverfassung</a> (Art. 112 BV) wurden konkrete Gesetze zu den Ergänzungsleistungen erlassen. Diese werden in den Verordnungen nochmals spezifiziert und in den Weisungen der jeweiligen Behörden konkretisiert. Das Gleiche passiert auf der kantonalen Ebene. Wenn Du Dich informieren willst, lohnt es sich immer zuerst in den jeweiligen Gesetzen und Verordnungen nachzuschauen. Detaillierte Angaben und Beispiele findest Du in den Weisungen.</p>
             </div>
         </article>
         <aside>

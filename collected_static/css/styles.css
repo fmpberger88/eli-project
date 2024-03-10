@@ -1,3 +1,12 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 
 /* Das Sternchen (*) ist ein universeller Selektor, der auf alle Elemente in der HTML-Struktur angewendet wird. */
 * {
@@ -217,6 +226,38 @@ aside a:hover {
     height: 40px;
 }
 
+.video-begrueßung {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: auto; /* Passen Sie die Höhe nach Bedarf an */
+}
+
+video#begrueßungsVideo {
+    width: 70%;
+    height: auto; /* Oder '100%' für volle Deckung, abhängig vom gewünschten Effekt */
+}
+
+.willkommensnachricht {
+    position: absolute;
+    padding: 20px;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 70%;
+    opacity: 0;
+    animation: fadeIn 5s ease-out 7s forwards;
+}
+
+.willkommensnachricht h1 {
+    background-color: white;
+    color: #00407C;
+    font-weight: bold;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
 
 
 /*ok/
@@ -353,17 +394,15 @@ nav a:hover {
     justify-content: space-around;
 }
 
-.ambulante-leistungen img:hover {
+.ambulante-leistungen img:hover, .hervorgehoben {
     background-color: #4ac1f7;
-    border: 1px #4ac1f7 solid;
+    border: 1px solid #4ac1f7;
     border-radius: 50%;
+    padding: 8px; /* Fügt innen um das Bild herum zusätzlichen Platz hinzu */
+    margin: -8px; /* Kompensiert den zusätzlichen Außenabstand, den das Padding hinzufügt */
+    transition: all 0.6s ease; /* Optional: Fügt eine sanfte Übergangsanimation hinzu */
 }
 
-.hervorgehoben {
-    background-color: #4ac1f7;
-        border: 1px #4ac1f7 solid;
-    border-radius: 50%;
-}
 
 
 .button-color {
@@ -540,6 +579,18 @@ footer {
     aside ul {
         margin: 0;
         padding: 0;
+    }
+
+    video#begrueßungsVideo {
+        width: 100%;
+    }
+
+    .video-begrueßung {
+        width: 100%;
+    }
+
+    .willkommensnachricht {
+        top: 90%;
     }
 }
 
