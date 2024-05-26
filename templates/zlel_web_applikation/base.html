@@ -26,7 +26,7 @@
     <body> <!-- Start of body element, which contains the content of the document -->
 
         <!-- Start of the navigation bar -->
-        <header class="navbar navbar-expand-lg navbar-light bg-white">
+        <header class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid header-container">
 
                 <!-- Navbar brand that links to the home page -->
@@ -41,40 +41,40 @@
                 <nav class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="durchfuehrungsstelleDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="durchfuehrungsstelleDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                               Ergänzungsleistungen
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="durchfuehrungsstelleDropdown">
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="durchfuehrungsstelleDropdown">
                                 <li><a class="dropdown-item" href="{% url 'eligibility_requirements' %}">Themenspezifische Informationen</a></li>
                                 <li><a class="dropdown-item" href="{% url 'el_anmeldung' %}">Antragsverfahren</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle nav-text" href="#" id="leistungenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle nav-text fw-bold" href="#" id="leistungenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                               Kantonale Leistungen Zürich
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="leistungenDropdown">
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="leistungenDropdown">
                                 <li><a class="dropdown-item nav-text" href="{% url 'beihilfe' %}">Kantonale Beihilfe</a></li>
                                 <li><a class="dropdown-item" href="{% url 'zuschuesse' %}">Kantonale Zuschüsse</a></li>
                                 <li><a class="dropdown-item" href="{% url 'betreuung_alter' %}">Betreuung im Alter</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'forum_index' %}">Forum</a>
+                            <a class="nav-link fw-bold" href="{% url 'forum_index' %}">Forum</a>
                         </li>
                         {% if user.is_authenticated %}
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'account' %}">Account</a>
+                                <a class="nav-link fw-bold" href="{% url 'account' %}">Account</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                                <a class="nav-link fw-bold" href="{% url 'logout' %}">Logout</a>
                             </li>
                         {% else %}
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'login' %}">Login</a>
+                                <a class="nav-link fw-bold" href="{% url 'login' %}">Login</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+                                <a class="nav-link fw-bold" href="{% url 'signup' %}">Sign Up</a>
                             </li>
                         {% endif %}
                     </ul>
