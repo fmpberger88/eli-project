@@ -440,10 +440,10 @@ nav a:hover {
 .personas-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* Erstellt 5 Spalten */
-    gap: 10px; /* Abstand zwischen den Grid-Elementen */
+    gap: 20px; /* Abstand zwischen den Grid-Elementen */
     list-style: none;
     padding: 0;
-    margin: 0 auto; /* Zentriert das Grid */
+    margin: 60px auto; /* Zentriert das Grid */
     max-width: 1000px; /* Maximale Breite des Grids */
 }
 

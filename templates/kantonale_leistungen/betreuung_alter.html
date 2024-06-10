@@ -16,8 +16,27 @@
     <article class="my-4">
         <section>
             <h1>Ambulante Leistungen für Menschen mit einer Ergänzungsleistung zur AHV</h1>
-            <p>Der Kanton Zürich wird auf Basis eines Postulats "Betreutes Wohnen statt verfrühter Heimeintritt" (KR-Nr. 404/2016) den Leistungskatalog für Menschen mit einer Ergänzungsleistung zur AHV erweitern. Die neuen Bestimmungen sollen per 1. Januar 2025 in Kraft treten.</p>
+            <p>Der Kanton Zürich wird auf Basis eines Postulats "Betreutes Wohnen statt verfrühter Heimeintritt" (KR-Nr. 404/2016) den Leistungskatalog für Menschen mit einer Ergänzungsleistung zur AHV erweitern. Die neuen Bestimmungen sollen per 1. Januar 2025 in Kraft treten. Im Wesentlichen wird der Leistungskatalog für Hilfe und Betreuung erweitert. Zusätzlich werden weitere Leistungsanbieter anerkannt sowie die Stundenansätze für Hilfe- und Betreuungsangebot erhöht. In diesem Abschnitt geht es aber vor allem um die Erweiterung des Leistungskatalogs, welche im Fachdiskurs häufig als "Betreuung" oder "psychosoziale Betreuung" diskutiert wird. Im Unterschied zu den bisherigen Leistungen wird implizit anerkannt, dass Betreuungsleistungen oft vor den eigentlichen pflegerischen Leistungen notwendig werden. Die Anpassung der Zusatzleistungsverordnung weist somit einen präventiven Charakter auf, indem ältere Menschen bereits vor Inanspruchnahme von Pflegeleistungen unterstützt werden. Nicht neu sind dabei die bereits jetzt übernommenen Kosten für pflegerische und nicht-pflegerische Leistungen, die bereits in der <a href="">Verordnung über die Pflegeversorgung vom 22. November 2010</a> definiert sind.</p>
         </section>
+        <section class="my-5">
+            <h2>Wer kann von den Leistungen profitieren?</h2>
+            <p>Im Kanton Zürich kannst Du von den Leistungen profitieren, wenn Du eine Altersrente der AHV beziehst und Anspruch auf Ergänzungsleistungen hast. Bitte achte dabei - auch wenn Du keinen Anspruch hast auf eine monatliche Ergänzungsleistung, kannst Du unter Umständen Kosten für Betreuung geltend machen. Kläre dies mit Deiner EL-Stelle ab.</p>
+            <div x-data="$store" class="personas-container">
+                <ul class="personas-grid">
+                    <template x-for="persona in $store.personas.favicons" :key="persona.name">
+                        <li @click="$store.personas.selectPersona(persona.name)"
+                            :class="{ 'active': $store.personas.selected === persona.name }">
+                            <img :src="persona.url" :alt="'Bild für ' + persona.name">
+                        </li>
+                    </template>
+                    <li class="persona-description" x-show="$store.personas.selected">
+                        <h3 x-text="$store.personas.getSelectedName()"></h3>
+                        <p x-text="$store.personas.getSelectedDescription()"></p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
         <section>
             <h2 class="mb-5">Welche Leistungen stehen Dir zur Verfügung?</h2>
             <div x-data="{ activeModal: null }">
@@ -68,24 +87,6 @@
                 </div>
             </div>
         </section>
-        <section>
-            <h2>Wer kann von den Leistungen profitieren?</h2>
-            <p>Im Kanton Zürich kannst Du von den Leistungen profitieren, wenn du eine Altersrente der AHV beziehst und Anspruch auf Ergänzungsleistungen hast. Bitte achte dabei - auch wenn Du keinen Anspruch hast auf eine monatliche Ergänzungsleistung, kannst Du unter Umständen Kosten für Betreuung geltend machen. Kläre dies mit Deiner EL-Stelle ab.</p>
-            <div x-data="$store" class="personas-container">
-                <ul class="personas-grid">
-                    <template x-for="persona in $store.personas.favicons" :key="persona.name">
-                        <li @click="$store.personas.selectPersona(persona.name)"
-                            :class="{ 'active': $store.personas.selected === persona.name }">
-                            <img :src="persona.url" :alt="'Bild für ' + persona.name">
-                        </li>
-                    </template>
-                    <li class="persona-description" x-show="$store.personas.selected">
-                        <p x-text="$store.personas.getSelectedDescription()"></p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section>
             <h2>Welche Leistungen werden in Deiner Gemeinde angeboten?</h2>
             <p>Jede Gemeinde bietet Dir Zugang zu einer Abklärungsstelle. Zudem bennen die Gemeinden Leistungsanbietende. Hier kannst Du nach den Leistungsanbietenden in Deinen Gemeinden suchen. Mithilfe der Suche kannst Du die Gemeinde einschränken und dann auswählen.</p>
             <div x-data="dropdown()">
@@ -117,30 +118,6 @@
                     <template x-if="leistungsanbietende.length === 0">
                         <p>Keine Leistungsanbietenden gefunden.</p>
                     </template>
-                </div>
-            </div>
-        </section>
-        <section>
-            <h2>Schau Dir Best-Practice-Beispiele an!</h2>
-            <div x-data="{ activeTab: 'Tab1' }">
-                <div>
-                    <button @click="activeTab = 'Tab1'">Tab 1</button>
-                    <button @click="activeTab = 'Tab2'">Tab 2</button>
-                    <button @click="activeTab = 'Tab3'">Tab 3</button>
-                </div>
-                <div x-show="activeTab === 'Tab1'">
-                    <h3>Tab 1</h3>
-                    <p>Inhalt von Tab 1.</p>
-                </div>
-            
-                <div x-show="activeTab === 'Tab2'">
-                    <h3>Tab 2</h3>
-                    <p>Inhalt von Tab 2.</p>
-                </div>
-            
-                <div x-show="activeTab === 'Tab3'">
-                    <h3>Tab 3</h3>
-                    <p>Inhalt von Tab 3.</p>
                 </div>
             </div>
         </section>

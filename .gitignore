@@ -130,5 +130,5 @@ cython_debug/
 .vscode/
 
 collected_static/videos/begruessung.mov
-collected_static/videos/begruessung.mp4
+collected_static/videos/begruessung.mp4p
 
