@@ -73,7 +73,6 @@ document.addEventListener('alpine:init', () => {
                 "description": "Anna kam vor 50 Jahren aus Polen in die Schweiz und lebt seitdem in einer kleinen Wohnung in der Stadt. Sie ist verheiratet und gesundheitlich weitgehend stabil, leidet aber unter dem Gefühl der Isolation seitdem sie nicht mehr arbeitet. Anna fühlt sich oft zuhause eingeschlossen und fremd in der Schweiz, obwohl sie Deutsch spricht. Sie wünscht sich mehr Kontakte zu Menschen mit ähnlichem Hintergrund, um ihre kulturelle Identität zu pflegen und sich weniger isoliert zu fühlen. Dank regelmässigen Treffen mit anderen Migrant*innen sowie Begleitung zu kulturellen Veranstaltungen und Sprachcafés, fühlt sich Anna sozial und kulturell besser integriert."
 
             },
-            // Füge hier weitere Personas hinzu...
         ],
         selectPersona(name) {
             console.log("Vorher ausgewählt:", this.selected);
