@@ -46,7 +46,7 @@ document.addEventListener('alpine:init', () => {
                 "id": "persona1",
                 "url": "./icons/emma.svg",
                 "name": "Emma, 82 Jahre alt",
-                "description": "Emma ist eine verwitwete Rentnerin, die ihr ganzes Leben in einem kleinen Dorf verbracht hat. Ihre beiden Kinder leben weit entfernt und besuchen sie nur selten. Emma leidet unter leichter Demenz und Arthritis, was ihre Mobilität einschränkt. Sie benötigt emotionale Unterstützung und Hilfe bei alltäglichen Aufgaben wie Einkaufen und Hausarbeit. Da sie sich oft einsam fühlt, wünscht sie sich mehr soziale Kontakte. Die psychosoziale Betreuung umfasst regelmässige Besuche, Teilnahme an lokalen Seniorengruppen und Mittagstischen sowie Gedächtnistraining."
+                "description": "Emma ist eine verwitwete Rentnerin, die ihr ganzes Leben in einem kleinen Dorf verbracht hat. Ihre beiden Kinder leben weit entfernt und besuchen sie nur selten. Emma leidet unter leichter Demenz und Arthritis, was ihre Mobilität einschränkt. Sie benötigt emotionale Unterstützung und Hilfe bei alltäglichen Aufgaben wie Einkaufen und Hausarbeit. Da sie sich oft einsam fühlt, wünscht sie sich mehr soziale Kontakte. Die psychosoziale Betreuung umfasst regelmässige Besuche sowie die Begleitung zu lokalen Seniorengruppen und Mittagstischen"
             },
             {
                 "id": "persona2",
@@ -64,13 +64,13 @@ document.addEventListener('alpine:init', () => {
                 "id": "persona4",
                 "url": "./icons/peter.svg",
                 "name": "Peter, 74 Jahre alt",
-                "description": "Peter ist geschieden und hat keinen Kontakt mehr zu seiner Familie. Seit Kurzem lebt er in einer Alterswohnung. Peter leidet an Diabetes. Er benötigt Hilfe bei der Verwaltung seiner Krankheit und bei der sozialen Integration in der neuen Wohnumgebung. Da er sich oft isoliert fühlt, hat er Schwierigkeiten, neue Freundschaften zu schliessen. Die psychosoziale Betreuung umfasst die Vermittlung und Begleitung zu sozialen Aktivitäten sowie eine regelmässige Gehbegleitung."
+                "description": "Peter ist geschieden und hat keinen Kontakt mehr zu seiner Familie. Seit Kurzem lebt er in einer Alterswohnung. Peter leidet an Diabetes. Er benötigt Hilfe bei der Verwaltung seiner Krankheit und bei der sozialen Integration in der neuen Wohnumgebung. Da er sich oft isoliert fühlt, hat er Schwierigkeiten, neue Freundschaften zu schliessen. Die psychosoziale Betreuung umfasst die Vermittlung und Begleitung zu sozialen Aktivitäten sowie eine regelmässige Gehbegleitung. Der psychsoziale Betreuer arbeitet dabei mit Pfleger*innen der Spitex zusammen und kann diese schnell auf gesundheitliche Verschlechterungen aufmerksam machen."
             },
             {
                 "id": "Anna, 68 Jahre alt",
                 "url": "./icons/anna.svg",
                 "name": "Anna, 68 Jahre alt",
-                "description": "Anna kam vor 50 Jahren aus Polen in die Schweiz und lebt seitdem in einer kleinen Wohnung in der Stadt. Sie ist verheiratet und gesundheitlich weitgehend stabil, leidet aber unter dem Gefühl der Isolation seitdem sie nicht mehr arbeitet. Anna fühlt sich oft zuhause eingeschlossen und fremd in der Schweiz, obwohl sie Deutsch spricht. Sie wünscht sich mehr Kontakte zu Menschen mit ähnlichem Hintergrund, um ihre kulturelle Identität zu pflegen und sich weniger isoliert zu fühlen. Dank regelmässigen Treffen mit anderen Migrant*innen, kulturelle Veranstaltungen und Sprachcafés, fühlt sich Anna sozial und kulturell besser integriert."
+                "description": "Anna kam vor 50 Jahren aus Polen in die Schweiz und lebt seitdem in einer kleinen Wohnung in der Stadt. Sie ist verheiratet und gesundheitlich weitgehend stabil, leidet aber unter dem Gefühl der Isolation seitdem sie nicht mehr arbeitet. Anna fühlt sich oft zuhause eingeschlossen und fremd in der Schweiz, obwohl sie Deutsch spricht. Sie wünscht sich mehr Kontakte zu Menschen mit ähnlichem Hintergrund, um ihre kulturelle Identität zu pflegen und sich weniger isoliert zu fühlen. Dank regelmässigen Treffen mit anderen Migrant*innen sowie Begleitung zu kulturellen Veranstaltungen und Sprachcafés, fühlt sich Anna sozial und kulturell besser integriert."
 
             },
             // Füge hier weitere Personas hinzu...
