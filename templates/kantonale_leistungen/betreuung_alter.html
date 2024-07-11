@@ -16,11 +16,11 @@
     <article class="my-4">
         <section>
             <h1>Ambulante Leistungen für Menschen mit einer Ergänzungsleistung zur AHV</h1>
-            <p>Der Kanton Zürich wird auf Basis eines Postulats "Betreutes Wohnen statt verfrühter Heimeintritt" (KR-Nr. 404/2016) den Leistungskatalog für Menschen mit einer Ergänzungsleistung zur AHV erweitern. Die neuen Bestimmungen sollen per 1. Januar 2025 in Kraft treten. Im Wesentlichen wird der Leistungskatalog für Hilfe und Betreuung erweitert. Zusätzlich werden weitere Leistungsanbieter anerkannt sowie die Stundenansätze für Hilfe- und Betreuungsangebot erhöht. In diesem Abschnitt geht es aber vor allem um die Erweiterung des Leistungskatalogs, welche im Fachdiskurs häufig als "Betreuung" oder "psychosoziale Betreuung" diskutiert wird. Im Unterschied zu den bisherigen Leistungen wird implizit anerkannt, dass Betreuungsleistungen oft vor den eigentlichen pflegerischen Leistungen notwendig werden. Die Anpassung der Zusatzleistungsverordnung weist somit einen präventiven Charakter auf, indem ältere Menschen bereits vor Inanspruchnahme von Pflegeleistungen unterstützt werden. Nicht neu sind dabei die bereits jetzt übernommenen Kosten für pflegerische und nicht-pflegerische Leistungen, die bereits in der <a href="">Verordnung über die Pflegeversorgung vom 22. November 2010</a> definiert sind.</p>
+            <p>Der Kanton Zürich wird auf Basis eines Postulats "Betreutes Wohnen statt verfrühter Heimeintritt" (KR-Nr. 404/2016) den Leistungskatalog für Menschen mit einer Ergänzungsleistung zur AHV erweitern. Die neuen Bestimmungen sollen per 1. Januar 2025 in Kraft treten. Im Wesentlichen wird der Leistungskatalog für Hilfe und Betreuung erweitert. Zusätzlich werden weitere Leistungsanbieter anerkannt sowie die Stundenansätze für Hilfe- und Betreuungsangebot erhöht. In diesem Abschnitt geht es aber vor allem um die Erweiterung des Leistungskatalogs, welche im Fachdiskurs häufig als "Betreuung" oder "psychosoziale Betreuung" diskutiert wird. Im Unterschied zu den bisherigen Leistungen wird implizit anerkannt, dass Betreuungsleistungen oft vor den eigentlichen pflegerischen Leistungen notwendig werden. Die Anpassung der Zusatzleistungsverordnung weist somit einen präventiven Charakter auf, indem ältere Menschen bereits vor Inanspruchnahme von Pflegeleistungen unterstützt werden. Nicht neu sind dabei die bereits jetzt übernommenen Kosten für pflegerische und nicht-pflegerische Leistungen, die bereits in der <a href="https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-855_11-2010_11_22-2011_03_01-081.html" target="_blank">Verordnung über die Pflegeversorgung vom 22. November 2010</a> definiert sind.</p>
         </section>
         <section class="my-5">
             <h2>Wer kann von den Leistungen profitieren?</h2>
-            <p>Im Kanton Zürich kannst Du von den Leistungen profitieren, wenn Du eine Altersrente der AHV beziehst und Anspruch auf Ergänzungsleistungen hast. Bitte achte dabei - auch wenn Du keinen Anspruch hast auf eine monatliche Ergänzungsleistung, kannst Du unter Umständen Kosten für Betreuung geltend machen. Kläre dies mit Deiner EL-Stelle ab.</p>
+            <p>Im Kanton Zürich kannst Du von den Leistungen profitieren, wenn Du eine Altersrente der AHV beziehst und Anspruch auf Ergänzungsleistungen hast. Bitte achte dabei - auch wenn Du keinen Anspruch hast auf eine monatliche Ergänzungsleistung, kannst Du unter Umständen Kosten für Betreuung über die Rückvergütung von <a href="/zlel-info/el_krankheit" target="_blank">Krankheits- und Behinderungskosten</a> geltend machen. Insbesondere wenn die Krankheits- und Behinderungskosten Deinen von der EL-Stelle berechneten Einnahmeüberschuss übersteigen sollten. Kläre dies mit Deiner <a href="https://www.zh.ch/de/soziales/ergaenzungsleistungen-ahv-iv.html#main_decisiontree_copy" target="_blank">EL-Stelle</a> ab.</p>
             <div x-data="$store" class="personas-container">
                 <ul class="personas-grid">
                     <template x-for="persona in $store.personas.favicons" :key="persona.name">
@@ -44,51 +44,50 @@
                     <img src="../../static/icons/book-club.svg" :class="{ 'hervorgehoben': activeModal === 'abklärung' }" @click="activeModal = 'abklärung'" alt="Abklärung & Koordination" width="50" height="50" style="cursor: pointer" tabindex="0" ref="abklärung">
                     <img src="../../static/icons/daycare.svg" :class="{ 'hervorgehoben': activeModal === 'betreuung' }" @click="activeModal = 'betreuung'" alt="Betreuung im Alter" width="50" height="50" style="cursor: pointer" tabindex="0" ref="betreuung">
                     <img src="../../static/icons/meal.svg" :class="{ 'hervorgehoben': activeModal === 'mahlzeit' }" @click="activeModal = 'mahlzeit'" alt="Mittagstisch & Mahlzeitendienst" width="50" height="50" style="cursor: pointer" tabindex="0" ref="mahlzeit">
-                    <img src="../../static/icons/hospital.svg" :class="{ 'hervorgehoben': activeModal === 'ambulant' }" @click="activeModal = 'ambulant'" alt="Ambulante Tagestrutkuren" width="50" height="50" style="cursor: pointer" tabindex="0" ref="ambulant">
+                    <img src="../../static/icons/hospital.svg" :class="{ 'hervorgehoben': activeModal === 'ambulant' }" @click="activeModal = 'ambulant'" alt="Ambulante Tagestrukturen" width="50" height="50" style="cursor: pointer" tabindex="0" ref="ambulant">
                     <img src="../../static/icons/transportation.svg" :class="{ 'hervorgehoben': activeModal === 'transport' }" @click="activeModal = 'transport'" alt="Transportdienste" width="50" height="50" style="cursor: pointer" tabindex="0" ref="transport">
                     <img src="../../static/icons/wheelchair.svg" :class="{ 'hervorgehoben': activeModal === 'hilfsmittel' }" @click="activeModal = 'hilfsmittel'" alt="Rollstuhl" width="50" height="50" style="cursor: pointer" tabindex="0" ref="hilfsmittel">
                 </div>
 
                 <div x-show="activeModal === 'abklärung'">
                     <h3>Abklärung & Koordination</h3>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                    <p>Die Kosten für Beratungs- und Bescheinigungsprozesse für Leistungen der psychosozialen Betreuung werden über Deine Zusatzleistungen/Ergänzungsleistungen gedeckt ($ 11e Abs. 1 lit. d). Gerade zu Beginn ist es wichtig, dass eine sorgfältige Abklärung getroffen wird. Zudem kann es sinnvoll sein, dass Du regelmässig Deine Situation mit Fachpersonen neu beurteilst. Diese Kosten musst Du nicht selber tragen, sondern wird von der Zusatzleistung via <a href="/zlel-info/el_krankheit" target="_blank">Krankheits- und Behinderungskosten</a> rückvergütet.</p>
                     <button @click="activeModal = null" class="button-color button-style">Schliessen</button>
                 </div>
                 
                 <div x-show="activeModal === 'betreuung'">
-                    <h3>Betreuung</h3>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                    <h3>Psychosoziale Betreuung</h3>
+                    <p>Finanziert wird Dir Betreuungsleistungen, die besonders geeignet sind, dass Du möglichst lange Zuhause wohnen bleiben kannst. Das kann sein eine Unterstützung in der Haushaltsführung oder andere Tätigkeiten, die es ermöglichen, dass Du aktiv am Leben teilnehmen kannst. Für konkrete Leistungen und wie Diese für Dich aussehen könnten, kontaktiere bitte die für Dich verantwortliche Abklärungsstelle oder <a href="https://www.zh.ch/de/soziales/ergaenzungsleistungen-ahv-iv.html#main_decisiontree_copy" target="_blank">EL-Stelle</a>!</p>
                     <button @click="activeModal = null" class="button-color button-style">Schliessen</button>
                 </div>
                 
                 <div x-show="activeModal === 'mahlzeit'">
-                    <h3>Mahlzeitendienst & Mittagstisch</h3>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                    <h3>Mahlzeitendienst & Mittagstisch für Personen mit EL zur AHV</h3>
+                    <p>Wenn Du Ergänzungsleistungen zu einer AHV beziehst und Deine Bedarfsabklärungsstelle den Bedarf bewilligt hat, kannst Du bis zu Fr 300.- pro Monat für Mittagstische oder Fr 360 pro Monat für den Mahlzeitendienst in Anspruch nehmen. Jedoch sind die Verpflegungskosten über Deinen Lebensbedarf bereits gedeckt (Art. 10 Abs. 1 ELG), sodass vor allem der Aufwand für Lieferung, Zubereitung und Betreuung über die Beiträge gedeckt werden sollen.</p>
                     <button @click="activeModal = null" class="button-color button-style">Schliessen</button>
                 </div>
                 
                 <div x-show="activeModal === 'ambulant'">
                     <h3>Ambulante Stationen</h3>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                    <p>Darunter fallen Leistungen die in Zusammenhang mit einer Tages- oder Nachtbetreuung in einem Ambulatorium bezogen werden können. Der Verbleib im angestammten Zuhause wird ermöglicht und kann individuell durch regelmässige Aufenthalte in einem Tagesheim oder Nachtheim ergänzt werden. Dies hat für Dich als Nutzer*in den Vorteil, dass Du nach Bedarf Betreuungsleistungen in Anspruch nehmen kannst, die über ein paar Stunden hinausgehen und Deine Angehörigen können sicher sein, dass Du gut betreust wirst. Die Fahrt zu und vom Ambulatorium kannst Du dabei als Ausgaben über die Vergütung von <a href="/zlel-info/el_krankheit" target="_blank">Krankheits- und Behinderungskosten</a> rückerstatten lassen.</p>
                     <button @click="activeModal = null" class="button-color button-style">Schliessen</button>
                 </div>
                         
                 <div x-show="activeModal === 'transport'">
                     <h3>Transportleistungen</h3>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                    <p>Neu werden auch die Transportkosten zu und von Tages- oder Nachtheimen, Tagesspitälern und Ambulatorien sowie zu und von Mittagstischen übernommen. Wenn ein gemeinnütziger Transportdienst für Seniorinnen und Senioren vorhanden ist, werden nur diese übernommen. Ansonsten werden die tatsächlichen Kosten in Höhe der ortsüblichen Tarife übernommen.</p>
                     <button @click="activeModal = null" class="button-color button-style">Schliessen</button>
                 </div>
                 
                 <div x-show="activeModal === 'hilfsmittel'">
                     <h3>Hilfsmittel</h3>
-                    <p>Beschreibung der Leistung</p>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                    <p>Geplant ist auch eine Erweiterung des Hilfsmittelkatalogs, welche über die <a href="/zlel-info/el_krankheit" target="_blank">Krankheits- und Behinderungskosten</a> abgegolten werden können. Diesbezüglich veröffentlicht das Kantonale Sozialamt Zürich eine Liste der finanzierbaren Hilfsmittel über ihre <a href="https://www.zh.ch/de/soziales/ergaenzungsleistungen-ahv-iv.html#-1837901559" target="_blank">Weisungen des Kantonalen Sozialamtes zum Vollzug der Zusatzleistungen zur AHV/IV</a>.</p>
                     <button @click="activeModal = null" class="button-color button-style">Schliessen</button>
                 </div>
             </div>
         </section>
             <h2>Welche Leistungen werden in Deiner Gemeinde angeboten?</h2>
-            <p>Jede Gemeinde bietet Dir Zugang zu einer Abklärungsstelle. Zudem bennen die Gemeinden Leistungsanbietende. Hier kannst Du nach den Leistungsanbietenden in Deinen Gemeinden suchen. Mithilfe der Suche kannst Du die Gemeinde einschränken und dann auswählen.</p>
+            <p>Jede Gemeinde bietet Dir Zugang zu einer Abklärungsstelle. Zudem benennen die Gemeinden Leistungsanbietende. Hier kannst Du nach den Leistungsanbietenden in Deinen Gemeinden suchen. Mithilfe der Suche kannst Du die Gemeinde einschränken und dann auswählen.</p>
             <div x-data="dropdown()">
                 <input x-model="searchQuery" type="text" placeholder="Gemeinde suchen..." class="form-control mb-3">
             
