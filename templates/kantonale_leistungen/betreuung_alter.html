@@ -107,8 +107,10 @@
                                         <hr>
                                         <p class="m-2"><strong>Tätigkeiten:</strong> <span x-text="anbieter.taetigkeit"></span></p>
                                         <p class="m-2"><strong>Beschreibung:</strong> <span x-text="anbieter.beschreibung"></span></p>
-                                        <p class="m-2"><strong>Kontakt: </strong> <span x-text="anbieter.internetlink"></span></p>
-                                        <p class="m-2"><strong>Leistungsvereinbarung:</strong> <span x-text="anbieter.leistungsvereinbarung ? 'Ja' : 'Nein'"></span></p>
+                                        <p class="m-2"><strong>Kontakt: </strong> 
+                                            <a :href="anbieter.internetlink" x-text="anbieter.internetlink" target="_blank"></a>
+                                        </p>
+                                        <p class="m-2"><strong>Leistungsvereinbarung:</strong> <span x-text="anbieter.leistungsvereinbarung ? 'Nein' : 'Ja'"></span></p>
                                     </div>
                                 </template>
                             </div>
