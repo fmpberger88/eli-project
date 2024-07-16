@@ -1,44 +1,4 @@
 document.addEventListener('alpine:init', () => {
-    Alpine.data('dropdown', () => ({
-        gemeinden: [],
-        leistungsanbietende: [],
-        selectedGemeinde: null,
-        searchQuery: '', // Datenfeld für die Suchanfrage
-
-        async init() {
-            // Lädt die Gemeindedaten beim Initialisieren
-            await this.fetchGemeinden();
-        },
-
-        async fetchGemeinden() {
-            const response = await fetch('/kantonale-leistungen/gemeinde_data/');
-            if (response.ok) {
-                this.gemeinden = await response.json();
-            }
-        },
-
-        async fetchLeistungsanbietende() {
-            // Überprüft, ob eine Gemeinde ausgewählt wurde
-            if (this.selectedGemeinde) {
-                const response = await fetch(`/kantonale-leistungen/leistungsanbietende_data/${this.selectedGemeinde}/`);
-                if (response.ok) {
-                    this.leistungsanbietende = await response.json();
-                }
-            }
-        },
-
-        selectGemeinde(gemeindeId) {
-            // Setzt die ausgewählte Gemeinde und lädt deren Leistungsanbietende
-            this.selectedGemeinde = gemeindeId;
-            this.fetchLeistungsanbietende();
-        },
-
-        get filteredGemeinden() {
-            // Filtert Gemeinden basierend auf der Suchanfrage
-            return this.gemeinden.filter(gemeinde => gemeinde.name.toLowerCase().includes(this.searchQuery.toLowerCase()));
-        }
-    }));
-
     Alpine.store('personas', {
         selected: "Persona 1",
         favicons: [

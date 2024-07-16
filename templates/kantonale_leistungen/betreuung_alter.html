@@ -6,8 +6,10 @@
     {{ block.super }}  <!-- Behält vorhandene Elemente des head-Blocks bei -->
     <meta name="description" content="Betreuung im Alter: Die Ergänzungsleistungen helfen Dir möglichst lange zu Hause zu bleiben.">
     <title>Betreuung im Alter</title> <!-- Set the title of the webpage -->
+    <link href="https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="{% static 'js/alpine.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js" defer></script>
 {% endblock %}
 
 {% block content %}
@@ -87,42 +89,41 @@
                 </div>
             </section>
             <section>
-                <h2 class="mt-5">Welche Leistungen werden in Deiner Gemeinde angeboten?</h2>
-                <p>Jede Gemeinde bietet Dir Zugang zu einer Abklärungsstelle. Zudem benennen die Gemeinden Leistungsanbietende. Hier kannst Du nach den Leistungsanbietenden in Deinen Gemeinden suchen. Mithilfe der Suche kannst Du die Gemeinde einschränken und dann auswählen.</p>
-                <div x-data="dropdown()">
-                    <input x-model="searchQuery" type="text" placeholder="Gemeinde suchen..." class="form-control mb-3">
+    <h2 class="mt-5">Welche Leistungen werden in Deiner Gemeinde angeboten?</h2>
+    <p>Jede Gemeinde bietet Dir Zugang zu einer Abklärungsstelle. Zudem benennen die Gemeinden Leistungsanbietende. Hier kannst Du nach den Leistungsanbietenden in Deinen Gemeinden suchen. Mithilfe der Suche kannst Du die Gemeinde einschränken und dann auswählen.</p>
+    <div x-data="dropdown()" x-init="init()">
+        <select id="gemeinde-select" x-model="selectedGemeinde" @change="selectGemeinde($event.target.value)" class="form-select" aria-label="Auswahl Gemeinde für Leistungsanbietende">
+            <option value="">Wähle eine Gemeinde...</option>
+            <template x-for="gemeinde in gemeinden" :key="gemeinde.id">
+                <option :value="gemeinde.id" x-text="gemeinde.name"></option>
+            </template>
+        </select>
 
-                    <select class="form-select" x-model="selectedGemeinde" @change="selectGemeinde($event.target.value)" aria-label="Auswahl Gemeinde für Leistungsanbietende">
-                        <option value="">Wähle eine Gemeinde...</option>
-                        <template x-for="gemeinde in filteredGemeinden" :key="gemeinde.id">
-                            <option :value="gemeinde.id" x-text="gemeinde.name"></option>
-                        </template>
-                    </select>
-                    <div x-show="selectedGemeinde">
-                        <template x-if="leistungsanbietende.length > 0">
-                            <div class="col-md-4 mb-3 w-100">
-                                <div class="card">
-                                    <template x-for="anbieter in leistungsanbietende" :key="anbieter.id">
-                                        <div class="card-content m-4">
-                                            <h2 x-text="anbieter.name" class="age-title m-1"></h2>
-                                            <hr>
-                                            <p class="m-2"><strong>Tätigkeiten:</strong> <span x-text="anbieter.taetigkeit"></span></p>
-                                            <p class="m-2"><strong>Beschreibung:</strong> <span x-text="anbieter.beschreibung"></span></p>
-                                            <p class="m-2"><strong>Kontakt: </strong>
-                                                <a :href="anbieter.internetlink" x-text="anbieter.internetlink" target="_blank"></a>
-                                            </p>
-                                            <p class="m-2"><strong>Leistungsvereinbarung:</strong> <span x-text="anbieter.leistungsvereinbarung ? 'Nein' : 'Ja'"></span></p>
-                                        </div>
-                                    </template>
-                                </div>
+        <div x-show="selectedGemeinde" class="mt-3">
+            <template x-if="leistungsanbietende.length > 0">
+                <div class="col-md-4 mb-3 w-100">
+                    <div class="card">
+                        <template x-for="anbieter in leistungsanbietende" :key="anbieter.id">
+                            <div class="card-content m-4">
+                                <h2 x-text="anbieter.name" class="age-title m-1"></h2>
+                                <hr>
+                                <p class="m-2"><strong>Tätigkeiten:</strong> <span x-text="anbieter.taetigkeit"></span></p>
+                                <p class="m-2"><strong>Beschreibung:</strong> <span x-text="anbieter.beschreibung"></span></p>
+                                <p class="m-2"><strong>Kontakt: </strong>
+                                    <a :href="anbieter.internetlink" x-text="anbieter.internetlink" target="_blank"></a>
+                                </p>
+                                <p class="m-2"><strong>Leistungsvereinbarung:</strong> <span x-text="anbieter.leistungsvereinbarung ? 'Nein' : 'Ja'"></span></p>
                             </div>
-                        </template>
-                        <template x-if="leistungsanbietende.length === 0">
-                            <p>Keine Leistungsanbietenden gefunden.</p>
                         </template>
                     </div>
                 </div>
-            </section>
+            </template>
+            <template x-if="leistungsanbietende.length === 0">
+                <p>Keine Leistungsanbietenden gefunden.</p>
+            </template>
+        </div>
+    </div>
+</section>
         </section>
     </article>
     <aside>
@@ -132,4 +133,58 @@
         </ul>
     </aside>
 </main>
+<script>
+document.addEventListener('alpine:init', () => {
+    Alpine.data('dropdown', () => ({
+        gemeinden: [],
+        leistungsanbietende: [],
+        selectedGemeinde: null,
+
+        async init() {
+            await this.fetchGemeinden();
+            this.initTomSelect();
+        },
+
+        async fetchGemeinden() {
+            const response = await fetch('/kantonale-leistungen/gemeinde_data/');
+            if (response.ok) {
+                this.gemeinden = await response.json();
+            }
+        },
+
+        initTomSelect() {
+            const select = new TomSelect('#gemeinde-select', {
+                maxItems: 1,
+                create: false,
+                allowEmptyOption: true,
+                sortField: {
+                    field: "name",
+                    direction: "asc"
+                }
+            });
+
+            this.gemeinden.forEach(gemeinde => {
+                select.addOption({ value: gemeinde.id, text: gemeinde.name });
+            });
+
+            select.refreshOptions(false);
+        },
+
+        async fetchLeistungsanbietende() {
+            if (this.selectedGemeinde) {
+                const response = await fetch(`/kantonale-leistungen/leistungsanbietende_data/${this.selectedGemeinde}/`);
+                if (response.ok) {
+                    this.leistungsanbietende = await response.json();
+                }
+            }
+        },
+
+        selectGemeinde(gemeindeId) {
+            this.selectedGemeinde = gemeindeId;
+            this.fetchLeistungsanbietende();
+        }
+    }));
+});
+</script>
+
 {% endblock %}
