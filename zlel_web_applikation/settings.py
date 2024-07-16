@@ -31,7 +31,7 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 # SECURITY WARNING: don't run with debug turned on in production!
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
-DEBUG = True
+DEBUG = False
 
 # Application definition
 
@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'zlel_web_applikation.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases$
 
 # DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
-DEVELOPMENT_MODE = True
+DEVELOPMENT_MODE = False
 
 if DEVELOPMENT_MODE is True:
     DATABASES = {
