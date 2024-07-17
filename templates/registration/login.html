@@ -8,8 +8,8 @@
     <div class="mt-5 mb-5 container_post">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
+                <div class="card-registration">
+                    <div>
                         <h1 class="text-center">Bitte logge Dich ein</h1>
 
                         <form method="post">
@@ -25,15 +25,15 @@
                                     {% endif %}
                                 </div>
                             {% endfor %}
-                            <div class="d-grid mb-3">
-                                <button type="submit" class="btn button-style button-color">Login</button>
+                            <div class="d-grid">
+                                <button type="submit" class="btn button-style button-color login-button">Login</button>
                             </div>
                         </form>
-                        <div class="d-grid mb-3">
-                            <a href="{% url 'signup' %}" class="btn button-style button-color">Sign Up</a>
+                        <div class="d-grid">
+                            <a href="{% url 'signup' %}" class="btn button-style button-color login-button">Sign Up</a>
                         </div>
                         <div class="d-grid">
-                            <a href="{% url 'password_reset' %}" class="btn button-style button-color">Passwort vergessen?</a>
+                            <a href="{% url 'password_reset' %}" class="btn button-style button-color login-button">Passwort vergessen?</a>
                         </div>
                     </div>
                 </div>
