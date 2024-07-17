@@ -526,7 +526,10 @@ footer {
     margin-bottom: 2rem;
 }
 
-
+.footer-nav a {
+    color: white;
+    font-weight: bold;
+}
 
 .footer-nav a:hover {
     text-decoration: underline;
